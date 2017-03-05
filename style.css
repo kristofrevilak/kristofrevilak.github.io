@@ -55,149 +55,571 @@ table {
           box-sizing: border-box;
 }
 
+/* #################### */
+/* End of the CSS RESET */
+/* #################### */
+
+
+/* The basic selectors */
+
 html{
-  padding: 0;
-	height: 100%;
-}
 
-header img{
-	height: 5vw;
-	position: absolute;
-	right: 45%;
-	margin: 0;
-}
-#main-container{
-  margin: 0 auto;
-  background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fcp91279.biography.com%2F1000509261001%2F1000509261001_1910637821001_TDIH-Picasso-Exhibit.jpg&sp=583067ab65720b802db430ddfc6169eb");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-	background-size: 60vw 30vw;
-  width: 100%;
-  height: 100%;
-	max-height: 1000px;
-	font-family: "Arsenal";
-	color: black;
-}
-
-#about{
-  padding: 20% 1.5% 1.5% 1.5%;
-  line-height: 3.7vw;
-  font-size: 76px;
-	font-size: 4vw;
-  letter-spacing: .2vw;
-	float: left;
-	width: 40%;
-	font-weight: 100;
-}
-#about p{
-	background-color: rgba(229,75,75, 1);
-	text-transform: full-width;
-}
-
-#about p::first-letter{
-	font-size: 90px;
-	font-size: 4.5vw;
-}
-
-#main-title{
-  margin: 0 auto;
-  padding: 20% 1.5% 1.5% 1.5%;
-  line-height: 3.5vw;
-  font-size: 76px;
-	font-size: 6vw;
-  letter-spacing: .1vw;
-  font-weight: 500;
-	float: right;
-}
-
-#main-title h3{
-	background-color: rgba(240,207,97, 1);
-	display: inline;
 	padding: 0;
-  font-variant: small-caps;
-}
-.content{
-	margin: 0 auto;
-  background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fcp91279.biography.com%2F1000509261001%2F1000509261001_1910637821001_TDIH-Picasso-Exhibit.jpg&sp=583067ab65720b802db430ddfc6169eb");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-	background-size: 60vw 30vw;
-  width: 100%;
-  height: auto;
-	font-family: 'Arsenal', sans-serif;
-}
-
-.indent{
-	margin: 0 auto;
-  padding: 1.5% 1.5% 3% 1.5%;
-  line-height: 3.5vw;
-  font-size: 36px;
-	font-size: 3vw;
-  letter-spacing: .05vw;
-  font-weight: 400;
-	background-color: rgba(255, 255, 255, 0.7);
-	text-align: center;
-}
-
-.pablo{
-	font-variant: small-caps;
-	font-size: 46px;
-	font-size: 3.5vw;
-  color: rgba(240,207,50, 1);
-}
-
-.highlight{
-	border-bottom: 1.5px dotted rgba(229,75,75, 1);
-}
-
-.images{
-	width: 100%;
-	height: 50vw;
-	margin: 0 auto;
-}
-.one-image img{
-	width: 33.33%;
 	height: 100%;
-	background-attachment: fixed;
+  width: 100%;
+
+}
+
+
+body{
+
+	padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+	font-family: 'Cormorant Garamond', serif;
+
+}
+
+
+
+
+/* The scrollbar settings */
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+
+/*body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkcyan;
+  outline: 1px solid slategrey;
+}*/
+
+
+
+
+/* ######################### */
+/* The "body borders" effect */
+/* ######################### */
+
+
+/* Create a series of empty pseudo-elements... */
+html:before,html:after,body:before,body:after{
+
+		content:"";
+    background:#F3C9DD;
+    position:fixed;
+    display:block;
+    z-index:5;
+
+}
+
+
+/* ...and position them! */
+html:before{
+
+		height:.65vw;
+    left:0;
+    right:0;
+    top:0;
+
+}
+
+
+html:after{
+
+		width:.65vw;
+    top:0;
+    right:0;
+		bottom:0;
+
+}
+
+
+body:before{
+
+		height:.65vw;
+    right:0;
+    bottom:0;
+    left:0;
+
+}
+
+
+body:after{
+
+		width:.65vw;
+    top:0;
+    bottom:0;
+    left:0;
+
+}
+
+
+
+
+/* ############## */
+/* The navbar css */
+/* ###############*/
+
+
+ul{
+
+	list-style: none;
+	display: block;
 	float: left;
+  margin-left: 7%;
+	position: fixed;
+	color: black;
+	margin-top: 10%;
+
 }
-#second{
-	background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fwww.celesteprize.com%2F_files%2Fopere%2F2014_68287_266667.jpg&sp=9e86a1170a89d01b163985a5d3eac27a");
-	background-size: 35vw 50vw;
-}
-#third{
-	background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=https:%2F%2Fuploads8.wikiart.org%2Fimages%2Fpablo-picasso%2Fportrait-of-woman-1936-2.jpg&sp=dda26d2a38938bd8b8cb60bf5e3eb83f");
-	background-size: 35vw 50vw;
-}
-.big-image img{
-	width: 100%;
-	height: 40vw;
-}
-.end{
-	padding-bottom: 1%;
-}
-.end a{
-	text-decoration: none;
-	color: rgba(240,207,97, 1);
-	font-family: 'Homemade Apple', cursive;
-	font-size: 2vw;
-}
-footer p{
-	font-size: 40px;
-	font-size: 1.2vw;
-	width: 100%;
-	line-height: 3vw;
-	padding-left: 1%;
-	font-family: 'Cormorant Garamond', sans-serif;
-	font-style: italic;
-	letter-spacing: 1vw;
+
+
+li a{
+
 	display: inline-block;
-	padding-top: 10px;
-	text-align: center;
-	height: inherit;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	color: black;
+	text-decoration: none;
+	padding-top: 5%;
+
 }
-footer{
-	margin-top: 2%;
+
+
+nav ul li a:hover{
+
+	text-decoration: line-through;
+	margin-top: 10%;
+
+}
+
+
+nav:hover{
+
+		background-color: white;
+
+}
+
+/* The active "li" css */
+.active a{
+
+	color: cyan;
+	text-decoration: line-through;
+
+}
+
+.active a:hover{
+
+	text-decoration: none;
+	margin-top: 0%;
+
+}
+
+
+/* ################ */
+/* The landing page */
+/* ################ */
+
+
+/* The Kristof Revilak title */
+#center{
+
+	width: 50%;
+  text-align: left;
+	font-size: 11vw;
+  letter-spacing: 2vw;
+  /*font-family: 'Trirong', serif;*/
+	font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+	/*padding-top: 5%;*/
+	color: #FDA69A;
+	margin-left: 1.2%;
+	position: relative;
+	top: 5%;
+
+}
+
+#center:hover{
+
+	color: rgba(255, 0, 0, 0.5);
+
+}
+
+
+/* The portfolio sign */
+.portfolio{
+	width: 30%;
+  text-align: right;
+	font-size: 5vw;
+  letter-spacing: 1.2vw;
+  line-height: 120%;
+  /*font-family: 'Trirong', serif;*/
+	font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+	position: absolute;
+	right: 1.2%;
+	top: 1.2%;
+}
+
+/* The random div */
+.background{
+
+	/*background-color: cyan;
+	background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fwww.lifeofpix.com%2Fwp-content%2Fuploads%2F2015%2F06%2FLife-of-Pix-free-stock-photos-beach-vintage-sea-szolkin.jpg&sp=d7595ffb3ce51ec55e0cc4efcd6c6275");
+	background-attachment: local;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50vw 33vw;*/
+	background-color: white;
+	width: 50%;
+	margin: auto;
+  margin-top: -10%;
+	padding: 10% 10% 20% 10%;
+  transition: 0.5s;
+	margin-bottom: -5%;
+	margin-left: 30%;
+
+}
+
+
+/* Another div for the arrow */
+.go-down{
+
+	cursor: default;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	text-align: center;
+	margin: 0 auto;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	display: block;
+
+}
+
+.go-down:hover{
+
+	color: #F3C9DD;
+	font-weight: 800;
+	font-size: 1.5vw;
+
+}
+
+
+/* The arrow */
+#view-projects{
+
+	position: absolute;
+	bottom: 5%;
+	display: block;
+	left: 48.7%;
+	cursor: default;
+
+}
+
+
+
+
+/* ################# */
+/* The projects page */
+/* ################# */
+
+
+/* The projects title */
+.nadpis{
+
+	width: 35%;
+  text-align: center;
+	font-size: 4vw;
+  letter-spacing: 1.6vw;
+  line-height: 120%;
+  /*font-family: 'Trirong', serif;*/
+	font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+	margin: 0 auto;
+	margin-top: 50%;
+	margin-bottom: 18%;
+
+}
+
+
+/*view projects*/
+
+
+/* The langs classes and ids */
+.langs{
+
+	position: absolute;
+	top: 210%;
+	font-size: 2vw;
+	font-family: 'Carrois Gothic SC', sans-serif;
+	letter-spacing: 0.2vw;
+	display: none;
+
+}
+
+
+#lang-html{
+
+	color: red;
+	right: 50%;
+	top: 200%;
+	transform: rotate(0deg);
+	/* TODO: TAKE KOLIECKO JAK KEBY S TYM ZE OD STREDU A KAZDE SA OTOCI O x STUPNOV A KED BUDU VSETKY TAK  ZAS OD POSLEDNEHO BUDU ZMIZAVAT */
+}
+
+#lang-css{
+	color: yellow;
+	left: 40%;
+	bottom: 190%;
+	transform: rotate(-10deg);
+}
+
+
+#lang-js{
+	color: black;
+	right: 30%;
+	top: 180%;
+	transform: rotate(20deg);
+}
+
+
+#lang-skrollr{
+	color: green;
+	left: 20%;
+	down: 170%;
+	transform: rotate(-30deg);
+}
+
+
+#lang-jquery{
+	color: orange;
+	right: 10%;
+	down: 160%;
+	transform: rotate(40deg);
+}
+
+
+#lang-mongodb{
+	color: grey;
+	left: 75%;
+	top: 175%;
+	transform: rotate(-50deg);
+}
+
+
+#lang-express{
+	color: red;
+	right: 80%;
+	top: 164%;
+	transform: rotate(60deg);
+}
+
+
+#lang-node{
+	color: green;
+	left: 50%;
+	top: 151%;
+	transform: rotate(-70deg);
+}
+
+
+#lang-angular{
+	color: red;
+	left: 90%;
+	top: 140%;
+	transform: rotate(80deg);
+}
+
+
+/* #################### */
+/* The projects squares */
+/* #################### */
+
+
+/*the main div*/
+.text{
+
+	width: 45%;
+  margin: 15% auto;
+  background-color: rgba(255, 0, 0, 0.5);
+  padding: 10%;
+
+}
+
+.text h3{
+
+	font-size: 8vw;
+	margin-left: 90%;
+	width: 50%;
+	display: block;
+	font-family: 'Arapey', cursive;
+
+}
+
+
+#tribute{
+	background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fwww.telegraph.co.uk%2Fcontent%2Fdam%2Fart%2F2016%2F10%2F04%2Fpicasso-large_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwbKTcqHAsmNzJMPMiov7fpk.jpg&sp=ac4dc4e35bc0ac74a30ea29d11ece6b9");
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto;
+	padding: 10%;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+#tribute:hover{
+	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+	transform: scale(1.1);
+}
+
+
+#nodeblog{
+
+	background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fdarkroom.clock.co.uk%2F1000%2F6652dbabd9b96731177e743cc5c09638:1fd2310a7c508a4c8f51f14d78626f3c%2Fnode-blog-post.jpg&sp=72feb3628050a71d1f73f7b15797778a");
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto;
+	padding: 10%;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+
+}
+
+
+#nodeblog:hover{
+	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+	transform: scale(1.1);
+}
+
+
+/* ############ */
+/* The about me */
+/* ############ */
+
+
+/* The title in the text */
+.about-me{
+
+	color:#F3C9DD;
+	font-size: 8vw;
+
+
+}
+
+
+/* The about me text */
+.aboutme{
+
+	font-family: 'Source Sans Pro', sans-serif;
+	width: 70%;
+	font-size: 4vw;
+	color: black;
+	margin-left: 20%;
+	margin-right: 10%;
+	margin-bottom: 7%;
+
+}
+
+
+
+
+/* ################ */
+/* The contact page */
+/* ################ */
+
+
+.contact{
+	height: 1%;
+	font-size: 4vw;
+	font-weight: 600;
+	letter-spacing: 1.6vw;
+	position: relative;
+	top: 0%;
+	text-align: center;
+	margin-bottom: 20%;
+	margin-top: 35%;
+}
+
+.space{
+	height: 1%;
+}
+
+/* ############### */
+/* The footer page */
+/* ############### */
+
+
+/* The rotated footer text with the year */
+#that-p{
+
+	font-size: 1.5vw;
+	transform: rotate(90deg);
+	position: fixed;
+	top: 50%;
+	right: -3%;
+	cursor: default;
+
+}
+
+
+/* same css for all the social buttons */
+.social{
+
+	position: fixed;
+	bottom: 5%;
+	right: 8%;
+	margin-top: 1%;
+	cursor: pointer;
+	font-size: 1vw;
+	padding: 0;
+
+}
+
+.social p{
+
+	padding: 5%;
+	text-align: center;
+	display: inline;
+
+}
+
+
+#fb:hover{
+	text-decoration: line-through;
+	color: blue;
+}
+
+
+#ig:hover{
+	text-decoration: line-through;
+	color: red;
+}
+
+
+#snap:hover{
+	text-decoration: line-through;
+	color: yellow;
 }

@@ -1,65 +1,291 @@
+<!DOCTYPE html>
+
 <html>
 <head>
-	<title> Tribute Page </title>
+
+	<title> My Personal Page </title>
+
+	<!-- Link to external css -->
 	<link rel="stylesheet" type="text/css" href="style.css"></link>
-	<link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet"></head>
+
+	<!-- Link to favicon -->
+	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+	<!-- The Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Arapey" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
 <header>
-	<img src="https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fyuliavizel.com%2Fwp-content%2Fuploads%2F2014%2F09%2Fpicasso_signature_lineart.jpg&sp=badce9afaa1d4fbfdc411483f7352968" alt="Picasso" />
+
+
+	<!-- The Navbar -->
+	<nav>
+
+		<!-- Every "li" has its own id for the js -->
+		<ul>
+			<li id="home"><a href="#"> Home.</a> </li>
+			<li id="proj"><a href="#"> Projects.</a> </li>
+			<li id="abme"><a href="#"> About Me.</a> </li>
+			<li id="cont"><a href="#"> Conatct.</a> </li>
+		</ul>
+
+	</nav>
+
+
 </header>
+
+
+
 <body>
-	<div id="main-container">
-		<div id="about">
-			<p>"The purpose of art is washing the dust of daily life off our souls."</p>
-		</div>
-		<div id="main-title">
-			<h3>Pablo Picasso</h3>
-  	</div>
+
+
+
+	<!-- Div with the main name on the left of landing page -->
+	<div id="center">
+
+
+				Kristof Revilak
+
+
 	</div>
 
-	<div class="content">
-		<div class="indent">
-			<p>
-				<span class="pablo">Pablo Picasso</span> was <span class="highlight">born in Spain in 1881</span>, and was raised there before going on to <span class="highlight">spend most of his adult life working as an artist in France</span>. Throughout  the long course of his career, he created <span class="highlight">more than 20,000 paintings, drawings, sculptures, ceramics</span> and other items such as costumes and theater sets. He is universally <span class="highlight">renowned as one of the most influential and celebrated artists of the twentieth century.</span>
-			</p>
-		</div>
+
+
+	<!-- Div with the "My Portfolio" sign on the right of landing page -->
+	<div class="portfolio">
+
+
+				My Portfolio
+
+
 	</div>
 
-	<div class="images">
-		<div class="one-image">
-			<img src="https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=https:%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fb%2Fbc%2FOld_guitarist_chicago.jpg&sp=bae3c3416a122c1ac7b222fb59e4fb22" alt="The old guitarist (1903)" />
-		</div>
-		<div class="one-image">
-			<img src="https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=https:%2F%2Fclassconnection.s3.amazonaws.com%2F609%2Fflashcards%2F1134609%2Fjpg%2Fpicasso_-_la_vie-14221C23E9E0E26D00A.jpg&sp=3f666a1c0937e33ddd1f1a4605e1c415" alt="La Vie (1903)" />
-		</div>
-		<div class="one-image">
-			<img src="https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=https:%2F%2Fqoramagazine.files.wordpress.com%2F2016%2F02%2Ffamous-arts-oil-painting-boy-with-pipe-by-pablo-font-b-picasso-b-font-font-b1.jpg%3Fw%3D1000%26amp;h%3D1200&sp=cadcb0e45998e1b87f3db38c776c34be" alt="Boy with a pipe (1905)" />
-		</div>
+
+
+	<!-- Random div for spacing -->
+	<div class="background"></div>
+
+
+
+	<!-- The "go down" text div -->
+	<div class="go-down" id="view-projects">
+
+
+				go down.
+
+
 	</div>
 
-	<div class="content" id="second">
-		<div class="indent">
-			<p>
-				<span class="pablo">Picasso's</span> <span class="highlight">ability to produce works in an astonishing range of styles made him well respected </span>during his own lifetime. After his death in 1973 <span class="highlight">his value as an artist and inspiration to other artists has only grown</span>. He is without a doubt destined to permanently etch himself into the fabric of humanity as <span class="highlight">one of the greatest artists of all time.</span>
-			</p>
-		</div>
+
+	<div id="divForTheProjects">
+
+
+				<!-- The "Projects." Title div -->
+				<div class="nadpis">
+
+
+							Projects.
+
+
+				</div>
+
+				<!-- <div class="langs">
+
+				</div>
+				<p class="langs" id="lang-html">
+					HTML
+				</p>
+				<p class="langs" id="lang-css">
+					CSS
+				</p>
+				<p class="langs" id="lang-js">
+					JS
+				</p>
+				<p class="langs" id="lang-skrollr">
+					SKROLLR
+				</p>
+				<p class="langs" id="lang-jquery">
+					jQUERY
+				</p>
+				<p class="langs" id="lang-mongodb">
+					MONGODB
+				</p>
+				<p class="langs" id="lang-express">
+					EXPRESS.JS
+				</p>
+				<p class="langs" id="lang-node">
+					NODE.JS
+				</p>
+				<p class="langs" id="lang-angular">
+					ANGULAR.JS2
+				</p> -->
+
+
+	<!-- The "View projects" text div-->
+	<div class="go-down" id="view-dem" onclick="">
+
+
+				View dem, nigga
+
+
 	</div>
-	<div class="big-image">
-		<img src="https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Flewebpedagogique.com%2Fhistoiredesartscamus%2Ffiles%2F2014%2F10%2Fguernica.jpg&sp=be4853af188173a9cd6b034fb0ed09ca" alt="Guernica ()" />
+
+
+
+	<!--The first projects square div  -->
+	<div class="text" id="nodeblog"
+			data-center-top="opacity: 0"
+      data-300-top="opacity: 1"
+			>
+
+
+				<!-- The actual square div -->
+				<div class="anim"
+				data-center="margin: 0px 60%;"
+				data-bottom-top="margin: 0px 70%;"
+				>
+
+
+							<h3>NodeBlog Page.</h3>
+
+
+				</div>
+
 	</div>
-	<div class="content" id="third">
-		<div class="indent">
-			<p>
-				As an artist and an innovator, he is responsible for <span class="highlight">co-founding the entire Cubist movement</span> alongside Georges Braque. <span class="highlight">Cubism was an avant-garde art movement that changed forever the face of European painting and sculpture </span>while simultaneously affecting contemporary architecture, music and literature. Subjects and objects in Cubism are broken up into pieces and re-arranged in an abstract form. During the period from approximately 1910-1920 when <span class="pablo">Picasso</span> and Braque were laying the foundation for Cubism in France, it's effects were so far-reaching as to inspire offshoots like the styles of Futurism, Dada, and Constructivism in other countries. 			</p>
-		</div>
+
+
+
+	<!--The first projects square div  -->
+	<div class="text" id="tribute"
+			data-center-top="opacity: 0"
+		  data-300-top="opacity: 1"
+			>
+
+
+				<!-- The actual square div -->
+				<div class="anim"
+				data-center="margin: 0px 60%;"
+				data-bottom-top="margin: 0px 70%;"
+				>
+
+
+							<h3>Tribute Page.</h3>
+
+
+				</div>
+
 	</div>
-	<div class="indent end">
-		<a href="http://www.pablopicasso.org">Read more about <span class="pablo"> Pablo Picasso </span></a>
+
+
+
+	<!--The first projects square div  -->
+	<div class="text"
+			data-center-top="opacity: 0"
+			data-300-top="opacity: 1"
+			>
+
+
+				<!-- The actual square div -->
+				<div class="anim"
+				data-center="margin: 0px 60%;"
+				data-bottom-top="margin: 0px 70%;"
+				>
+
+
+					<h3>Comming soon!</h3>
+
+
+				</div>
+
 	</div>
+
+
+	</div>
+
+
+	<!-- The aboutme div - including the text -->
+	<div class="aboutme">
+
+
+				<p>
+
+
+						<span class="about-me">About Me.</span>
+						Hi, im Kiko. Im 16 years old wannabe web developer. My hobbys are programming, playing tennis, playing guitar, hanging out w/ friends.
+						This page is a showcase of my frontend skills and my projects, created for the freecodecamp.com
+
+				</p>
+
+
+	</div>
+
+
+	<div class="go-down" id="to-contact">
+
+
+				go down.
+
+
+	</div>
+
+
+	<div class="contact">
+
+				Contact.
+
+	</div>
+	<div class="space">
+
+	</div>
+
+
+
 </body>
+
+
+
 <footer>
-	<p>	Kristof Revilak </p>
-</footer>
+
+
+	<p id="that-p">
+
+
+				2017 Kristof Revilak.
+
+
+	</p>
+
+
+	<div class="social"><!--
+
+
+				--><p id="fb">facebook.</p><!--
+				--><p id="ig">instagram.</p><!--
+				--><p id="snap">snapchat.</p><!--
+
+
+--></div>
+
+
+
+<!-- All the fucking scripts -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script src="jquery.inview.js"></script>
+
+<script>
+// This version runs the function *immediately*
+(function($) {
+
+  $(document.body).fadeIn(1000);
+
+})(jQuery);
+</script>
+<script type="text/javascript" src="main.js"></script>
 
 </html>
