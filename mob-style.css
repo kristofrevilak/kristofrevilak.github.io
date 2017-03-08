@@ -74,7 +74,7 @@ html{
 body{
 
 	padding: 0;
-  margin: 0;
+  margin: 2vw;
   height: 100%;
   width: 100%;
 	font-family: 'Cormorant Garamond', serif;
@@ -124,7 +124,7 @@ html:before,html:after,body:before,body:after{
 /* ...and position them! */
 html:before{
 
-		height:.65vw;
+		height:0vw;
     left:0;
     right:0;
     top:0;
@@ -134,7 +134,7 @@ html:before{
 
 html:after{
 
-		width:.65vw;
+		width:0vw;
     top:0;
     right:0;
 		bottom:0;
@@ -144,7 +144,7 @@ html:after{
 
 body:before{
 
-		height:.65vw;
+		height:0vw;
     right:0;
     bottom:0;
     left:0;
@@ -154,7 +154,7 @@ body:before{
 
 body:after{
 
-		width:.65vw;
+		width:0vw;
     top:0;
     bottom:0;
     left:0;
@@ -162,63 +162,60 @@ body:after{
 }
 
 
-nav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    text-align:center;
-}
 
-nav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
+nav{
+
+	list-style: none;
+	display: block;
+	float: left;
+	position: fixed;
+	color: black;
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
 
 }
 
-nav a:hover{
-    color: #f1f1f1;
+
+li a{
+
+	display: inline-block;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	color: black;
+	text-decoration: none;
+	padding: 3%;
+
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-</head>
-<body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-</div>
+nav ul li a:hover{
 
-<h2>Animated Sidenav Example Full Width</h2>
-<p>Click on the element below to open the navigation menu.</p>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+	text-decoration: line-through;
+	margin-top: 3%;
 
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
 }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-</script>
 
-</body>
-</html>
+nav:hover{
+
+		background-color: white;
+
+}
+
+/* The active "li" css */
+.active a{
+
+	color: cyan;
+	text-decoration: line-through;
+
+}
+
+.active a:hover{
+
+	text-decoration: none;
+	margin-top: 0%;
+
+}

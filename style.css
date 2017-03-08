@@ -169,6 +169,10 @@ body:after{
 /* ###############*/
 
 
+#x{
+	display: none;
+}
+
 ul{
 
 	list-style: none;
@@ -181,6 +185,16 @@ ul{
 
 }
 
+@media screen and (max-width: 640px){
+	ul{
+
+		position: relative;
+		text-align: center;
+		margin-left: 0;
+		width: 100%;
+
+	}
+}
 
 li a{
 
@@ -195,6 +209,13 @@ li a{
 
 }
 
+@media screen and (max-width: 640px){
+
+	li a{
+		padding-top: 3%;
+	}
+
+}
 
 nav ul li a:hover{
 
@@ -203,6 +224,13 @@ nav ul li a:hover{
 
 }
 
+@media screen and (max-width: 640px){
+	nav ul li a:hover{
+
+		margin-top: 2%;
+
+	}
+}
 
 nav:hover{
 
@@ -256,6 +284,18 @@ nav:hover{
 }
 
 
+@media screen and (max-width: 640px){
+
+		#center{
+
+			width: 100%;
+			display: inline;
+
+		}
+
+}
+
+
 /* The portfolio sign */
 .portfolio{
 	width: 30%;
@@ -271,23 +311,13 @@ nav:hover{
 	top: 1.2%;
 }
 
-/* The random div */
-.background{
+@media screen and (max-width: 640px){
 
-	/*background-color: cyan;
-	background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fwww.lifeofpix.com%2Fwp-content%2Fuploads%2F2015%2F06%2FLife-of-Pix-free-stock-photos-beach-vintage-sea-szolkin.jpg&sp=d7595ffb3ce51ec55e0cc4efcd6c6275");
-	background-attachment: local;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 50vw 33vw;*/
-	background-color: white;
-	width: 50%;
-	margin: auto;
-  margin-top: -10%;
-	padding: 10% 10% 20% 10%;
-  transition: 0.5s;
-	margin-bottom: -5%;
-	margin-left: 30%;
+	.portfolio{
+
+			top: 35%;
+
+	}
 
 }
 
@@ -305,6 +335,7 @@ nav:hover{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
 	display: block;
+	font-size: 1.5vw;
 
 }
 
@@ -312,7 +343,7 @@ nav:hover{
 
 	color: #F3C9DD;
 	font-weight: 800;
-	font-size: 1.5vw;
+	font-size: 2.5vw;
 
 }
 
@@ -352,6 +383,17 @@ nav:hover{
 	margin-bottom: 18%;
 
 }
+
+@media screen and (max-width: 640px){
+
+	.nadpis{
+
+		margin: 0;
+
+	}
+
+}
+
 
 
 /*view projects*/
