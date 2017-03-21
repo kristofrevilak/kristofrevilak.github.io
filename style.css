@@ -90,22 +90,6 @@ body::-webkit-scrollbar {
     width: 0;
 }
 
-@media screen and (max-width: 640px){
-
-	body::-webkit-scrollbar{
-		width: 2%;
-	}
-
-	body::-webkit-scrollbar-track {
-	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	}
-
-	body::-webkit-scrollbar-thumb {
-	  background-color: darkcyan;
-	  outline: 1px solid slategrey;
-	}
-
-}
 
 /*body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -202,15 +186,15 @@ ul{
 }
 
 @media screen and (max-width: 640px){
-	ul{
 
-		position: relative;
-		text-align: center;
-		margin-left: 0;
-		width: 100%;
+	.nadpis, .go-down, #view-dem{
+	
+	display: none;
 
 	}
+
 }
+
 
 li a{
 
@@ -225,13 +209,7 @@ li a{
 
 }
 
-@media screen and (max-width: 640px){
 
-	li a{
-		padding-top: 3%;
-	}
-
-}
 
 nav ul li a:hover{
 
@@ -240,13 +218,6 @@ nav ul li a:hover{
 
 }
 
-@media screen and (max-width: 640px){
-	nav ul li a:hover{
-
-		margin-top: 2%;
-
-	}
-}
 
 nav:hover{
 
@@ -300,16 +271,7 @@ nav:hover{
 }
 
 
-@media screen and (max-width: 640px){
 
-		#center{
-
-			width: 100%;
-			display: inline;
-
-		}
-
-}
 
 
 /* The portfolio sign */
@@ -327,15 +289,7 @@ nav:hover{
 	top: 1.2%;
 }
 
-@media screen and (max-width: 640px){
 
-	.portfolio{
-
-			top: 35%;
-
-	}
-
-}
 
 
 /* Another div for the arrow */
@@ -402,9 +356,9 @@ nav:hover{
 
 @media screen and (max-width: 640px){
 
-	.nadpis{
-
-		margin: 0;
+	.nadpis, .go-down, #view-dem{
+	
+	display: none;
 
 	}
 
@@ -415,90 +369,6 @@ nav:hover{
 /*view projects*/
 
 
-/* The langs classes and ids */
-.langs{
-
-	position: absolute;
-	top: 210%;
-	font-size: 2vw;
-	font-family: 'Carrois Gothic SC', sans-serif;
-	letter-spacing: 0.2vw;
-	display: none;
-
-}
-
-
-#lang-html{
-
-	color: red;
-	right: 50%;
-	top: 200%;
-	transform: rotate(0deg);
-	/* TODO: TAKE KOLIECKO JAK KEBY S TYM ZE OD STREDU A KAZDE SA OTOCI O x STUPNOV A KED BUDU VSETKY TAK  ZAS OD POSLEDNEHO BUDU ZMIZAVAT */
-}
-
-#lang-css{
-	color: yellow;
-	left: 40%;
-	bottom: 190%;
-	transform: rotate(-10deg);
-}
-
-
-#lang-js{
-	color: black;
-	right: 30%;
-	top: 180%;
-	transform: rotate(20deg);
-}
-
-
-#lang-skrollr{
-	color: green;
-	left: 20%;
-	down: 170%;
-	transform: rotate(-30deg);
-}
-
-
-#lang-jquery{
-	color: orange;
-	right: 10%;
-	down: 160%;
-	transform: rotate(40deg);
-}
-
-
-#lang-mongodb{
-	color: grey;
-	left: 75%;
-	top: 175%;
-	transform: rotate(-50deg);
-}
-
-
-#lang-express{
-	color: red;
-	right: 80%;
-	top: 164%;
-	transform: rotate(60deg);
-}
-
-
-#lang-node{
-	color: green;
-	left: 50%;
-	top: 151%;
-	transform: rotate(-70deg);
-}
-
-
-#lang-angular{
-	color: red;
-	left: 90%;
-	top: 140%;
-	transform: rotate(80deg);
-}
 
 
 /* #################### */
@@ -681,3 +551,4 @@ nav:hover{
 	text-decoration: line-through;
 	color: yellow;
 }
+
