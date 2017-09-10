@@ -169,12 +169,7 @@ $(window).on('load', function() {
       curCol++;
    }, 1000);
 
-  //  $(".langs").each(function(index, el) {
-  //     var timer = setInterval(function() {
-  //         $(el).css("display", "initial").delay(500).fadeIn(400);
-  //     }, 1000);
-  //     console.log(index);
-  //  });
 
 
 });
+
