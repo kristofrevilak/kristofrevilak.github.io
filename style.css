@@ -90,22 +90,7 @@ body::-webkit-scrollbar {
     width: 0;
 }
 
-@media screen and (max-width: 640px){
 
-	body::-webkit-scrollbar{
-		width: 2%;
-	}
-
-	body::-webkit-scrollbar-track {
-	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	}
-
-	body::-webkit-scrollbar-thumb {
-	  background-color: darkcyan;
-	  outline: 1px solid slategrey;
-	}
-
-}
 
 /*body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -550,7 +535,7 @@ nav:hover{
 
 #nodeblog{
 
-	background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fdarkroom.clock.co.uk%2F1000%2F6652dbabd9b96731177e743cc5c09638:1fd2310a7c508a4c8f51f14d78626f3c%2Fnode-blog-post.jpg&sp=72feb3628050a71d1f73f7b15797778a");
+	background-image: url("quotescreen.png");
 	background-color: transparent;
 	background-position: center;
 	background-repeat: no-repeat;

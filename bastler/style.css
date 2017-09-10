@@ -1,0 +1,368 @@
+/********************************************
+	Tag Resets
+********************************************/
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/********************************************
+	Normalize CSS
+	http://necolas.github.com/normalize.css/
+********************************************/
+
+html {
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	min-height: 100%;
+	font-size: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+	display: block;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+input,
+textarea,
+button,
+select {
+	margin: 0;
+	font-size: 100%;
+	line-height: normal;
+	vertical-align: baseline;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+textarea {
+	overflow: auto;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*@keyframes slide {
+	from{width:0;	display:none;}
+	to{width:100%;display:block;}
+}
+@-ms-keyframes slide {
+	from{width:0;	display:none;}
+	to{width:100%;display:block;}
+}
+@-o-keyframes slide {
+	from{width:0;	display:none;}
+	to{width:100%;display:block;}
+}
+@-webkit-keyframes slide {
+	from{width:0;	display:none;}
+	to{width:100%;display:block;}
+}
+@-moz-keyframes slide {
+	from{width:0;	display:none;}
+	to{width:100%;display:block;}
+}*/
+
+.fa-arrow-down{
+	transition: 2s;
+	-o-transition: 2s;
+	-ms-transition: 2s;
+	-webkit-transition: 2s;
+	-moz-transition: 2s;
+}
+.fa-arrow-down:hover{
+	top: 10px;
+}
+
+html{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.normal{
+	display: none;
+}
+
+nav{
+  height: 80px;
+  /*background-color: rgb(223, 223, 223);*/
+}
+ul{
+	display: inline;
+}
+
+.nav-logo{
+	padding: 12px;
+	width: 60px;
+	margin: 0;
+	float: left;
+}
+.nav-logo img{
+	width: 60px;
+}
+
+.nav-item{
+  float: right;
+	padding-top: 30px;
+	padding-bottom: 30px;
+  list-style-type: none;
+	padding-right: 30px;
+	color: #DFDFGF;
+}
+.nav-item-text{
+  margin: 0 auto;
+  float: left;
+	font-size: 15px;
+	transition: all ease-in-out 0.5s;
+	cursor: default;
+	border-bottom: 1px solid transparent;
+}
+.nav-item-text:hover{
+	border-color: black;
+}
+
+li{
+  height: 100%;
+}
+
+.nav-menu-mobile{
+	width: 100%;
+	background: -webkit-linear-gradient(left top, #DFDFDF, #F1E5E5);
+	background: -o-linear-gradient(bottom right, #DFDFDF, #F1E5E5);
+	background: -moz-linear-gradient(bottom right, #DFDFDF, #F1E5E5);
+	background: linear-gradient(to bottom right, #DFDFDF, #F1E5E5);
+	position: absolute;
+	z-index: 5;
+	text-align: center;
+	padding: 100px 0;
+	/*font-family: "helvetica";*/
+	letter-spacing: 1px;
+	display: none;
+}
+
+.exit{
+	position: absolute;
+	top: 60px;
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	font-family: fantasy;
+	border: 2px solid black;
+	width: 70px;
+	cursor: default;
+}
+
+.nav-menu-mobile img{
+	width: 200px;
+	margin-top: 20px;
+}
+
+.nav-menu-item{
+	list-style-type: none;
+	padding: 10px;
+}
+
+/*MAIN SECTION*/
+.main-section{
+  background-image: url("https://static.pexels.com/photos/159731/pencil-education-pencil-sharpener-art-159731.jpeg");
+	background-color: #DFDFDF;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+	color: white;
+	text-shadow: 1px 1px grey;
+
+	/*background: -webkit-linear-gradient(left top, #DFDFDF, #F1E5E5);
+	background: -o-linear-gradient(bottom right, #DFDFDF, #F1E5E5);
+	background: -moz-linear-gradient(bottom right, #DFDFDF, #F1E5E5);
+	background: linear-gradient(to bottom right, #DFDFDF, #F1E5E5);*/
+}
+
+.main-section-content, .side-section-content, .review-section-content{
+  padding: 70px;
+  width: auto;
+  text-align: center;
+}
+.main-section-header,.side-section-header, .review-section-header, .footer-header{
+  padding-top: 70px;
+  margin-bottom: 50px;
+	font-size: 40px;
+}
+.main-section-desc, .review-section-body{
+  margin-bottom: 100px;
+}
+.side-section-content{
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: scroll;
+}
+.side-section-content.first{
+	background-image: url("https://static.pexels.com/photos/259803/pexels-photo-259803.jpeg");
+}
+.side-section-content.second{
+	background-image: url("https://static.pexels.com/photos/263370/pexels-photo-263370.jpeg");
+	color: white;
+	text-shadow: 1px 1px grey;
+}
+.side-section-content.third{
+	background-image: url("https://static.pexels.com/photos/40879/cpu-processor-macro-pen-40879.jpeg");
+	padding-bottom: 100px;
+	color: white;
+	text-shadow: 1px 1px grey;
+}
+
+.profile-photo{
+	border-radius: 100%;
+	height: 128px;
+}
+
+.review-section{
+
+}
+.review-section-content{
+	text-align: center;
+
+}
+.review-section-header{
+	font-size: 28px;
+}
+.review-section-body{
+
+}
+.review-section-body-header{
+}
+.review-section-body-stars{
+}
+footer{
+	text-align: center;
+	background-color: #DFDFDF;
+}
+footer section{
+
+}
+.footer-map{
+	width: 500px;
+	height: 350px;
+	margin: 0 auto;
+	padding: 10px;
+	border: 0;
+}
+.footer-row{
+	padding: 5px;
+	margin-top: 10px;
+}
+.footer-row a{
+	text-decoration-color: #008E8F;
+	color: black;
+}
+.signature{
+	font-family: 'Cormorant Garamond', serif;
+	background-color: white;
+	padding-top: 30px;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+.copy{
+	font-size: 10px;
+	letter-spacing: 5px;
+}

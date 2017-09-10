@@ -86,6 +86,11 @@ $("#tribute").click(function(event) {
   window.open("tribute/index.html")
 });
 
+$("#nodeblog").click(function(event) {
+  /* Act on the event */
+  window.open("quotemachine/index.html")
+});
+
 
 
 $('#center').bind('inview', function(event, isInView) {

@@ -1,0 +1,204 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+
+body{
+	background-color: #fedccc;
+	font-family: Helvetica, serif;
+}
+
+
+
+html:before,html:after,body:before,body:after{
+
+		content:"";
+    background:white;
+    position:fixed;
+    display:block;
+    z-index:5;
+
+}
+
+html:before{
+
+		height:6vw;
+    left:0;
+    right:0;
+    top:0;
+
+}
+
+
+html:after{
+
+		width:14vw;
+    top:0;
+    right:0;
+		bottom:0;
+
+}
+
+
+body:before{
+
+		height:6vw;
+    right:0;
+    bottom:0;
+    left:0;
+
+}
+
+
+body:after{
+
+		width:14vw;
+    top:0;
+    bottom:0;
+    left:0;
+
+}
+
+
+#quoteDiv{
+	width: 60vw;
+	margin: 0 auto;
+}
+
+#quoteText{
+	width: 100%;
+	margin: 10vw auto;
+	margin-bottom: 9vw;
+	top: 10%;
+	font-size: 2vw;
+	letter-spacing: .2vw;
+	line-height: 2.5vw;
+	background-color: pink;
+	padding: 1vw;
+}
+
+#quoteAuthor{
+	font-size: 1.5vw;
+	letter-spacing: .2vw;
+	color: #0c4bbe;
+}
+
+#quoteBtn{
+	position: fixed;
+	bottom: 4vw;
+	left: 5vw;
+	border: 0px;
+	color: #0c4bbe;
+	z-index: 7;
+	padding: 1vw;
+	background-color: transparent;
+	font-size: 2.2vw;
+	letter-spacing: .5vw;
+}
+#quoteBtn span {
+  position: relative;
+  display: inline-block;
+}
+#quoteBtn span::after,
+#quoteBtn span::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: .25vw;
+  top: 50%;
+  margin-top: -0.5px;
+  background: red;
+}
+#quoteBtn span::before {
+  left: -2.5px;
+}
+#quoteBtn span::after {
+  right: 2.5px;
+  background: red;
+  -webkit-transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+#quoteBtn:hover span:before {
+  background: red;
+  width: 100%;
+  -webkit-transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+#quoteBtn:hover span:after {
+  background: transparent;
+  width: 100%;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+#nadpis{
+	position: fixed;
+	top: 1vw;
+	left: 30%;
+	border: 0px;
+		color: #0c4bbe;
+	z-index: 7;
+	padding: 1vw;
+	background-color: transparent;
+	font-size: 1vw;
+	letter-spacing: .7vw;
+	width: 50%;
+	font-variant: small-caps;
+}
+#nadpis span{
+	color: red;
+}
