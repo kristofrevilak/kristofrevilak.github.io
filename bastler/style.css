@@ -243,7 +243,7 @@ li{
 	margin-right: auto;
 	left: 0;
 	right: 0;
-	font-family: fantasy;
+	font-family: serif;
 	border: 2px solid black;
 	width: 70px;
 	cursor: default;
@@ -267,8 +267,8 @@ li{
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
-	color: white;
-	text-shadow: 1px 1px grey;
+	color: black;
+	/*text-shadow: 1px 1px grey;*/
 
 	/*background: -webkit-linear-gradient(left top, #DFDFDF, #F1E5E5);
 	background: -o-linear-gradient(bottom right, #DFDFDF, #F1E5E5);
@@ -284,11 +284,18 @@ li{
 .main-section-header,.side-section-header, .review-section-header, .footer-header{
   padding-top: 70px;
   margin-bottom: 50px;
-	font-size: 40px;
+	font-size: 35px;
 }
 .main-section-desc, .review-section-body{
   margin-bottom: 100px;
 }
+
+.main-section-see-more{}
+
+.side-section-header{
+	font-size:30px;
+}
+
 .side-section-content{
   background-repeat: no-repeat;
   background-position: bottom;
@@ -340,8 +347,8 @@ footer section{
 
 }
 .footer-map{
-	width: 500px;
-	height: 350px;
+	width: 250px;
+	height: 175px;
 	margin: 0 auto;
 	padding: 10px;
 	border: 0;
