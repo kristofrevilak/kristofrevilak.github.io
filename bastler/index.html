@@ -1,101 +1,119 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+
+    <!-- title -->
     <title>PC Bastler | Predaj a servis PC techniky</title>
+
+    <!-- meta tags -->
     <meta name="description" content="Zložíme PC presne podľa Vašich potrieb a očakávaní. Doprava zadarmo v BA a Senci.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
 
+    <!-- link tags -->
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
-
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
 
+    <!-- script tags -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="jquery.inview.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js" charset="utf-8"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
   </head>
 
+  <!-- nav bar -->
   <nav>
     <ul>
+
+      <!-- logo -->
       <li class="nav-logo mobile">
 
-        <img src="logo.png" alt="PC Bastler" />
+        <a href="index.html"><img src="logo.png" alt="PC Bastler" /><a>
+
+      </li>
+
+      <!-- nav menu items -->
+      <li class="nav-item normal">
+
+        <a href="#" class="active">Hlavná Stránka</a>
 
       </li>
       <li class="nav-item normal">
 
-        <span>Hlavna Stranka</span>
+        <a href="pc-na-mieru.html">PC na mieru</a>
 
       </li>
       <li class="nav-item normal">
 
-        <span>PC na mieru</span>
+        <a href="pc-na-mieru.html">Delid CPU</a>
 
       </li>
       <li class="nav-item normal">
 
-        <span>Delid CPU</span>
+        <a href="pc-na-mieru.html">Doprava a platba</a>
 
       </li>
       <li class="nav-item normal">
 
-        <span>Doprava a platba</span>
+        <a href="pc-na-mieru.html">Kontakt</a>
 
       </li>
-      <li class="nav-item normal">
 
-        <span>Kontakt</span>
-
-      </li>
+      <!-- nav-item "menu" mobile-only -->
       <li class="nav-item mobile" id="menu">
         <p class="nav-item-text">menu</p>
       </li>
     </ul>
+
+    <!-- special nav page mobile-only -->
     <div class="nav-menu-mobile">
       <span class="exit">XXX</span>
       <li class="nav-menu-item">
 
-        <span>Hlavna Stranka</span>
+        <a href="#" class="active">Hlavná Stránka</a>
 
       </li>
       <li class="nav-menu-item">
 
-        <span>PC na mieru</span>
+        <a href="pc-na-mieru.html">PC na mieru</a>
 
       </li>
       <li class="nav-menu-item">
 
-        <span>Delid CPU</span>
+        <a href="pc-na-mieru.html">Delid CPU</a>
 
       </li>
       <li class="nav-menu-item">
 
-        <span>Doprava a platba</span>
+        <a href="pc-na-mieru.html">Doprava a platba</a>
 
       </li>
       <li class="nav-menu-item">
 
-        <span>Kontakt</span>
+        <a href="pc-na-mieru.html">Kontakt</a>
 
       </li>
       <img src="logo.png" alt="PC Bastler" />
     </div>
   </nav>
 
+  <!-- main section -->
   <section class="main-section">
     <section class="main-section-content">
+
+      <!-- main section header -->
       <header class="main-section-header">
 
         <h1>PC Bastler</h1>
       </header>
 
-      <h4 class="main-section-desc">Zložíme PC presne podľa Vašich potrieb a očakávaní. Skusenosti a kvalita za tu najvyhodnejsiu cenu.</h4>
+      <!-- main section text -->
+      <h4 class="main-section-desc">Zložíme PC presne podľa Vašich potrieb a očakávaní. Skúsenosti a kvalita za tu najvýhodnejšiu cenu.</h4>
       <div class="main-section-see-more">
-        <span class="arrow-text">Preco prave my?</span>
+        <span class="arrow-text">Prečo práve my?</span>
         <br>
         <i class="fa fa-arrow-down" aria-hidden="true"></i>
       </div>
@@ -103,22 +121,9 @@
     </section>
   </section>
 
+  <!-- body with side sections and review section -->
   <body>
-    <section class="side-section normal">
-      <article class="side-section-content">
-        <!-- <img src="http://files.temptec.webnode.sk/200000013-a72e7a8284/200/PC.png" alt="PC" /> -->
-      </article>
-      <article class="side-section-text" id="see-more">
-
-        <h2>PC zostavy na mieru</h2>
-
-        <p class="main-section-desc">
-          Každý potrebuje PC na to svoje. Vašnivý hráč, ktorý si chce vychutnať tie najlepšie detaily? Práca v kancelárii, Microsoft Office, tlač dokumentov? Dizajn, grafika, strih videa či úprava hudby? Zložíme PC presne podľa Vašich potrieb a očakávaní!
-        </p>
-
-      </article>
-    </section>
-    <section class="side-section mobile">
+    <section class="side-section mobile" id="see-more">
       <article class="side-section-content first">
         <!-- <img src="http://files.temptec.webnode.sk/200000013-a72e7a8284/200/PC.png" alt="PC" /> -->
 
@@ -162,13 +167,15 @@
           Delid je slúži hlavne na zníženie teplôt, ktoré môžu vo výsledku byť až o 20°C nižšie! Svoje uplatnenie má hlavne pri taktovaní a pre dosiahnutie tichšieho chodu PC. Pri objednávke PC na mieru s procesorom Intel rady "K" dostanete 20% zľavu na delid "Profi".
         </h4>
 
-        <span>Vediet viac</span><br>
-        <i class="fa fa-bullseye" aria-hidden="true"></i>
+        <div class="side-section-see-more">
+          <span>Vediet viac</span><br>
+          <i class="fa fa-bullseye" aria-hidden="true"></i>
+        </div>
 
       </article>
     </section>
     <section class="review-section">
-      <section class="review-section-content">
+      <section class="review-section-div">
         <header class="review-section-header">
 
           <h2>Recenzie</h2>
@@ -208,7 +215,7 @@
     </section>
   </body>
   <footer>
-    <h2 class="footer-header">Kde nas najdete?</h2>
+    <h2 class="footer-header">Kde nás nájdete?</h2>
     <section class="footer-map">
 
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2660.309475028372!2d17.476507715900787!3d48.18138845608711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476b7d522c98e9b9%3A0x8b8b6709abac3602!2zSHJ1YsOhIEJvcsWhYSAxODIsIDkyNSAyMyBIcnViw6EgQm9yxaFh!5e0!3m2!1ssk!2ssk!4v1504255161884" class="footer-map" allowfullscreen></iframe>

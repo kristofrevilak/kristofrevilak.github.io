@@ -16,4 +16,14 @@ $(function(){
       scrollTop: $("#see-more").offset().top
     }, 800);
   });
+  $(".main-section-see-more").hover(function() {
+    $(".fa-arrow-down").animate({top:"10px"},200,function(){});
+  }, function() {
+    $(".fa-arrow-down").animate({top:"0px"},200,function(){});
+  });
+  $(".side-section-see-more").hover(function() {
+    $(".fa-bullseye").animate({width:"10px"},200,function(){});
+  }, function() {
+    $(".fa-bullseye").animate({width:"0px"},200,function(){});
+  });
 })
