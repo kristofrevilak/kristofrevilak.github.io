@@ -90,10 +90,6 @@ body::-webkit-scrollbar {
     width: 0;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 335fa143e3085b54dd439b5ed0802e6b67dfa8d9
 
 /*body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -117,7 +113,7 @@ body::-webkit-scrollbar-thumb {
 html:before,html:after,body:before,body:after{
 
 		content:"";
-    background:#F3C9DD;
+    background-color:#F3C9DD;
     position:fixed;
     display:block;
     z-index:5;
@@ -213,7 +209,22 @@ li a{
 
 }
 
-
+@media screen and (min-width: 600px){
+	#mobile{
+		display: none;
+	}
+	#home, #abme, #proj, #cont{
+		display: block;
+	}
+}
+@media screen and (max-width: 600px){
+	#mobile{
+		display: block;
+	}
+	#home, #abme, #proj, #cont{
+		display: none;
+	}
+}
 
 nav ul li a:hover{
 
@@ -262,16 +273,20 @@ nav:hover{
   font-weight: 400;
 	/*padding-top: 5%;*/
 	color: #FDA69A;
-	margin-left: 1.2%;
-	position: relative;
-	top: 5%;
-
+	padding-left: 1.5%;
+	padding-top: 20%;
 }
 
 #center:hover{
 
 	color: rgba(255, 0, 0, 0.5);
 
+}
+
+@media screen and (max-width: 500px){
+	#center{
+		font-size: 65px;
+	}
 }
 
 
@@ -287,10 +302,18 @@ nav:hover{
   line-height: 120%;
   /*font-family: 'Trirong', serif;*/
 	font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-	position: absolute;
-	right: 1.2%;
-	top: 1.2%;
+	font-weight: 400;
+	float: right;
+	padding-right: 1.5%;
+	padding-top: 1.5%;
+}
+@media screen and (max-width: 500px){
+	.portfolio{
+		padding-right: 0%;
+		padding-left: 3%;
+		padding-top: 1.5%;
+		font-size: 30px;
+	}
 }
 
 
@@ -304,13 +327,11 @@ nav:hover{
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
-	text-align: center;
-	margin: 0 auto;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 200;
 	display: block;
 	font-size: 1.5vw;
-
+	text-align: center;
 }
 
 .go-down:hover{
@@ -321,20 +342,9 @@ nav:hover{
 
 }
 
-
-/* The arrow */
 #view-projects{
-
-	position: absolute;
-	bottom: 5%;
-	display: block;
-	left: 48.7%;
-	cursor: default;
-
+	margin-top: 2%;
 }
-
-
-
 
 /* ################# */
 /* The projects page */
@@ -353,7 +363,7 @@ nav:hover{
 	font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 	margin: 0 auto;
-	margin-top: 50%;
+	/* margin-top: 50%; */
 	margin-bottom: 18%;
 
 }
@@ -372,6 +382,13 @@ nav:hover{
 
 /*view projects*/
 
+.front-project{
+	background: url("img/image1.jpeg");
+	padding-top: 15%;
+	padding-bottom: 10%;
+	margin-top: 30%;
+	color: white;
+}
 
 
 
@@ -494,6 +511,11 @@ nav:hover{
 	margin-bottom: 20%;
 	margin-top: 35%;
 }
+@media screen and (max-width: 600px){
+	.contact{
+		/* display: none; */
+	}
+}
 
 .space{
 	height: 1%;
@@ -530,6 +552,11 @@ nav:hover{
 
 }
 
+@media screen and (max-width: 600px){
+	.social{
+		/* display: none; */
+	}
+}
 .social p{
 
 	padding: 5%;

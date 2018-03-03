@@ -24,7 +24,7 @@ proj.on('click', function(event) {
   event.preventDefault();
   /* Act on the event */
   $('html, body').animate({
-    scrollTop: $("#divForTheProjects").offset().top - 300
+    scrollTop: $("#divForTheProjects").offset().top
   }, 800);
   // $.scrollTo("#divForTheProjects", 500);
   proj.addClass('active');
@@ -36,7 +36,7 @@ abme.on('click', function(event) {
   /* Act on the event */
   // $.scrollTo(".aboutme", 500);
   $('html, body').animate({
-    scrollTop: $(".aboutme").offset().top - 80
+    scrollTop: $(".aboutme").offset().top - 50
   }, 800);
   abme.addClass('active');
 });
@@ -61,7 +61,7 @@ goDown.click(function(event) {
   /* Act on the event */
   // $.scrollTo("#divForTheProjects", 1000);
   $('html, body').animate({
-    scrollTop: $("#divForTheProjects").offset().top - 300
+    scrollTop: $("#divForTheProjects").offset().top - 23
   }, 500);
 });
 
@@ -143,8 +143,9 @@ $('.contact').bind('inview', function(event, isInView) {
 $('.space').bind('inview', function(event, isInView) {
   if (isInView) {
       $(".social").animate({
-        "right": "16.5%",
-        "font-size": "4vw"},
+        "right": "33vw",
+        "font-size": "4vw",
+        "display": "block"},
         250, function() {
         /* stuff to do after animation is complete */
       });
