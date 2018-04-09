@@ -76,7 +76,8 @@ body{
 	padding: 0;
   margin: 0;
   height: 100%;
-  width: 100%;
+	width: 100%;
+	background: rgb(240, 223, 231);
 	font-family: 'Cormorant Garamond', serif;
 
 }
@@ -113,7 +114,7 @@ body::-webkit-scrollbar-thumb {
 html:before,html:after,body:before,body:after{
 
 		content:"";
-    background-color:#F3C9DD;
+    background-color:rgb(255, 255, 255);
     position:fixed;
     display:block;
     z-index:5;
@@ -124,7 +125,7 @@ html:before,html:after,body:before,body:after{
 /* ...and position them! */
 html:before{
 
-		height:.65vw;
+		height:40px;
     left:0;
     right:0;
     top:0;
@@ -134,7 +135,7 @@ html:before{
 
 html:after{
 
-		width:.65vw;
+		width:40px;
     top:0;
     right:0;
 		bottom:0;
@@ -144,7 +145,7 @@ html:after{
 
 body:before{
 
-		height:.65vw;
+		height:40px;
     right:0;
     bottom:0;
     left:0;
@@ -154,7 +155,7 @@ body:before{
 
 body:after{
 
-		width:.65vw;
+		width:40px;
     top:0;
     bottom:0;
     left:0;
@@ -168,91 +169,8 @@ body:after{
 /* The navbar css */
 /* ###############*/
 
-
-#x{
-	display: none;
-}
-
-ul{
-
-	list-style: none;
-	display: block;
-	float: left;
-  margin-left: 7%;
-	position: fixed;
-	color: black;
-	margin-top: 10%;
-
-}
-
-@media screen and (max-width: 640px){
-
-	.nadpis, .go-down, #view-dem{
-	
-	display: none;
-
-	}
-
-}
-
-
-li a{
-
-	display: inline-block;
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-	color: black;
-	text-decoration: none;
-	padding-top: 5%;
-
-}
-
-@media screen and (min-width: 600px){
-	#mobile{
-		display: none;
-	}
-	#home, #abme, #proj, #cont{
-		display: block;
-	}
-}
-@media screen and (max-width: 600px){
-	#mobile{
-		display: block;
-	}
-	#home, #abme, #proj, #cont{
-		display: none;
-	}
-}
-
-nav ul li a:hover{
-
-	text-decoration: line-through;
-	margin-top: 10%;
-
-}
-
-
-nav:hover{
-
-		background-color: white;
-
-}
-
-/* The active "li" css */
-.active a{
-
-	color: cyan;
-	text-decoration: line-through;
-
-}
-
-.active a:hover{
-
-	text-decoration: none;
-	margin-top: 0%;
-
+header{
+	overflow: hidden;
 }
 
 
@@ -260,26 +178,88 @@ nav:hover{
 /* The landing page */
 /* ################ */
 
+.word{
+	opacity: 0;
+}
 
-/* The Kristof Revilak title */
+.first-view{
+	padding: 100px;
+	padding-left: 100px;
+	overflow: hidden;
+	-moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+	
+	/* display: none; */
+	text-transform: lowercase;
+	cursor: default;
+}
+.hi, .my-name, .name, .and-this, .is-my, .port{
+	opacity: 0;
+}
+
+.hi, .my-name, .and-this, .is-my, .name, .portfolio{
+	/* position: absolute;
+	top: 20px;
+	left: 20px; */
+	padding-left: 160px;
+	padding-top: 40px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 66px;
+	font-weight: 900;
+	color: rgb(48, 66, 104);
+}
+.my-name{
+	top: 40px;
+}
+.name{
+	color: red;
+	padding-left: 220px
+}
 #center{
-
-	width: 50%;
-  text-align: left;
-	font-size: 11vw;
-  letter-spacing: 2vw;
+	font-size: 100px;
+	font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+	overflow: hidden;
+	width: 100%;
+}
+.and-this{
+	top: 200px;
+}
+.is-my{
+	top: 220px;
+}
+.portfolio{
+	width: 400px;
+	font-size: 5vw;
+  line-height: 120%;
   /*font-family: 'Trirong', serif;*/
 	font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-	/*padding-top: 5%;*/
-	color: #FDA69A;
-	padding-left: 1.5%;
-	padding-top: 20%;
+	font-weight: 700;
+	color: rgb(255, 0, 0);
+	padding: 20px;
+	margin-top: 80px;
+	margin-left: 160px;
+	border: 1px dotted rgba(255, 0, 0, 0.5);
+	overflow: hidden;
 }
+
+
+
+.left{
+	width: 50%;
+	clear: both;
+}
+.right{
+	width: 50%;
+	float: left;
+}
+
+
 
 #center:hover{
 
-	color: rgba(255, 0, 0, 0.5);
+	
 
 }
 
@@ -289,24 +269,23 @@ nav:hover{
 	}
 }
 
-
+.img{
+	width: 400px;
+	overflow: hidden;
+	position: absolute;
+	right: 270px;
+	opacity: 0;
+	bottom: -80px;
+}
+.img img{
+	width: 400px;
+	filter: grayscale(60%) blur(.5px) sepia(30%) opacity(80%);
+}
 
 
 
 /* The portfolio sign */
-.portfolio{
-	width: 30%;
-  text-align: right;
-	font-size: 5vw;
-  letter-spacing: 1.2vw;
-  line-height: 120%;
-  /*font-family: 'Trirong', serif;*/
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
-	float: right;
-	padding-right: 1.5%;
-	padding-top: 1.5%;
-}
+
 @media screen and (max-width: 500px){
 	.portfolio{
 		padding-right: 0%;
@@ -509,7 +488,7 @@ nav:hover{
 	top: 0%;
 	text-align: center;
 	margin-bottom: 20%;
-	margin-top: 35%;
+	margin-top: 300px;
 }
 @media screen and (max-width: 600px){
 	.contact{
@@ -533,8 +512,11 @@ nav:hover{
 	transform: rotate(90deg);
 	position: fixed;
 	top: 50%;
-	right: -3%;
+	opacity: 0;
+	right: -4%;
 	cursor: default;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: rgb(48, 66, 104);
 
 }
 
@@ -543,12 +525,16 @@ nav:hover{
 .social{
 
 	position: fixed;
-	bottom: 5%;
+	bottom: 1%;
+	opacity: 0;
 	right: 8%;
 	margin-top: 1%;
 	cursor: pointer;
 	font-size: 1vw;
 	padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	
+	color: rgb(48, 66, 104);
 
 }
 
