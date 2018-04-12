@@ -29,6 +29,8 @@ $(document).ready(function () {
   firstPage.to(".social",1, {opacity:1,bottom:"5%"},"-=1.25");
   firstPage.to(".img",1.5, {opacity:1,bottom:"-100px"}, "-=0.75");
 
+  firstPage.to("#img")
+
 
 
 
@@ -61,15 +63,15 @@ $(document).ready(function () {
   //   }, 500);
   // });
 
-  // $("#tribute").click(function(event) {
-  //   /* Act on the event */
-  //   window.open("tribute/index.html")
-  // });
+  $("#tribute").click(function(event) {
+    /* Act on the event */
+    window.open("tribute/index.html")
+  });
 
-  // $("#nodeblog").click(function(event) {
-  //   /* Act on the event */
-  //   window.open("quotemachine/index.html")
-  // });
+  $("#nodeblog").click(function(event) {
+    /* Act on the event */
+    window.open("quotemachine/index.html")
+  });
 
 
   // $('.space').bind('inview', function(event, isInView) {
