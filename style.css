@@ -171,6 +171,24 @@ body:after{
 
 header{
 	overflow: hidden;
+	position: fixed;
+	right: 8%;
+	font-family: 'Source Sans Pro', sans-serif;
+	top: 20px;
+	color: rgb(48, 66, 104);
+}
+header p{
+	display:block;
+	position: fixed;
+}
+#pr{
+	right: 9.5%;
+}
+#ab{
+	right: 14%;
+}
+#te{
+	right: 18.5%;
 }
 
 
@@ -279,7 +297,7 @@ header{
 }
 .img img{
 	width: 400px;
-	filter: grayscale(60%) blur(.5px) sepia(30%) opacity(80%);
+	filter: grayscale(30%) blur(.8px) sepia(30%) opacity(80%);
 }
 
 
@@ -392,8 +410,8 @@ header{
 	margin-left: 90%;
 	width: 50%;
 	display: block;
-	font-family: 'Arapey', cursive;
-
+	font-family: 'Source Sans Pro', sans-serif;
+	color: rgb(48, 66, 104);
 }
 
 
@@ -417,6 +435,14 @@ header{
 	transform: scale(1.1);
 }
 
+#quote-container, #tribute-container{
+	width: 100%;
+	overflow: hidden;
+	background-color: rgb(236, 225, 119);
+}
+#tribute-container{
+	background-color: rgb(208, 180, 235);
+}
 
 #nodeblog{
 
@@ -451,7 +477,7 @@ header{
 /* The title in the text */
 .about-me{
 
-	color:#F3C9DD;
+	color:rgb(255, 255, 255);
 	font-size: 8vw;
 
 
@@ -462,13 +488,13 @@ header{
 .aboutme{
 
 	font-family: 'Source Sans Pro', sans-serif;
-	width: 70%;
+	width: 100%;
+	padding: 10%;
 	font-size: 4vw;
-	color: black;
-	margin-left: 20%;
-	margin-right: 10%;
-	margin-bottom: 7%;
-
+	color: rgb(48, 66, 104);
+	background-color: rgb(134, 255, 255);
+	display: block;
+	margin: 0 auto;
 }
 
 

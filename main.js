@@ -7,7 +7,7 @@ $(document).ready(function () {
   ]
   let firstPage = new TimelineMax();
   let controller = new ScrollMagic.Controller();
-  let scene = new ScrollMagic.Scene({
+  let firstPageDissapear = new ScrollMagic.Scene({
       triggerElement: "#trigger1",
       duration: "80%"
       })
@@ -27,10 +27,9 @@ $(document).ready(function () {
 
   firstPage.to("#that-p",1, {opacity:1,right:"-2%"});
   firstPage.to(".social",1, {opacity:1,bottom:"5%"},"-=1.25");
+  firstPage.to("header",1, {opacity:1,top:"10%"},"-=1");
   firstPage.to(".img",1.5, {opacity:1,bottom:"-100px"}, "-=0.75");
-
-  firstPage.to("#img")
-
+});
 
 
 
@@ -93,12 +92,12 @@ $(document).ready(function () {
   //     });
   //   }
   // });
-});
+// });
 
 
 
 
-$(window).on('load', function() {
+// $(window).on('load', function() {
   // var colors = ["#FDA69A", "#E69B98", "#FD6F88", "#E665A3", "#FD7CE1"];
   // var curCol = 0,
   // timer = setInterval(function () {
@@ -116,9 +115,9 @@ $(window).on('load', function() {
 
 
 
-});
+// });
 
-$(window).scroll((e)=>{
-  e.preventDefault();
-});
+// $(window).scroll((e)=>{
+//   e.preventDefault();
+// });
 
