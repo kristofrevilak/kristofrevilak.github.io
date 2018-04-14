@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 /* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -28,14 +30,18 @@ blockquote, q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after {
-  content: '';
-  content: none;
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
 }
 
-q:before, q:after {
-  content: '';
-  content: none;
+q {
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
 }
 
 table {
@@ -47,18 +53,19 @@ table {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-*:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  &:before, &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 }
 
 /* #################### */
 /* End of the CSS RESET */
 /* #################### */
+
 /* The basic selectors */
+
 html {
   padding: 0;
   height: 100%;
@@ -70,15 +77,15 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  background: #f0dfe7;
+  background: rgb(240, 223, 231);
   font-family: 'Cormorant Garamond', serif;
-}
-
-body::-webkit-scrollbar {
-  width: 0;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 /* The scrollbar settings */
+
 /*body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
@@ -88,65 +95,76 @@ body::-webkit-scrollbar-thumb {
   background-color: darkcyan;
   outline: 1px solid slategrey;
 }*/
+
 /* ######################### */
 /* The "body borders" effect */
 /* ######################### */
+
 /* Create a series of empty pseudo-elements... */
-html:before, html:after {
-  content: "";
-  background-color: white;
-  position: fixed;
-  display: block;
-  z-index: 5;
+
+html {
+  &:before, &:after {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    display: block;
+    z-index: 5;
+  }
 }
 
-body:before, body:after {
-  content: "";
-  background-color: white;
-  position: fixed;
-  display: block;
-  z-index: 5;
+body {
+  &:before, &:after {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    display: block;
+    z-index: 5;
+  }
 }
 
 /* ...and position them! */
-html:before {
-  height: 40px;
-  left: 0;
-  right: 0;
-  top: 0;
+
+html {
+  &:before {
+    height: 40px;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  &:after {
+    width: 40px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
-html:after {
-  width: 40px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-
-body:before {
-  height: 40px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-body:after {
-  width: 40px;
-  top: 0;
-  bottom: 0;
-  left: 0;
+body {
+  &:before {
+    height: 40px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &:after {
+    width: 40px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 /* ############## */
 /* The navbar css */
 /* ###############*/
+
 header {
   overflow: hidden;
   position: fixed;
   right: 8%;
   font-family: 'Source Sans Pro', sans-serif;
   top: 20px;
-  color: #304268;
+  color: rgb(48, 66, 104);
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAMAAACeyVWkAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAEZJREFUeAGt0EEKgDAUA1En9z+0qEENhA+FvlUZQqE9Bnynlmlr2iVkSY66AHrg+MddSUiU6VuxqMhYquzcCvO6PZjhx5oTQ+8Bs3EshqIAAAAASUVORK5CYII=), auto;
   -webkit-touch-callout: none;
   /* iOS Safari */
@@ -159,30 +177,30 @@ header {
   -ms-user-select: none;
   /* Internet Explorer/Edge */
   user-select: none;
-}
-
-header p {
-  display: block;
-  position: fixed;
-  transition: 0.5s ease-out;
-}
-
-header p:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -10px;
-  right: 0;
-  bottom: 0;
-  overflow: display;
-  width: 70px;
-  z-index: -1;
-  transition: 0.05s ease-out;
-}
-
-header p:hover:before {
-  animation: glitchy 0.2s ease 0.1s infinite;
-  background-color: #00ffff;
+  p {
+    display: block;
+    position: fixed;
+    transition: 0.5s ease-out;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -10px;
+      right: 0;
+      bottom: 0;
+      overflow: display;
+      width: 70px;
+      z-index: -1;
+      transition: 0.05s ease-out;
+    }
+    &:hover {
+      &:before{
+        animation: glitchy 0.2s ease 0.1s infinite;
+        background-color: #00ffff;
+      }
+      
+    }
+  }
 }
 
 #pr {
@@ -200,6 +218,7 @@ header p:hover:before {
 /* ################ */
 /* The landing page */
 /* ################ */
+
 .word {
   opacity: 0;
 }
@@ -229,7 +248,7 @@ header p:hover:before {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 66px;
   font-weight: 900;
-  color: #304268;
+  color: rgb(48, 66, 104);
 }
 
 .my-name {
@@ -264,7 +283,7 @@ header p:hover:before {
   /*font-family: 'Trirong', serif;*/
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
-  color: red;
+  color: rgb(255, 0, 0);
   padding: 20px;
   margin-top: 80px;
   margin-left: 160px;
@@ -282,6 +301,8 @@ header p:hover:before {
   float: left;
 }
 
+#center:hover {}
+
 @media screen and (max-width: 500px) {
   #center {
     font-size: 65px;
@@ -295,16 +316,16 @@ header p:hover:before {
   right: 270px;
   opacity: 0;
   bottom: -80px;
-}
-
-.img img {
-  width: 400px;
-  border: 1px solid black;
-  animation: borderr 0.2 ease-in 3s infinite;
-  filter: grayscale(30%) blur(0.8px) sepia(30%) opacity(80%);
+  img {
+    width: 400px;
+    border: 1px solid black;
+    animation: borderr 0.2 ease-in 3s infinite;
+    filter: grayscale(30%) blur(0.8px) sepia(30%) opacity(80%);
+  }
 }
 
 /* The portfolio sign */
+
 @media screen and (max-width: 500px) {
   .portfolio {
     padding-right: 0%;
@@ -315,6 +336,7 @@ header p:hover:before {
 }
 
 /* Another div for the arrow */
+
 .go-down {
   cursor: default;
   -webkit-transition: all 0.2s linear;
@@ -326,12 +348,11 @@ header p:hover:before {
   display: block;
   font-size: 1.5vw;
   text-align: center;
-}
-
-.go-down:hover {
-  color: #F3C9DD;
-  font-weight: 800;
-  font-size: 2.5vw;
+  &:hover {
+    color: #F3C9DD;
+    font-weight: 800;
+    font-size: 2.5vw;
+  }
 }
 
 #view-projects {
@@ -341,7 +362,9 @@ header p:hover:before {
 /* ################# */
 /* The projects page */
 /* ################# */
+
 /* The projects title */
+
 .nadpis {
   width: 35%;
   text-align: center;
@@ -363,6 +386,7 @@ header p:hover:before {
 }
 
 /*view projects*/
+
 .front-project {
   background: url("img/image1.jpeg");
   padding-top: 15%;
@@ -374,21 +398,22 @@ header p:hover:before {
 /* #################### */
 /* The projects squares */
 /* #################### */
+
 /*the main div*/
+
 .text {
   width: 45%;
   margin: 15% auto;
   background-color: rgba(255, 0, 0, 0.5);
   padding: 10%;
-}
-
-.text h3 {
-  font-size: 8vw;
-  margin-left: 90%;
-  width: 50%;
-  display: block;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #304268;
+  h3 {
+    font-size: 8vw;
+    margin-left: 90%;
+    width: 50%;
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(48, 66, 104);
+  }
 }
 
 #tribute {
@@ -405,26 +430,25 @@ header p:hover:before {
   -webkit-filter: grayscale(100%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
-}
-
-#tribute:hover {
-  -webkit-filter: grayscale(0%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%);
-  transform: scale(1.1);
+  &:hover {
+    -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }
 }
 
 #quote-container {
   width: 100%;
   overflow: hidden;
-  background-color: #ece177;
+  background-color: rgb(236, 225, 119);
 }
 
 #tribute-container {
   width: 100%;
   overflow: hidden;
-  background-color: #ece177;
-  background-color: #d0b4eb;
+  background-color: rgb(236, 225, 119);
+  background-color: rgb(208, 180, 235);
 }
 
 #nodeblog {
@@ -441,32 +465,34 @@ header p:hover:before {
   -webkit-filter: grayscale(100%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
-}
-
-#nodeblog:hover {
-  -webkit-filter: grayscale(0%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%);
-  transform: scale(1.1);
+  &:hover {
+    -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }
 }
 
 /* ############ */
 /* The about me */
 /* ############ */
+
 /* The title in the text */
+
 .about-me {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 8vw;
 }
 
 /* The about me text */
+
 .aboutme {
   font-family: 'Source Sans Pro', sans-serif;
   width: 100%;
   padding: 10%;
   font-size: 4vw;
-  color: #304268;
-  background-color: #86ffff;
+  color: rgb(48, 66, 104);
+  background-color: rgb(134, 255, 255);
   display: block;
   margin: 0 auto;
 }
@@ -474,6 +500,7 @@ header p:hover:before {
 /* ################ */
 /* The contact page */
 /* ################ */
+
 .contact {
   height: 1%;
   font-size: 4vw;
@@ -499,7 +526,9 @@ header p:hover:before {
 /* ############### */
 /* The footer page */
 /* ############### */
+
 /* The rotated footer text with the year */
+
 #that-p {
   font-size: 1.5vw;
   transform: rotate(90deg);
@@ -509,10 +538,11 @@ header p:hover:before {
   right: -4%;
   cursor: default;
   font-family: 'Source Sans Pro', sans-serif;
-  color: #304268;
+  color: rgb(48, 66, 104);
 }
 
 /* same css for all the social buttons */
+
 .social {
   position: fixed;
   bottom: 1%;
@@ -523,13 +553,12 @@ header p:hover:before {
   font-size: 1vw;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  color: #304268;
-}
-
-.social p {
-  padding: 5%;
-  text-align: center;
-  display: inline;
+  color: rgb(48, 66, 104);
+  p {
+    padding: 5%;
+    text-align: center;
+    display: inline;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -554,74 +583,30 @@ header p:hover:before {
 }
 
 @keyframes glitchy {
-  0% {
-    transform: translate3d(-6px, 4px, 2px);
-  }
-  25% {
-    transform: translate3d(-4px, 2px, -6px);
-  }
-  50% {
-    transform: translate3d(0px, 4px, 2px);
-  }
-  75% {
-    transform: translate3d(2px, 6px, -4px);
-  }
-  100% {
-    transform: translate3d(-4px, 6px 0px);
-  }
+  0%   {transform: translate3d(-6px, 4px, 2px);}
+  25%  {transform: translate3d(-4px, 2px, -6px);}
+  50%  {transform: translate3d(0px, 4px, 2px);}
+  75%  {transform: translate3d(2px, 6px, -4px);}
+  100%  {transform: translate3d(-4px, 6px 0px);}
 }
-
 @-webkit-keyframes glitchy {
-  0% {
-    transform: translate3d(-6px, 4px, 2px);
-  }
-  25% {
-    transform: translate3d(-4px, 2px, -6px);
-  }
-  50% {
-    transform: translate3d(0px, 4px, 2px);
-  }
-  75% {
-    transform: translate3d(2px, 6px, -4px);
-  }
-  100% {
-    transform: translate3d(-4px, 6px 0px);
-  }
+  0%   {transform: translate3d(-6px, 4px, 2px);}
+  25%  {transform: translate3d(-4px, 2px, -6px);}
+  50%  {transform: translate3d(0px, 4px, 2px);}
+  75%  {transform: translate3d(2px, 6px, -4px);}
+  100%  {transform: translate3d(-4px, 6px 0px);}
 }
-
 @keyframes borderr {
-  0% {
-    border: 2px solid grey;
-  }
-  25% {
-    border: 5px solid #25f0ff;
-  }
-  50% {
-    border: 1px solid #ff3838;
-  }
-  75% {
-    border: 3px solid #4df837;
-  }
-  100% {
-    border: 6px solid #b539e6;
-  }
+  0%   {border: 2px solid grey;}
+  25%  {border: 5px solid rgb(37, 240, 255);}
+  50%  {border: 1px solid rgb(255, 56, 56);}
+  75%  {border: 3px solid rgb(77, 248, 55);}
+  100%  {border: 6px solid rgb(181, 57, 230);}
 }
-
 @-webkit-keyframes borderr {
-  0% {
-    border: 2px solid grey;
-  }
-  25% {
-    border: 5px solid #25f0ff;
-  }
-  50% {
-    border: 1px solid #ff3838;
-  }
-  75% {
-    border: 3px solid #4df837;
-  }
-  100% {
-    border: 6px solid #b539e6;
-  }
+  0%   {border: 2px solid grey;}
+  25%  {border: 5px solid rgb(37, 240, 255);}
+  50%  {border: 1px solid rgb(255, 56, 56);}
+  75%  {border: 3px solid rgb(77, 248, 55);}
+  100%  {border: 6px solid rgb(181, 57, 230);}
 }
-/*# sourceMappingURL=style.css.map */
