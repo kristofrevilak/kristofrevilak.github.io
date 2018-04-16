@@ -402,7 +402,7 @@ header {
 /*the main div*/
 
 .text {
-  width: 45%;
+  width: 10%;
   margin: 15% auto;
   background-color: rgba(255, 0, 0, 0.5);
   padding: 10%;
@@ -457,7 +457,9 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
-  padding: 10%;
+  overflow: hidden;
+  padding: 5%;
+  width: 10px;
   -webkit-transition: all .4s ease-in-out;
   -moz-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
