@@ -13,6 +13,8 @@ var cont = $('#cont');
 
 home.on('click', function(event) {
   event.preventDefault();
+  console.log("jjj");
+  console.log("click");
   /* Act on the event */
   home.addClass('active');
   // $.scrollTo("#center", 500);
@@ -22,6 +24,7 @@ home.on('click', function(event) {
 
 proj.on('click', function(event) {
   event.preventDefault();
+  console.log("jjj");
   /* Act on the event */
   $('html, body').animate({
     scrollTop: $("#divForTheProjects").offset().top
@@ -33,6 +36,7 @@ proj.on('click', function(event) {
 
 abme.on('click', function(event) {
   event.preventDefault();
+  console.log("jjj");
   /* Act on the event */
   // $.scrollTo(".aboutme", 500);
   $('html, body').animate({
@@ -44,6 +48,7 @@ abme.on('click', function(event) {
 
 cont.on('click', function(event) {
   event.preventDefault();
+  console.log("jjj");
   /* Act on the event */
   cont.addClass('active');
   // $.scrollTo("#center", 500);

@@ -229,14 +229,13 @@ li a{
 nav ul li a:hover{
 
 	text-decoration: line-through;
-	margin-top: 10%;
 
 }
 
 
 nav:hover{
 
-		background-color: white;
+	background-color: white;
 
 }
 
