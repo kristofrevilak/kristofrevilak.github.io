@@ -59,73 +59,44 @@ table {
 /* End of the CSS RESET */
 /* #################### */
 
-
-/* The basic selectors */
-@media screen and (max-width:700px){
-	header h2{
-		width: 94%;
-		font-size: 4.9vw;
-		text-align: center;
-		margin: 5% auto;
-	}
-	#lame{
-		border: 5px solid blue;
-		width: 70%;
-		padding: 5px;
-		float: right;
-	}
-	#lame:focus{
-		border-color: green;
-	}
-	#random{
-		width: 30%;
-		text-align: center;
-		display: block;
-		text-decoration: none;
-		color: black;
-		padding: 8px;
-	}
-	section{
-		width: 100%;
-		margin-top: 50px;
-	}
-	section h1{
-		font-size: 5vw;
-		width: 100%;
-	}
+body{
+	font-family: 'Gugi', cursive !important;
+	background: rgb(31, 31, 255);
 }
-
-@media screen and (max-width:900px) and (min-width:700px){
-	header h2{
-		width: 94%;
-		font-size: 4.9vw;
-		text-align: center;
-		margin: 5% auto;
-	}
-	#lame{
-		border: 5px solid blue;
-		width: 70%;
-		padding: 5px;
-		float: right;
-	}
-	#lame:focus{
-		border-color: green;
-	}
-	#random{
-		width: 30%;
-		text-align: center;
-		display: block;
-		text-decoration: none;
-		color: black;
-		padding: 8px;
-	}
-	section{
-		width: 50%;
-		margin-top: 50px;
-		float: left;
-	}
-	section h1{
-		font-size: 5vw;
-		width: 100%;
-	}
+header{
+	position: absolute;
+	bottom: 130px;
+	left: 100px;
+	font-size: 70px;
+}
+header h2{
+	position: relative;
+	padding-bottom: 25px;
+	color: white;
+}
+.search{
+	position: absolute;
+	top: 30%;
+	left: 25%;
+}
+input{
+	padding: 7px 10px;
+	
+	font-size: 70px;
+	background: rgba(255,255,255,0.2);
+	border: none;
+	border-radius: 5px 0px 0px 5px;
+}
+a{
+	font-size: 70px;
+	text-decoration: none;
+	color: rgba(255,255,255,0.8);
+	background: rgba(187, 187, 187, 0.582);
+	padding: 14px 10px;
+	padding-bottom: 15px;
+	margin: 0;
+	position: relative;
+	left: -5px;
+	top: -3px;
+	border-radius: 0px 5px 5px 0px;
 }
