@@ -189,32 +189,12 @@ header p:hover:before {
   right: 9.5%;
 }
 
-nav ul li a:hover{
-
-	text-decoration: line-through;
-
+#ab {
+  right: 14%;
 }
 
-
-nav:hover{
-
-	background-color: white;
-
-}
-
-/* The active "li" css */
-.active a{
-
-	color: cyan;
-	text-decoration: line-through;
-
-}
-
-.active a:hover{
-
-	text-decoration: none;
-	margin-top: 0%;
-
+#te {
+  right: 18.5%;
 }
 
 /* ################ */
