@@ -1,0 +1,614 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+q {
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  &:before, &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+/* #################### */
+/* End of the CSS RESET */
+/* #################### */
+
+/* The basic selectors */
+
+html {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(240, 223, 231);
+  font-family: 'Cormorant Garamond', serif;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+/* The scrollbar settings */
+
+/*body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkcyan;
+  outline: 1px solid slategrey;
+}*/
+
+/* ######################### */
+/* The "body borders" effect */
+/* ######################### */
+
+/* Create a series of empty pseudo-elements... */
+
+html {
+  &:before, &:after {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    display: block;
+    z-index: 5;
+  }
+}
+
+body {
+  &:before, &:after {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    display: block;
+    z-index: 5;
+  }
+}
+
+/* ...and position them! */
+
+html {
+  &:before {
+    height: 40px;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  &:after {
+    width: 40px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+body {
+  &:before {
+    height: 40px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &:after {
+    width: 40px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+/* ############## */
+/* The navbar css */
+/* ###############*/
+
+header {
+  overflow: hidden;
+  position: fixed;
+  right: 8%;
+  font-family: 'Source Sans Pro', sans-serif;
+  top: 20px;
+  color: rgb(48, 66, 104);
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAMAAACeyVWkAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAEZJREFUeAGt0EEKgDAUA1En9z+0qEENhA+FvlUZQqE9Bnynlmlr2iVkSY66AHrg+MddSUiU6VuxqMhYquzcCvO6PZjhx5oTQ+8Bs3EshqIAAAAASUVORK5CYII=), auto;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  p {
+    display: block;
+    position: fixed;
+    transition: 0.5s ease-out;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -10px;
+      right: 0;
+      bottom: 0;
+      overflow: display;
+      width: 70px;
+      z-index: -1;
+      transition: 0.05s ease-out;
+    }
+    &:hover {
+      &:before{
+        animation: glitchy 0.2s ease 0.1s infinite;
+        background-color: #00ffff;
+      }
+      
+    }
+  }
+}
+
+#pr {
+  right: 9.5%;
+}
+
+#ab {
+  right: 14%;
+}
+
+#te {
+  right: 18.5%;
+}
+
+/* ################ */
+/* The landing page */
+/* ################ */
+
+.word {
+  opacity: 0;
+}
+
+.first-view {
+  padding: 100px;
+  padding-left: 100px;
+  overflow: hidden;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  /* display: none; */
+  text-transform: lowercase;
+  cursor: default;
+}
+
+.hi, .my-name, .name, .and-this, .is-my, .port {
+  opacity: 0;
+}
+
+.hi, .my-name, .and-this, .is-my, .name, .portfolio {
+  /* position: absolute;
+  top: 20px;
+  left: 20px; */
+  padding-left: 160px;
+  padding-top: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 66px;
+  font-weight: 900;
+  color: rgb(48, 66, 104);
+}
+
+.my-name {
+  top: 40px;
+}
+
+.name {
+  color: red;
+  padding-left: 220px;
+}
+
+#center {
+  font-size: 100px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  overflow: hidden;
+  width: 100%;
+}
+
+.and-this {
+  top: 200px;
+}
+
+.is-my {
+  top: 220px;
+}
+
+.portfolio {
+  width: 400px;
+  font-size: 5vw;
+  line-height: 120%;
+  /*font-family: 'Trirong', serif;*/
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  color: rgb(255, 0, 0);
+  padding: 20px;
+  margin-top: 80px;
+  margin-left: 160px;
+  border: 1px dotted rgba(255, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.left {
+  width: 50%;
+  clear: both;
+}
+
+.right {
+  width: 50%;
+  float: left;
+}
+
+#center:hover {}
+
+@media screen and (max-width: 500px) {
+  #center {
+    font-size: 65px;
+  }
+}
+
+.img {
+  width: 400px;
+  overflow: hidden;
+  position: absolute;
+  right: 270px;
+  opacity: 0;
+  bottom: -80px;
+  img {
+    width: 400px;
+    border: 1px solid black;
+    animation: borderr 0.2 ease-in 3s infinite;
+    filter: grayscale(30%) blur(0.8px) sepia(30%) opacity(80%);
+  }
+}
+
+/* The portfolio sign */
+
+@media screen and (max-width: 500px) {
+  .portfolio {
+    padding-right: 0%;
+    padding-left: 3%;
+    padding-top: 1.5%;
+    font-size: 30px;
+  }
+}
+
+/* Another div for the arrow */
+
+.go-down {
+  cursor: default;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  display: block;
+  font-size: 1.5vw;
+  text-align: center;
+  &:hover {
+    color: #F3C9DD;
+    font-weight: 800;
+    font-size: 2.5vw;
+  }
+}
+
+#view-projects {
+  margin-top: 2%;
+}
+
+/* ################# */
+/* The projects page */
+/* ################# */
+
+/* The projects title */
+
+.nadpis {
+  width: 35%;
+  text-align: center;
+  font-size: 4vw;
+  letter-spacing: 1.6vw;
+  line-height: 120%;
+  /*font-family: 'Trirong', serif;*/
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+  /* margin-top: 50%; */
+  margin-bottom: 18%;
+}
+
+@media screen and (max-width: 640px) {
+  .nadpis, .go-down, #view-dem {
+    display: none;
+  }
+}
+
+/*view projects*/
+
+.front-project {
+  background: url("img/image1.jpeg");
+  padding-top: 15%;
+  padding-bottom: 10%;
+  margin-top: 30%;
+  color: white;
+}
+
+/* #################### */
+/* The projects squares */
+/* #################### */
+
+/*the main div*/
+
+.text {
+  width: 10%;
+  margin: 15% auto;
+  background-color: rgba(255, 0, 0, 0.5);
+  padding: 10%;
+  h3 {
+    font-size: 8vw;
+    margin-left: 90%;
+    width: 50%;
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(48, 66, 104);
+  }
+}
+
+#tribute {
+  background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fwww.telegraph.co.uk%2Fcontent%2Fdam%2Fart%2F2016%2F10%2F04%2Fpicasso-large_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwbKTcqHAsmNzJMPMiov7fpk.jpg&sp=ac4dc4e35bc0ac74a30ea29d11ece6b9");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 10%;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  &:hover {
+    -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }
+}
+
+#quote-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(236, 225, 119);
+}
+
+#tribute-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(236, 225, 119);
+  background-color: rgb(208, 180, 235);
+}
+
+#nodeblog {
+  background-image: url("quotescreen.png");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  overflow: hidden;
+  padding: 5%;
+  width: 10px;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  &:hover {
+    -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }
+}
+
+/* ############ */
+/* The about me */
+/* ############ */
+
+/* The title in the text */
+
+.about-me {
+  color: rgb(255, 255, 255);
+  font-size: 8vw;
+}
+
+/* The about me text */
+
+.aboutme {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  padding: 10%;
+  font-size: 4vw;
+  color: rgb(48, 66, 104);
+  background-color: rgb(134, 255, 255);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ################ */
+/* The contact page */
+/* ################ */
+
+.contact {
+  height: 1%;
+  font-size: 4vw;
+  font-weight: 600;
+  letter-spacing: 1.6vw;
+  position: relative;
+  top: 0%;
+  text-align: center;
+  margin-bottom: 20%;
+  margin-top: 300px;
+}
+
+@media screen and (max-width: 600px) {
+  .contact {
+    /* display: none; */
+  }
+}
+
+.space {
+  height: 1%;
+}
+
+/* ############### */
+/* The footer page */
+/* ############### */
+
+/* The rotated footer text with the year */
+
+#that-p {
+  font-size: 1.5vw;
+  transform: rotate(90deg);
+  position: fixed;
+  top: 50%;
+  opacity: 0;
+  right: -4%;
+  cursor: default;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgb(48, 66, 104);
+}
+
+/* same css for all the social buttons */
+
+.social {
+  position: fixed;
+  bottom: 1%;
+  opacity: 0;
+  right: 8%;
+  margin-top: 1%;
+  cursor: pointer;
+  font-size: 1vw;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgb(48, 66, 104);
+  p {
+    padding: 5%;
+    text-align: center;
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .social {
+    /* display: none; */
+  }
+}
+
+#fb:hover {
+  text-decoration: line-through;
+  color: blue;
+}
+
+#ig:hover {
+  text-decoration: line-through;
+  color: red;
+}
+
+#snap:hover {
+  text-decoration: line-through;
+  color: yellow;
+}
+
+@keyframes glitchy {
+  0%   {transform: translate3d(-6px, 4px, 2px);}
+  25%  {transform: translate3d(-4px, 2px, -6px);}
+  50%  {transform: translate3d(0px, 4px, 2px);}
+  75%  {transform: translate3d(2px, 6px, -4px);}
+  100%  {transform: translate3d(-4px, 6px 0px);}
+}
+@-webkit-keyframes glitchy {
+  0%   {transform: translate3d(-6px, 4px, 2px);}
+  25%  {transform: translate3d(-4px, 2px, -6px);}
+  50%  {transform: translate3d(0px, 4px, 2px);}
+  75%  {transform: translate3d(2px, 6px, -4px);}
+  100%  {transform: translate3d(-4px, 6px 0px);}
+}
+@keyframes borderr {
+  0%   {border: 2px solid grey;}
+  25%  {border: 5px solid rgb(37, 240, 255);}
+  50%  {border: 1px solid rgb(255, 56, 56);}
+  75%  {border: 3px solid rgb(77, 248, 55);}
+  100%  {border: 6px solid rgb(181, 57, 230);}
+}
+@-webkit-keyframes borderr {
+  0%   {border: 2px solid grey;}
+  25%  {border: 5px solid rgb(37, 240, 255);}
+  50%  {border: 1px solid rgb(255, 56, 56);}
+  75%  {border: 3px solid rgb(77, 248, 55);}
+  100%  {border: 6px solid rgb(181, 57, 230);}
+}

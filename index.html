@@ -3,7 +3,7 @@
 <html>
 <head>
 
-	<title> My Personal Page </title>
+	<title> kristof revilak </title>
 
 	<!-- Link to external css -->
 	<link rel="stylesheet" type="text/css" href="style.css" >
@@ -21,64 +21,76 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <header>
-	<!-- The Navbar -->
-	<nav>
-		<!-- Every "li" has its own id for the js -->
-		<ul class="normal">
-			<li id="home"><a href="#"> Home.</a> </li>
-			<li id="proj"><a href="#"> Projects.</a> </li>
-			<li id="abme"><a href="#"> About Me.</a> </li>
-			<li id="cont"><a href="#"> Conatct.</a> </li>
-			<li id="mobile"><a href="#"> Menu. </a></li>
-		</ul>
-		<ul class="mobile">
-			<li id="home"><a href="#"> Home.</a> </li>
-			<li id="proj"><a href="#"> Projects.</a> </li>
-			<li id="abme"><a href="#"> About Me.</a> </li>
-			<li id="cont"><a href="#"> Conatct.</a> </li>
-			<li id="mobile"><a href="#"> Menu. </a></li>
-		</ul>
-	</nav>
+	<p id="st">the start</p>
+	<p id="pr">projects</p>
+	<p id="ab">about me</p>
+	<p id="te">the end</p>
 </header>
 
 <body>
-	<!-- Div with the "My Portfolio" sign on the right of landing page -->
-	<div class="portfolio">
-		My Portfolio
+	<div class="first-view">
+		<div class="rott">
+			<div class="left">
+				<div class="hi">
+						<p></p>
+					</div>
+					<div class="my-name">
+						<p></p>
+					</div>
+			</div>
+			<div class="right name">
+				<div id="center">
+					
+				</div>
+			</div>
+			<div class="left">
+				<div class="and-this">
+						<p></p>
+				</div>
+				<div class="is-my" >
+					<p></p>
+				</div>
+			</div>
+			<div class="right">
+				<div class="portfolio port">
+					<p class="ppp port"></p>
+				</div>
+			</div>
+			
+		</div>
+		<div class="img" id="trigger2">
+			<img src="img/2.jpg" alt="" id="image">
+		</div>
+		
 	</div>
+	
 	<!-- Div with the main name on the left of landing page -->
-	<div id="center">
-		Kristof Revilak
-	</div>
+	
 	<!-- The "go down" text div -->
-	<div class="go-down" id="view-projects">
+	<!-- <div class="go-down" id="view-projects">
 		go down.
-	</div>
-	<div id="divForTheProjects">
-		<!-- The "Projects." Title div -->
-		<div class="front-project">
-			<div class="nadpis">
-					Projects.
-			</div>
-			<!-- The "View projects" text div-->
-			<div class="go-down" id="view-dem" onclick="">
-				view the projects.
-			</div>
-		</div>
+	</div> -->
+	<div id="divForTheProjects" style="padding-top:400px">
 		<!--The first projects square div  -->
-		<div class="text" id="nodeblog">
-			<!-- The actual square div -->
-			<div class="anim">
-				<h3>Quote Machine.</h3>
+		<div id="quote-container">
+			<div class="text" id="nodeblog">
+				<!-- The actual square div -->
+				<div class="anim">
+					<h3>Quote Machine</h3>
+				</div>
 			</div>
 		</div>
+		
 		<!--The first projects square div  -->
-		<div class="text" id="tribute">>
-			<!-- The actual square div -->
-			<div class="anim">
-				<h3>Tribute Page.</h3>
+		<div id="tribute-container">
+			<div class="text" id="tribute">>
+				<!-- The actual square div -->
+				<div class="anim">
+					<h3>Tribute Page</h3>
+				</div>
 			</div>
 		</div>
+		
 		<!--The first projects square div  -->
 		<div class="text">
 			<!-- The actual square div -->
@@ -95,29 +107,31 @@
 			This page is a showcase of my frontend skills and my projects, created for the freecodecamp.com
 		</p>
 	</div>
-	<div class="go-down" id="to-contact">
-		go down.
-	</div>
-	<div class="contact">
-		contact.
-	</div>
-	<div class="space">
-	</div>
 </body>
 
 <footer>
 	<p id="that-p">
-		2017 Kristof Revilak.
+		2018 kristof revilak
 	</p>
 	<div class="social"><!--
-		--><p id="fb">facebook.</p><!--
-		--><p id="ig">instagram.</p><!--
-		--><p id="snap">snapchat.</p><!--
+		--><p id="fb">facebook</p><!--
+		--><p id="ig">instagram</p><!--
+		--><p id="snap">snapchat</p><!--
 --></div>
 
 <!-- All the fucking scripts -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script> -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TimelineMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/TextPlugin.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
+
 <script src="jquery.inview.js"></script>
 
 <script type="text/javascript" src="main.js"></script>
