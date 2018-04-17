@@ -189,7 +189,6 @@ header p:hover:before {
   right: 9.5%;
 }
 
-<<<<<<< HEAD
 nav ul li a:hover{
 
 	text-decoration: line-through;
@@ -216,14 +215,6 @@ nav:hover{
 	text-decoration: none;
 	margin-top: 0%;
 
-=======
-#ab {
-  right: 14%;
-}
-
-#te {
-  right: 18.5%;
->>>>>>> 3efda3cf6b95635b77f6bfbd5d90dd566dcd94b5
 }
 
 /* ################ */

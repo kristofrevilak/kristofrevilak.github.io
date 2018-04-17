@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 // Init Skrollr
 var s = skrollr.init();
 
-// Refresh Skrollr after resizing our sections
+//Refresh Skrollr after resizing our sections
 s.refresh($('body'));
 
 
@@ -85,39 +84,6 @@ toContact.click(function(event) {
   $('html, body').animate({
     scrollTop: $(".contact").offset().top - 270
   }, 500);
-=======
-$(document).ready(function () {
-  let firstPageEls = [
-    ".hi", ".my-name", ".name", ".and-this", ".is-my", ".port"
-  ];
-  let firstPageWords = [
-    "Hi!", "My name is", "Kristof Revilak", "and this", "is my", "portfolio"
-  ]
-  let firstPage = new TimelineMax();
-  let controller = new ScrollMagic.Controller();
-  let firstPageDissapear = new ScrollMagic.Scene({
-      triggerElement: "#trigger1",
-      duration: "80%"
-      })
-      .setTween(TweenMax.staggerTo(".rott", 0.5, {scale: 0.8,opacity:0, delay:0.3, ease:Power1.easeOut, force3D:true})) 
-      .addTo(controller);
-  firstPageEls.forEach((el)=>{
-    if(el == ".name"){
-      firstPage.to(el,1,{text:{value:firstPageWords[0],delimeter:" "},opacity:1, color: "rgba(255, 0, 0, 0.5)", ease:Sine.easeOut});
-    } else if(el == ".port"){
-      firstPage.to(el,1,{text:{value:firstPageWords[0],delimeter:" "},opacity:1});
-    } else{
-      firstPage.to(el,1,{text:{value:firstPageWords[0],delimeter:" "},opacity:1});
-      
-    }
-    firstPageWords.shift();
-  });
-
-  firstPage.to("#that-p",1, {opacity:1,right:"-2%"});
-  firstPage.to(".social",1, {opacity:1,bottom:"5%"},"-=1.25");
-  firstPage.to("header",1, {opacity:1,top:"10%"},"-=1");
-  firstPage.to(".img",1.5, {opacity:1,bottom:"-100px"}, "-=0.75");
->>>>>>> 3efda3cf6b95635b77f6bfbd5d90dd566dcd94b5
 });
 
 
