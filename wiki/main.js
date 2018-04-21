@@ -5,7 +5,7 @@ $(document).keypress(function(e) {
   let current = $('#lame').val(); 
   evt = e || window.event;
   var charCode = evt.keyCode || evt.which;
-
+  
   if(charCode == 82){
     // ALERT RANDOM, TYPE ANOTHER CHAR TO ABORT OR COUNTDOWN TO RANDOM
     // window.open("https://en.wikipedia.org/wiki/Special:Random");
@@ -14,7 +14,10 @@ $(document).keypress(function(e) {
 
   }
   else {
-    
+    if(current == "" || !current || current == " " ){
+      let show = new TimelineMax();
+      show.to("header",1,{top: "50%"});
+    }
     var charStr = String.fromCharCode(charCode);
     $('#lame').val(current + charStr);
     var title = $("#lame").val();
@@ -24,21 +27,18 @@ $(document).keypress(function(e) {
 });
 
 $(document).keydown((e)=>{
-  let appear = false;
   let current = $('#lame').val(); 
   evt = e || window.event;
   var charCode = evt.keyCode || evt.which;
-  if(current == "" || !current || current == " " ){
-    appear = true;
-  }
+  
   if(charCode == 8){
-    appear = false;
     $('#lame').val(current.substr(0,current.length -1));
     var title = $("#lame").val();
     console.log(title);
     if($('#lame').val() == "" || !$('#lame').val() || $('#lame').val() == " "){
-      console.log("xdd");
       $(".results").empty();
+      let show = new TimelineMax();
+      show.to("header",1,{top: "30%"});
     } else {
       callData(title);
     }
@@ -47,11 +47,35 @@ $(document).keydown((e)=>{
 });
 
 $(document).ready((e)=>{
+  let init = new TimelineMax();
+  let loop = new TimelineMax({onComplete:function() {
+    this.restart()}
+  });
   $("#lame").val("");
   $(".results").empty();
-  TweenMax.to("header",1,{opacity:1,left:"5%",ease:SlowMo.easeIn});
+  init.to("header",1,{opacity:1,left:"5%",ease:SlowMo.easeIn});
   // let footer = CSSRulePlugin.getRule(".footer:before")
-  TweenMax.to(".pseudo",1.5,{opacity:1,bottom:"2%", width:"0%", color: "black",ease:SlowMo.easeIn, delay:1.7});
+  init.to(".pseudo",1.5,{opacity:1,bottom:"2%", width:"0%", color: "black",ease:SlowMo.easeIn});
+  loop.to(".change", 1.5,{opacity:0,top: -20,ease:SlowMo.easeOut, delay:3})
+      .add(()=>{
+        if($(".change").html() == "culture"){
+          $(".change").html("");
+          TweenMax.to(".change",1,{text:{value:"art",delimeter:" "}, color:"pink", ease:Sine.easeIn});
+         
+        } else if($(".change").html() == "art") {
+          $(".change").html("");
+          TweenMax.to(".change",1,{text:{value:"history",delimeter:" "}, color:"yellow", ease:Sine.easeIn});
+          // $(".change").html("culture");
+        } else if($(".change").html() == "history") {
+          $(".change").html("");
+          TweenMax.to(".change",1,{text:{value:"world",delimeter:" "},color:"blue", ease:Sine.easeIn});
+          // $(".change").html("culture");
+        } else {
+          $(".change").html("");
+          TweenMax.to(".change",1,{text:{value:"culture",delimeter:" "},color:"green", ease:Sine.easeIn});
+        }
+        
+      });
 });
 
 
