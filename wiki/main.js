@@ -78,8 +78,6 @@ $(document).ready((e)=>{
       });
 });
 
-
-
 function callData(title){
   $.ajax({
     url: url + title + end,
@@ -102,6 +100,11 @@ function showData(result){
   $(".results").html("");
   var pages = result.query.pages;
   $.each(pages, function (i,item) {
-    $(".results").append("<section><h1>" + item.title + "</h1>" + "<p>" + item.extract + "</p>" + "<a href='" + item.fullurl + "' target='_blank'>click here for more</a></section>");
+    $(".results").append(
+      "<section class='one-result'><a href='" + item.fullurl + "' target='_blank'><h1>" + item.title + "</h1>" + 
+      "<p>" + item.extract +  "</p>" +
+      "<p class='more'>click for more!</p></a></section>");
   })
 }
+
+// "<a href='" + item.fullurl + "' target='_blank'>click here for more</a></section>"

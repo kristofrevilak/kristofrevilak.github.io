@@ -130,11 +130,7 @@ a{
 	opacity: 0;
 }
 
-.results{
-	top: 200px;
-	left: 5%;
-	position: absolute;
-}
+
 
 footer{
 	width: 100%;
@@ -177,6 +173,34 @@ footer{
 
 .change{
 	position: relative;
+}
+
+.results{
+	top: 200px;
+	left: 5%;
+	position: absolute;
+}
+
+.one-result{
+	width: 20%;
+	font-family: Helvetica, sans-serif;
+	line-height: 25px;
+	float: left;
+	padding-right: 5%;
+}
+
+.one-result a{
+	color: black;
+	text-decoration: none;
+}
+.more{
+	color: blue;
+	text-decoration: underline rgb(108, 108, 255);
+}
+
+.one-result h1{
+	font-size: 20px;
+	text-decoration: underline blue;
 }
 
 /* 
