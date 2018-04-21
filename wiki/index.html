@@ -8,22 +8,38 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js" charset="utf-8"></script>
 		<script type="text/javascript" src="main.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/CSSRulePlugin.min.js" ></script> -->
 	</head>
 	<body>
 		<header>
-				<h2>Wiki viewer!
-					<br>
-				<h2> Search for articles in Wikipedia.</h2>
+				<h2 id="first"> Search for articles in Wikipedia by typing your words. </h2>
+				<h2>Type "R" for random article</h2>
 		</header>
 		<article class="search">
-				<input type="text" id="lame" placeholder="Search for an article...">
-				<a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" id="random">Random</a>
+				<input type="text" id="lame">
 		</article>
 
     <article class="results">
 
-    </article>
+		</article>
+		
+		<div class="random">
+			<p> Going to random article in</p>
+		</div>
 
 	</body>
+	<div class="footer">
+		<p>
+			made by kristofrevilak
+		</p>
+		<p class="pseudo">
+			
+		</p>
+	</div>
+	<div class="footer-back">
+		
+	</div>
+		
 </html>
