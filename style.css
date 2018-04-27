@@ -66,6 +66,17 @@ html {
 }
 
 body {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
   padding: 0;
   margin: 0;
   height: 100%;
@@ -110,28 +121,32 @@ body:before, body:after {
 
 /* ...and position them! */
 html:before {
-  height: 40px;
+  height: 2.5vw;
+  max-height: 40px;
   left: 0;
   right: 0;
   top: 0;
 }
 
 html:after {
-  width: 40px;
+  max-width: 40px;
+  width: 2.5vw;
   top: 0;
   right: 0;
   bottom: 0;
 }
 
 body:before {
-  height: 40px;
+  height: 2.5vw;
+  max-height: 40px;
   right: 0;
   bottom: 0;
   left: 0;
 }
 
 body:after {
-  width: 40px;
+  max-width: 40px;
+  width: 2.5vw;
   top: 0;
   bottom: 0;
   left: 0;
@@ -140,14 +155,18 @@ body:after {
 /* ############## */
 /* The navbar css */
 /* ###############*/
-header {
+.logo {
   overflow: hidden;
   position: fixed;
-  right: 8%;
-  font-family: 'Source Sans Pro', sans-serif;
-  top: 20px;
+  left: 100px;
+  top: 1%;
+  opacity: 0;
   color: #304268;
-  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAMAAACeyVWkAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAEZJREFUeAGt0EEKgDAUA1En9z+0qEENhA+FvlUZQqE9Bnynlmlr2iVkSY66AHrg+MddSUiU6VuxqMhYquzcCvO6PZjhx5oTQ+8Bs3EshqIAAAAASUVORK5CYII=), auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: lowercase;
+  border: 2px solid #304268;
+  padding: .8vw;
+  border-radius: 1px;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -161,10 +180,58 @@ header {
   user-select: none;
 }
 
-header p {
-  display: block;
+.logo h2 {
+  font-size: 18px;
+}
+
+.logo h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo:before {
+  content: '';
+  position: absolute;
+  top: 58%;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  overflow: display;
+  width: 100%;
+  z-index: -1;
+  background: rgba(255, 0, 106, 0.308);
+  transition: 0.05s ease-out;
+}
+
+.logo:after {
+  content: '';
+  position: absolute;
+  top: 65%;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  overflow: display;
+  width: 100%;
+  z-index: -1;
+  background: rgba(255, 0, 106, 0.678);
+  transition: 0.05s ease-out;
+}
+
+header {
+  overflow: hidden;
   position: fixed;
+  right: 50px;
+  font-family: 'Source Sans Pro', sans-serif;
+  top: 20px;
+  width: 25%;
+  opacity: 0;
+  color: #304268;
+}
+
+header p {
+  display: inline-block;
   transition: 0.5s ease-out;
+  padding: 0 5%;
 }
 
 header p:before {
@@ -185,18 +252,6 @@ header p:hover:before {
   background-color: #00ffff;
 }
 
-#pr {
-  right: 9.5%;
-}
-
-#ab {
-  right: 14%;
-}
-
-#te {
-  right: 18.5%;
-}
-
 /* ################ */
 /* The landing page */
 /* ################ */
@@ -206,7 +261,8 @@ header p:hover:before {
 
 .first-view {
   padding: 100px;
-  padding-left: 100px;
+  padding-left: 150px;
+  padding-top: 150px;
   overflow: hidden;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -225,7 +281,7 @@ header p:hover:before {
   top: 20px;
   left: 20px; */
   padding-left: 160px;
-  padding-top: 40px;
+  padding-top: 30px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 66px;
   font-weight: 900;
@@ -238,7 +294,7 @@ header p:hover:before {
 
 .name {
   color: red;
-  padding-left: 220px;
+  padding-left: 160px;
 }
 
 #center {
@@ -267,19 +323,29 @@ header p:hover:before {
   color: red;
   padding: 20px;
   margin-top: 80px;
-  margin-left: 160px;
+  margin-left: 150px;
   border: 1px dotted rgba(255, 0, 0, 0.5);
   overflow: hidden;
 }
 
 .left {
-  width: 50%;
+  width: 40%;
   clear: both;
+  margin: 0 auto;
 }
 
 .right {
-  width: 50%;
-  float: left;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.arrow {
+  background: transparent;
+  display: inline-block;
+  position: absolute;
+  bottom: 200px;
+  left: 350px;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 500px) {
@@ -289,12 +355,14 @@ header p:hover:before {
 }
 
 .img {
-  width: 400px;
+  min-width: 200px;
+  min-width: 150px;
+  width: 40%;
   overflow: hidden;
   position: absolute;
-  right: 270px;
+  right: 50px;
   opacity: 0;
-  bottom: -80px;
+  bottom: 5%;
 }
 
 .img img {
@@ -376,15 +444,17 @@ header p:hover:before {
 /* #################### */
 /*the main div*/
 .text {
-  width: 45%;
-  margin: 15% auto;
-  background-color: rgba(255, 0, 0, 0.5);
-  padding: 10%;
+  width: 100%;
+  margin: 0 auto;
+  height: 110vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #ece177;
 }
 
 .text h3 {
   font-size: 8vw;
-  margin-left: 90%;
+  margin-left: 80%;
   width: 50%;
   display: block;
   font-family: 'Source Sans Pro', sans-serif;
@@ -433,21 +503,11 @@ header p:hover:before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
-  padding: 10%;
-  -webkit-transition: all .4s ease-in-out;
-  -moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -ms-transition: all .4s ease-in-out;
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-}
-
-#nodeblog:hover {
-  -webkit-filter: grayscale(0%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%);
-  transform: scale(1.1);
+  width: 40vw;
+  margin: 10% auto;
+  padding-top: 30%;
+  height: 50vh;
+  overflow: hidden;
 }
 
 /* ############ */
@@ -501,7 +561,7 @@ header p:hover:before {
 /* ############### */
 /* The rotated footer text with the year */
 #that-p {
-  font-size: 1.5vw;
+  font-size: calc(8px + 1.5vw);
   transform: rotate(90deg);
   position: fixed;
   top: 50%;
@@ -520,7 +580,7 @@ header p:hover:before {
   right: 8%;
   margin-top: 1%;
   cursor: pointer;
-  font-size: 1vw;
+  font-size: calc(5px + .8vw);
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
   color: #304268;

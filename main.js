@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
   let firstPageEls = [
     ".hi", ".my-name", ".name", ".and-this", ".is-my", ".port"
   ];
@@ -6,12 +7,15 @@ $(document).ready(function () {
     "Hi!", "My name is", "Kristof Revilak", "and this", "is my", "portfolio"
   ]
   let firstPage = new TimelineMax();
+  let efp = new TimelineMax();
+  efp.staggerTo(".rott", 0.5, {scale: 0.8,opacity:0, delay:0.3, ease:Power1.easeOut, force3D:true});
+  efp.staggerTo(".img", 0.5, {scale: 0.8,opacity:0, delay:0.3, ease:Power1.easeOut, force3D:true});
   let controller = new ScrollMagic.Controller();
   let firstPageDissapear = new ScrollMagic.Scene({
       triggerElement: "#trigger1",
       duration: "80%"
       })
-      .setTween(TweenMax.staggerTo(".rott", 0.5, {scale: 0.8,opacity:0, delay:0.3, ease:Power1.easeOut, force3D:true})) 
+      .setTween(efp)
       .addTo(controller);
   firstPageEls.forEach((el)=>{
     if(el == ".name"){
@@ -24,11 +28,12 @@ $(document).ready(function () {
     }
     firstPageWords.shift();
   });
-
+  firstPage.to("header",1.25, {opacity:1,top:"10%"});
+  firstPage.to(".logo",1.25, {opacity:1,top:"7%"},"-=1.25");
   firstPage.to("#that-p",1, {opacity:1,right:"-2%"});
-  firstPage.to(".social",1, {opacity:1,bottom:"5%"},"-=1.25");
-  firstPage.to("header",1, {opacity:1,top:"10%"},"-=1");
-  firstPage.to(".img",1.5, {opacity:1,bottom:"-100px"}, "-=0.75");
+  firstPage.to(".social",1, {opacity:1,bottom:"5%"});
+  
+  firstPage.to(".img",1.5, {opacity:1,bottom:"-100px"});
 });
 
 
