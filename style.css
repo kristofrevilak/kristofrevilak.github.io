@@ -280,12 +280,13 @@ header p:hover:before {
   /* position: absolute;
   top: 20px;
   left: 20px; */
-  padding-left: 160px;
   padding-top: 30px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Forum', cursive;
   font-size: 66px;
-  font-weight: 900;
+  font-style: italic;
+  font-weight: 800;
   color: #304268;
+  text-decoration: rgba(255, 0, 0, 0.5) underline;
 }
 
 .my-name {
@@ -295,6 +296,7 @@ header p:hover:before {
 .name {
   color: red;
   padding-left: 160px;
+  text-decoration: none;
 }
 
 #center {
@@ -322,9 +324,7 @@ header p:hover:before {
   font-weight: 700;
   color: red;
   padding: 20px;
-  margin-top: 80px;
   margin-left: 150px;
-  border: 1px dotted rgba(255, 0, 0, 0.5);
   overflow: hidden;
 }
 
@@ -339,13 +339,32 @@ header p:hover:before {
   margin: 0 auto;
 }
 
-.arrow {
-  background: transparent;
-  display: inline-block;
+.scroll-down {
   position: absolute;
-  bottom: 200px;
-  left: 350px;
+  bottom: 30vh;
+  width: 20%;
+}
+
+.scroll-down .scroll-text {
+  color: #304268;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  width: 1vh;
+  position: relative;
+  top: -10vh;
+  opacity: 0;
+  display: block;
   overflow: hidden;
+}
+
+.scroll-down .scroll-line {
+  width: 1px;
+  background-color: #304268;
+  height: 20vh;
+  position: relative;
+  top: 10vh;
+  opacity: 0;
+  margin-left: 1px;
 }
 
 @media screen and (max-width: 500px) {

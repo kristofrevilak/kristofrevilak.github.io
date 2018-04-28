@@ -290,18 +290,20 @@ header {
 
 .hi, .my-name, .name, .and-this, .is-my, .port {
   opacity: 0;
+  
 }
 
 .hi, .my-name, .and-this, .is-my, .name, .portfolio {
   /* position: absolute;
   top: 20px;
   left: 20px; */
-  padding-left: 160px;
   padding-top: 30px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Forum', cursive;
   font-size: 66px;
-  font-weight: 900;
+  font-style: italic;
+  font-weight: 800;
   color: rgb(48, 66, 104);
+  text-decoration: rgba(255, 0, 0, 0.5) underline;
 }
 
 .my-name {
@@ -311,6 +313,7 @@ header {
 .name {
   color: red;
   padding-left: 160px;
+  text-decoration: none;
 }
 
 #center {
@@ -336,11 +339,9 @@ header {
   /*font-family: 'Trirong', serif;*/
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
-  color: rgb(255, 0, 0);
+  color: red;
   padding: 20px;
-  margin-top: 80px;
-  margin-left: 150px;
-  border: 1px dotted rgba(255, 0, 0, 0.5);
+  margin-left: 150px; 
   overflow: hidden;
 }
 
@@ -354,14 +355,31 @@ header {
   width: 40%;
   margin: 0 auto;
 }
-
-.arrow{
-  background: transparent;
-  display: inline-block;
+.scroll-down{
   position: absolute;
-  bottom: 200px;
-  left: 350px;
-  overflow: hidden;
+  bottom: 30vh;
+  width: 20%;
+  .scroll-text{
+    color: rgb(48, 66, 104);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    width: 1vh;
+    position: relative;
+    top: -10vh;
+    // letter-spacing: 5px;
+    opacity: 0;
+    display: block;
+    overflow: hidden;
+  }
+  .scroll-line{
+    width: 1px;
+    background-color: rgb(48, 66, 104);
+    height: 20vh;
+    position: relative;
+    top: 10vh;
+    opacity: 0;
+    margin-left: 1px;
+  }
 }
 
 #center:hover {}

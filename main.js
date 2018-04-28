@@ -8,8 +8,13 @@ $(document).ready(function () {
   ]
   let firstPage = new TimelineMax();
   let efp = new TimelineMax();
+  let loop = new TimelineMax({onComplete:function() {
+    this.restart()}
+  });
+
   efp.staggerTo(".rott", 0.5, {scale: 0.8,opacity:0, delay:0.3, ease:Power1.easeOut, force3D:true});
   efp.staggerTo(".img", 0.5, {scale: 0.8,opacity:0, delay:0.3, ease:Power1.easeOut, force3D:true});
+
   let controller = new ScrollMagic.Controller();
   let firstPageDissapear = new ScrollMagic.Scene({
       triggerElement: "#trigger1",
@@ -17,6 +22,7 @@ $(document).ready(function () {
       })
       .setTween(efp)
       .addTo(controller);
+
   firstPageEls.forEach((el)=>{
     if(el == ".name"){
       firstPage.to(el,1,{text:{value:firstPageWords[0],delimeter:" "},opacity:1, color: "rgba(255, 0, 0, 0.5)", ease:Sine.easeOut});
@@ -28,12 +34,17 @@ $(document).ready(function () {
     }
     firstPageWords.shift();
   });
+
   firstPage.to("header",1.25, {opacity:1,top:"10%"});
   firstPage.to(".logo",1.25, {opacity:1,top:"7%"},"-=1.25");
+
   firstPage.to("#that-p",1, {opacity:1,right:"-2%"});
+
   firstPage.to(".social",1, {opacity:1,bottom:"5%"});
+
+  firstPage.to(".scroll-text",1, {opacity:1,top:0});
+  firstPage.to(".scroll-line",1, {opacity:1,top:0},"-=1");
   
-  firstPage.to(".img",1.5, {opacity:1,bottom:"-100px"});
 });
 
 
