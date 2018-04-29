@@ -200,7 +200,7 @@ body:after {
   width: 100%;
   z-index: -1;
   background: rgba(255, 0, 106, 0.308);
-  transition: 0.05s ease-out;
+  transition: 0.5s ease-out;
 }
 
 .logo:after {
@@ -214,24 +214,34 @@ body:after {
   width: 100%;
   z-index: -1;
   background: rgba(255, 0, 106, 0.678);
-  transition: 0.05s ease-out;
+  transition: 1s ease-out;
+}
+
+.logo:hover:before {
+  top: 15%;
+}
+
+.logo:hover:after {
+  top: 30%;
 }
 
 header {
   overflow: hidden;
   position: fixed;
+  text-align: right;
   right: 50px;
+  padding-right: 5vw;
   font-family: 'Source Sans Pro', sans-serif;
   top: 20px;
-  width: 25%;
+  width: calc(250px + 25vw);
   opacity: 0;
   color: #304268;
 }
 
 header p {
   display: inline-block;
-  transition: 0.5s ease-out;
-  padding: 0 5%;
+  transition: 0.5 ease-out;
+  padding-left: 30px;
 }
 
 header p:before {
@@ -261,7 +271,7 @@ header p:hover:before {
 
 .first-view {
   padding: 100px;
-  padding-left: 150px;
+  padding-left: 15vw;
   padding-top: 150px;
   overflow: hidden;
   -moz-user-select: -moz-none;
@@ -295,7 +305,7 @@ header p:hover:before {
 
 .name {
   color: red;
-  padding-left: 160px;
+  padding-left: calc(35px + 3vw);
   text-decoration: none;
 }
 
@@ -319,12 +329,13 @@ header p:hover:before {
   width: 400px;
   font-size: 5vw;
   line-height: 120%;
+  text-decoration: none;
   /*font-family: 'Trirong', serif;*/
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   color: red;
   padding: 20px;
-  margin-left: 150px;
+  margin-left: calc(35px + 3vw);
   overflow: hidden;
 }
 
@@ -342,7 +353,7 @@ header p:hover:before {
 .scroll-down {
   position: absolute;
   bottom: 30vh;
-  width: 20%;
+  height: 30vh;
 }
 
 .scroll-down .scroll-text {
@@ -362,9 +373,9 @@ header p:hover:before {
   background-color: #304268;
   height: 20vh;
   position: relative;
-  top: 10vh;
+  top: 30vh;
   opacity: 0;
-  margin-left: 1px;
+  margin-left: calc(3px + .5vw);
 }
 
 @media screen and (max-width: 500px) {
@@ -516,7 +527,19 @@ header p:hover:before {
   background-color: #d0b4eb;
 }
 
-#nodeblog {
+#weather-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #77cbec;
+}
+
+#wiki-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f5d1a9;
+}
+
+#nodeblog, #weather, #wiki {
   background-image: url("quotescreen.png");
   background-color: transparent;
   background-position: center;
@@ -527,6 +550,21 @@ header p:hover:before {
   padding-top: 30%;
   height: 50vh;
   overflow: hidden;
+  box-shadow: 10px 5px 8px #999999;
+}
+
+#weather {
+  background: url("https://png.pngtree.com/element_origin_min_pic/17/02/12/3e85f445a7e124653f8d0f5787b4bdb7.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#wiki {
+  background: url("https://media.wired.com/photos/5955ac6b5992c54331ac161b/1:1/w_4049,c_limit/2000px-Wikipedia-logo-v2-en-F.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* ############ */
@@ -668,39 +706,43 @@ header p:hover:before {
   }
 }
 
-@keyframes borderr {
+@keyframes shade {
   0% {
-    border: 2px solid grey;
+    height: 10vh;
+    opacity: 0.5;
   }
-  25% {
-    border: 5px solid #25f0ff;
+  20% {
+    height: 20vh;
+    opacity: 1;
   }
-  50% {
-    border: 1px solid #ff3838;
-  }
-  75% {
-    border: 3px solid #4df837;
+  90% {
+    height: 0;
+    opacity: 0;
   }
   100% {
-    border: 6px solid #b539e6;
+    height: 0;
+    opacity: 0;
   }
 }
 
-@-webkit-keyframes borderr {
+@-webkit-keyframes shade {
   0% {
-    border: 2px solid grey;
+    height: 10vh;
+    opacity: 0.5;
   }
-  25% {
-    border: 5px solid #25f0ff;
+  10% {
+    height: 20vh;
+    opacity: 1;
   }
-  50% {
-    border: 1px solid #ff3838;
-  }
-  75% {
-    border: 3px solid #4df837;
+  90% {
+    height: 0;
+    opacity: 0;
   }
   100% {
-    border: 6px solid #b539e6;
+    height: 0;
+    opacity: 0;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.css.map */

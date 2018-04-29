@@ -35,19 +35,29 @@ $(document).ready(function () {
     firstPageWords.shift();
   });
 
-  firstPage.to("header",1.25, {opacity:1,top:"10%"});
+  firstPage.to("header",1.25, {opacity:1,top:"8.3%"});
   firstPage.to(".logo",1.25, {opacity:1,top:"7%"},"-=1.25");
 
   firstPage.to("#that-p",1, {opacity:1,right:"-2%"});
 
-  firstPage.to(".social",1, {opacity:1,bottom:"5%"});
+  firstPage.to(".social",1, {opacity:1,bottom:"5%"},"-=1");
 
-  firstPage.to(".scroll-text",1, {opacity:1,top:0});
+  firstPage.to(".scroll-text",1, {opacity:1,top:"3vh"});
   firstPage.to(".scroll-line",1, {opacity:1,top:0},"-=1");
   
 });
 
+$(".scroll-down").hover((e)=>{
+  TweenMax.to(".scroll-line",1,{top:"10%",ease:SlowMo.easeIn});
+  TweenMax.to(".scroll-text",1,{top:"-10%",ease:SlowMo.easeIn});
+},(e)=>{
+  TweenMax.to(".scroll-line",1,{top:0,ease:SlowMo.easeIn});
+  TweenMax.to(".scroll-text",1,{top:"3vh",ease:SlowMo.easeIn});
+});
 
+// $(".logo").hover((e)=>{
+//   TweenMax.to("")
+// },(e)=>{})
 
 
   // var goDown = $('#view-projects');
@@ -86,6 +96,16 @@ $(document).ready(function () {
   $("#nodeblog").click(function(event) {
     /* Act on the event */
     window.open("quotemachine/index.html")
+  });
+
+  $("#weather").click(function(event) {
+    /* Act on the event */
+    window.open("weather_app/index.html")
+  });
+
+  $("#wiki").click(function(event) {
+    /* Act on the event */
+    window.open("wiki/index.html")
   });
 
 
