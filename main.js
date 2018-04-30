@@ -25,11 +25,11 @@ $(document).ready(function () {
 
   firstPageEls.forEach((el)=>{
     if(el == ".name"){
-      firstPage.to(el,1,{text:{value:firstPageWords[0],delimeter:" "},opacity:1, color: "rgba(255, 0, 0, 0.5)", ease:Sine.easeOut});
+      firstPage.to(el,1,{text:{value:firstPageWords[0],delimeter:" "},opacity:1, color: "rgba(255, 0, 0, 0.5)", ease:Sine.easeIn});
     } else if(el == ".port"){
-      firstPage.to(el,1,{text:{value:firstPageWords[0],delimeter:" "},opacity:1});
+      firstPage.to(el,1,{text:{value:firstPageWords[0],delimeter:" "},opacity:1,ease:Sine.easeIn});
     } else{
-      firstPage.to(el,1,{text:{value:firstPageWords[0],delimeter:" "},opacity:1});
+      firstPage.to(el,1,{text:{value:firstPageWords[0],delimeter:" "},opacity:1,ease:Sine.easeIn});
       
     }
     firstPageWords.shift();
@@ -54,6 +54,48 @@ $(".scroll-down").hover((e)=>{
   TweenMax.to(".scroll-line",1,{top:0,ease:SlowMo.easeIn});
   TweenMax.to(".scroll-text",1,{top:"3vh",ease:SlowMo.easeIn});
 });
+
+$(".scroll-down").click((e)=>{
+  $('html, body').animate({
+        scrollTop: $("#quote-container").offset().top
+      }, 1000, "linear");
+})
+
+// $("header p").hover((e)=>{
+
+// },(e)=>{})
+
+
+$(".hi").hover((e)=>{
+  TweenMax.to(".hi",1,{left: 80,ease:Expo.easeOut})
+},(e)=>{
+  TweenMax.to(".hi",1,{left: 0,ease:Power4.easeOut,delay:2})
+})
+$(".my-name").hover((e)=>{
+  TweenMax.to(".my-name",1,{right: 40,ease:Expo.easeOut})
+},(e)=>{
+  TweenMax.to(".my-name",1,{right: 0,ease:Power4.easeOut,delay:2})
+})
+$(".name").hover((e)=>{
+  TweenMax.to(".name",1,{left: 120,ease:Expo.easeOut})
+},(e)=>{
+  TweenMax.to(".name",1,{left: 0,ease:Power4.easeOut,delay:2})
+})
+$(".and-this").hover((e)=>{
+  TweenMax.to(".and-this",1,{right: 70,ease:Expo.easeOut})
+},(e)=>{
+  TweenMax.to(".and-this",1,{right: 0,ease:Power4.easeOut,delay:2})
+})
+$(".is-my").hover((e)=>{
+  TweenMax.to(".is-my",1,{left: 10,ease:Expo.easeOut})
+},(e)=>{
+  TweenMax.to(".is-my",1,{left: 0,ease:Power4.easeOut,delay:2})
+})
+$(".portfolio").hover((e)=>{
+  TweenMax.to(".portfolio",1,{right: 50,ease:Expo.easeOut})
+},(e)=>{
+  TweenMax.to(".portfolio",1,{right: 0,ease:Power4.easeOut,delay:2})
+})
 
 // $(".logo").hover((e)=>{
 //   TweenMax.to("")

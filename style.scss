@@ -239,33 +239,63 @@ body {
 header {
   overflow: hidden;
   position: fixed;
-  text-align: right;
+  // text-align: right;
   right: 50px;
   padding-right: 5vw;
   font-family: 'Source Sans Pro', sans-serif;
   top: 20px;
-  width: calc(250px + 25vw);
+  width: 451px !important;
+  min-width: 451px !important;
+  max-width: 451px !important;
   opacity: 0;
   color: #304268;
   p {
     display: inline-block;
     transition: 0.5 ease-out;
-    padding-left: 30px;
+    margin-left: 30px;
     &:before {
       content: '';
       position: absolute;
-      top: 0;
-      left: -10px;
+      top: 10px;
+      left: 0;
       right: 0;
       bottom: 0;
       overflow: display;
       width: 70px;
-      z-index: -1;
-      transition: 0.05s ease-out;
+      height: 0px;
+      z-index: 1;
+      transition: 0.5s ease-out;
     }
     &:hover:before {
-      animation: glitchy 0.2s ease 0.1s infinite;
-      background-color: #00ffff;
+        animation: glitchy 0.2s ease 0.1s infinite;
+        
+        height: 15px;
+     
+    }
+  }
+  #st{
+    &:before{
+      left: 23px;
+      background-color: rgba(255, 0, 106, 0.278);
+    }
+  }
+  #pr{
+    &:before{
+      left: 110px;
+      background-color: rgba(255, 0, 106, 0.478);
+    }
+  }
+  #ab{
+    &:before{
+      left: 205px;
+      background-color: rgba(255, 0, 106, 0.678);
+    }
+  }
+  #te{
+    &:before{
+      left: 300px;
+      width: 60px;
+      background-color: rgba(255, 0, 106, 0.878);
     }
   }
 }
@@ -303,20 +333,31 @@ header {
   font-family: 'Forum', cursive;
   font-size: 66px;
   font-style: italic;
+  position: relative;
   font-weight: 800;
   color: #304268;
   text-decoration: rgba(255, 0, 0, 0.5) underline;
+  // transition: 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
 
-.my-name {
-  top: 40px;
-}
+// .hi:hover{
+//   left: 80px;
+// }
+
+
+// .my-name:hover{
+//   right: 40px;
+// }
 
 .name {
   color: red;
   padding-left: calc(35px + 3vw);
   text-decoration: none;
 }
+
+// .name:hover{
+//   left: 120px;
+// }
 
 #center {
   font-size: 100px;
@@ -326,13 +367,18 @@ header {
   width: 100%;
 }
 
-.and-this {
-  top: 200px;
+#center:hover{
+  right: 30px;
 }
 
-.is-my {
-  top: 220px;
-}
+// .and-this:hover{
+//   left: 70px;
+// }
+
+// .is-my:hover{
+  
+//   right: 10px;
+// }
 
 .portfolio {
   width: 400px;
@@ -347,6 +393,11 @@ header {
   margin-left: calc(35px + 3vw);
   overflow: hidden;
 }
+
+// .portfolio:hover{
+//   position: relative;
+//   left: 50px;
+// }
 
 .left {
   width: 40%;
@@ -658,6 +709,7 @@ header {
     padding: 5%;
     text-align: center;
     display: inline;
+    transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }
 
@@ -684,46 +736,46 @@ header {
 
 @keyframes glitchy {
   0% {
-    transform: translate3d(-6px, 4px, 2px);
+    transform: translate3d(-3px, 2px, 1px);
   }
 
   25% {
-    transform: translate3d(-4px, 2px, -6px);
+    transform: translate3d(-2px, 1px, -3px);
   }
 
   50% {
-    transform: translate3d(0px, 4px, 2px);
+    transform: translate3d(0px, 2px, 1px);
   }
 
   75% {
-    transform: translate3d(2px, 6px, -4px);
+    transform: translate3d(1px, 3px, -2px);
   }
 
   100% {
-    transform: translate3d(-4px, 6px 0px);
+    transform: translate3d(-2px, 3px 0px);
   }
 }
 
 
 @-webkit-keyframes glitchy {
   0% {
-    transform: translate3d(-6px, 4px, 2px);
+    transform: translate3d(-3px, 2px, 1px);
   }
 
   25% {
-    transform: translate3d(-4px, 2px, -6px);
+    transform: translate3d(-2px, 1px, -3px);
   }
 
   50% {
-    transform: translate3d(0px, 4px, 2px);
+    transform: translate3d(0px, 2px, 1px);
   }
 
   75% {
-    transform: translate3d(2px, 6px, -4px);
+    transform: translate3d(1px, 3px, -2px);
   }
 
   100% {
-    transform: translate3d(-4px, 6px 0px);
+    transform: translate3d(-2px, 3px 0px);
   }
 }
 
