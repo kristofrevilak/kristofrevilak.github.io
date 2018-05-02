@@ -159,7 +159,7 @@ body:after {
   overflow: hidden;
   position: fixed;
   left: 100px;
-  top: 1%;
+  top: 1vw;
   opacity: 0;
   color: #304268;
   font-family: 'Source Sans Pro', sans-serif;
@@ -257,6 +257,7 @@ header p:before {
   height: 0px;
   z-index: 1;
   transition: 0.5s ease-out;
+  color: transparent;
 }
 
 header p:hover:before {
@@ -313,9 +314,9 @@ header #te:before {
   /* position: absolute;
   top: 20px;
   left: 20px; */
-  padding-top: 30px;
+  padding-top: 1vw;
   font-family: 'Forum', cursive;
-  font-size: 66px;
+  font-size: calc(25px + 3vw);
   font-style: italic;
   position: relative;
   font-weight: 800;
@@ -362,7 +363,7 @@ header #te:before {
 }
 
 .right {
-  width: 40%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -650,7 +651,7 @@ header #te:before {
   position: fixed;
   bottom: 1%;
   opacity: 0;
-  right: 8%;
+  right: calc(80px + 5vw);
   margin-top: 1%;
   cursor: pointer;
   font-size: calc(5px + .8vw);
@@ -702,6 +703,7 @@ header #te:before {
   }
   100% {
     transform: translate3d(-2px, 3px 0px);
+    height: 0px;
   }
 }
 
@@ -720,6 +722,7 @@ header #te:before {
   }
   100% {
     transform: translate3d(-2px, 3px 0px);
+    height: 0px;
   }
 }
 
