@@ -545,8 +545,21 @@ header {
   overflow: hidden;
   background-color: #ece177;
   h3 {
-    font-size: 5vw;
-    margin-left: 0%;
+    font-size: calc(20px + 3vw);
+    margin-left: 2.5%;
+    position: relative;
+    top: 45vh;
+    left: 70px;
+    text-transform: lowercase;
+    display: inline-block;  
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #304268;
+    transform: translateZ(20px);
+    background: white;
+  }
+  p{
+    font-size: calc(14px + .5vw);
+    margin-left: 2.5%;
     position: relative;
     top: 45vh;
     left: 70px;
@@ -555,7 +568,6 @@ header {
     font-family: 'Source Sans Pro', sans-serif;
     color: #304268;
     transform: translateZ(20px);
-    background: white;
   }
 }
 
@@ -628,9 +640,13 @@ header {
   height: 50vh;
   overflow: hidden;
   box-shadow: 10px 5px 8px rgb(153, 153, 153);
-  h3{
-    
-  }
+  margin-right: 10%;
+  position: relative;
+  top: -5vw;
+}
+
+#nodeblog{
+  
 }
 
 #weather {
