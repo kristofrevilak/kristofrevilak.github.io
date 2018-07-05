@@ -544,9 +544,13 @@ header {
   box-sizing: border-box;
   overflow: hidden;
   background-color: #ece177;
+}
+
+.project-desc{
+  width: 35%;
+  margin-left: 5%;
   h3 {
     font-size: calc(20px + 3vw);
-    margin-left: 2.5%;
     position: relative;
     top: 45vh;
     left: 70px;
@@ -557,9 +561,12 @@ header {
     transform: translateZ(20px);
     background: white;
   }
+  .project-header{
+    margin-bottom: 3%;
+
+  }
   p{
     font-size: calc(14px + .5vw);
-    margin-left: 2.5%;
     position: relative;
     top: 45vh;
     left: 70px;
@@ -567,29 +574,8 @@ header {
     display: inline-block;
     font-family: 'Source Sans Pro', sans-serif;
     color: #304268;
-    transform: translateZ(20px);
-  }
-}
-
-#tribute {
-  background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fwww.telegraph.co.uk%2Fcontent%2Fdam%2Fart%2F2016%2F10%2F04%2Fpicasso-large_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwbKTcqHAsmNzJMPMiov7fpk.jpg&sp=ac4dc4e35bc0ac74a30ea29d11ece6b9");
-  background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-  padding: 10%;
-  -webkit-transition: all .4s ease-in-out;
-  -moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -ms-transition: all .4s ease-in-out;
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  &:hover {
-    -webkit-filter: grayscale(0%);
-    /* Safari 6.0 - 9.0 */
-    filter: grayscale(0%);
-    transform: scale(1.1);
+    line-height: 1.2;
+    margin-bottom: 1%;
   }
 }
 
@@ -627,7 +613,7 @@ header {
   background-color: #f5d1a9;
 }
 
-#nodeblog, #weather, #wiki {
+#nodeblog, #weather, #wiki, #tribute {
   background-image: url("quotescreen.png");
   background-color: transparent;
   background-position: center;
@@ -642,7 +628,29 @@ header {
   box-shadow: 10px 5px 8px rgb(153, 153, 153);
   margin-right: 10%;
   position: relative;
-  top: -5vw;
+  top: -8vw;  
+}
+
+#tribute {
+  background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fwww.telegraph.co.uk%2Fcontent%2Fdam%2Fart%2F2016%2F10%2F04%2Fpicasso-large_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwbKTcqHAsmNzJMPMiov7fpk.jpg&sp=ac4dc4e35bc0ac74a30ea29d11ece6b9");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  // padding: 10%;
+  // -webkit-transition: all .4s ease-in-out;
+  // -moz-transition: all .4s ease-in-out;
+  // -o-transition: all .4s ease-in-out;
+  // -ms-transition: all .4s ease-in-out;
+  // -webkit-filter: grayscale(100%);
+  // /* Safari 6.0 - 9.0 */
+  // filter: grayscale(100%);
+  // &:hover {
+  //   -webkit-filter: grayscale(0%);
+  //   /* Safari 6.0 - 9.0 */
+  //   filter: grayscale(0%);
+  //   transform: scale(1.1);
+  // }
 }
 
 #nodeblog{
