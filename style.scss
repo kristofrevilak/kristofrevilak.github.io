@@ -543,12 +543,13 @@ header {
   height: 110vh;
   box-sizing: border-box;
   overflow: hidden;
-  background-color: #ece177;
+  // background-color: #ece177;
 }
 
 .project-desc{
   width: 35%;
-  margin-left: 5%;
+  margin-left: 3%;
+  opacity: 0;
   h3 {
     font-size: calc(20px + 3vw);
     position: relative;
@@ -579,6 +580,11 @@ header {
   }
 }
 
+
+// .anim{
+//   overflow: hidden;
+// }
+
 // .anim{
 //   background: rgb(141, 50, 50);
 //   overflow: hidden;
@@ -597,7 +603,6 @@ header {
 #tribute-container {
   width: 100%;
   overflow: hidden;
-  background-color: #ece177;
   background-color: #d0b4eb;
 }
 
@@ -612,6 +617,13 @@ header {
   overflow: hidden;
   background-color: #f5d1a9;
 }
+
+.proj-img{
+  opacity: 0;
+  position: relative;
+  right: -10vw;
+}
+
 
 #nodeblog, #weather, #wiki, #tribute {
   background-image: url("quotescreen.png");
@@ -628,7 +640,7 @@ header {
   box-shadow: 10px 5px 8px rgb(153, 153, 153);
   margin-right: 10%;
   position: relative;
-  top: -8vw;  
+  top: -10vw;  
 }
 
 #tribute {
@@ -669,6 +681,20 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.info{
+  font-style: italic;
+  font-size: calc(11px + .5vw) !important;
+  color: #0f2655 !important;
+}
+
+.controller{
+  margin-top: 5%;
+  p{
+    font-size: calc(9px + .5vw);
+    color: #304268;
+  }
 }
 
 /* ############ */
@@ -741,13 +767,13 @@ header {
 
 .social {
   position: fixed;
-  bottom: 1%;
+  bottom: 4%;
   opacity: 0;
   right: calc(80px + 5vw);
   margin-top: 1%;
   cursor: pointer;
   font-size: calc(5px + .8vw);
-  padding: 0;
+  padding: 0 5%;
   font-family: 'Source Sans Pro', sans-serif;
   color: #304268;
   p {

@@ -8,9 +8,12 @@ $(document).ready(function () {
   ]
   let firstPage = new TimelineMax();
   let efp = new TimelineMax();
+  
   let loop = new TimelineMax({onComplete:function() {
     this.restart()}
   });
+
+  
 
   efp.staggerTo(".rott", 0.5, {scale: 0.8,opacity:0, delay:0.3, ease:Power1.easeOut, force3D:true});
   efp.staggerTo(".img", 0.5, {scale: 0.8,opacity:0, delay:0.3, ease:Power1.easeOut, force3D:true});
@@ -22,6 +25,25 @@ $(document).ready(function () {
       })
       .setTween(efp)
       .addTo(controller);
+  $(".proj-img").each((i)=>{
+    let element_b = $(".proj-img")[i].id;
+    let element = "#" + element_b;
+    
+    let desc_b = $(".project-desc")[i].id;
+    let desc = "#" + desc_b;
+
+    let project = new TimelineMax();
+    let trigger = ".trigger" + (i+2);
+
+    project.staggerTo(element,0.5,{opacity:1, delay:-0.1, right:0 ,ease:Power1.easeIn});
+    project.staggerTo(desc,0.5,{opacity:1,ease:Power1.easeIn})
+    let projectsPageAppear = new ScrollMagic.Scene({
+      triggerElement: trigger,
+      })
+      .setTween(project)
+      .addTo(controller);
+  })
+
 
   firstPageEls.forEach((el)=>{
     if(el == ".name"){
@@ -40,7 +62,7 @@ $(document).ready(function () {
 
   firstPage.to("#that-p",1, {opacity:1,right:"-2%"});
 
-  firstPage.to(".social",1, {opacity:1,bottom:"5%"},"-=1");
+  firstPage.to(".social",1, {opacity:1,bottom:"8%"},"-=1");
 
   firstPage.to(".scroll-text",1, {opacity:1,top:"3vh"});
   firstPage.to(".scroll-line",1, {opacity:1,top:0},"-=1");
@@ -57,7 +79,7 @@ $(".scroll-down").hover((e)=>{
 
 $(".scroll-down").click((e)=>{
   $('html, body').animate({
-        scrollTop: $("#quote-container").offset().top
+        scrollTop: $("#quote-container").offset().top + 60
       }, 1000, "linear");
 })
 
