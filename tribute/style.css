@@ -84,22 +84,15 @@ header img{
 
 #about{
   padding: 20% 1.5% 1.5% 1.5%;
-  line-height: 3.7vw;
-  font-size: 76px;
-	font-size: 4vw;
-  letter-spacing: .2vw;
+  line-height: 1.5;
+  font-size: calc(10px + 2vw);
+  letter-spacing: .25vw;
 	float: left;
 	width: 40%;
 	font-weight: 100;
 }
 #about p{
 	background-color: rgba(229,75,75, 1);
-	text-transform: full-width;
-}
-
-#about p::first-letter{
-	font-size: 90px;
-	font-size: 4.5vw;
 }
 
 #main-title{
@@ -108,7 +101,7 @@ header img{
   line-height: 3.5vw;
   font-size: 76px;
 	font-size: 6vw;
-  letter-spacing: .1vw;
+  letter-spacing: .05vw;
   font-weight: 500;
 	float: right;
 }

@@ -568,6 +568,8 @@ header #te:before {
 .proj-img {
   opacity: 0;
   position: relative;
+  width: 100%;
+  height: 100%;
   right: -10vw;
 }
 
