@@ -505,14 +505,14 @@ header #te:before {
 
 .project-desc {
   width: 35%;
-  margin-left: 3%;
+  margin-left: 10%;
   opacity: 0;
 }
 
 .project-desc h3 {
   font-size: calc(20px + 3vw);
   position: relative;
-  top: 45vh;
+  top: 40vh;
   left: 70px;
   text-transform: lowercase;
   display: inline-block;
@@ -530,7 +530,7 @@ header #te:before {
 .project-desc p {
   font-size: calc(14px + .5vw);
   position: relative;
-  top: 45vh;
+  top: 40vh;
   left: 70px;
   text-transform: lowercase;
   display: inline-block;
@@ -538,6 +538,7 @@ header #te:before {
   color: #304268;
   line-height: 1.2;
   margin-bottom: 1%;
+  width: 75%;
 }
 
 #quote-container {
@@ -549,19 +550,19 @@ header #te:before {
 #tribute-container {
   width: 100%;
   overflow: hidden;
-  background-color: #d0b4eb;
+  background-color: #f0dfe7;
 }
 
 #weather-container {
   width: 100%;
   overflow: hidden;
-  background-color: #77cbec;
+  background-color: #ece177;
 }
 
 #wiki-container {
   width: 100%;
   overflow: hidden;
-  background-color: #f5d1a9;
+  background-color: #f0dfe7;
 }
 
 .proj-img {
@@ -599,14 +600,14 @@ header #te:before {
 }
 
 #weather {
-  background: url("https://png.pngtree.com/element_origin_min_pic/17/02/12/3e85f445a7e124653f8d0f5787b4bdb7.jpg");
+  background: url("https://cdn-images-1.medium.com/max/1920/1*rPypt_bQdSNMxfgOKERKzA.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 #wiki {
-  background: url("https://media.wired.com/photos/5955ac6b5992c54331ac161b/1:1/w_4049,c_limit/2000px-Wikipedia-logo-v2-en-F.jpg");
+  background: url("https://cdn-images-1.medium.com/max/1600/1*tJRr_Lf9nlFW7QmWHX8i8A.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -632,7 +633,7 @@ header #te:before {
 /* ############ */
 /* The title in the text */
 .about-me {
-  color: white;
+  color: rgba(255, 0, 106, 0.308);
   font-size: 8vw;
 }
 
@@ -643,7 +644,7 @@ header #te:before {
   padding: 10%;
   font-size: 4vw;
   color: #304268;
-  background-color: #86ffff;
+  background-color: white;
   display: block;
   margin: 0 auto;
 }
@@ -695,11 +696,10 @@ header #te:before {
   position: fixed;
   bottom: 4%;
   opacity: 0;
-  right: calc(80px + 5vw);
+  left: 100px;
   margin-top: 1%;
   cursor: pointer;
-  font-size: calc(5px + .8vw);
-  padding: 0 5%;
+  font-size: calc(5px + .6vw);
   font-family: 'Source Sans Pro', sans-serif;
   color: #304268;
 }
@@ -719,18 +719,15 @@ header #te:before {
 }
 
 #fb:hover {
-  text-decoration: line-through;
-  color: blue;
+  color: #3e65cf;
 }
 
 #ig:hover {
-  text-decoration: line-through;
-  color: red;
+  color: #cd486b;
 }
 
-#snap:hover {
-  text-decoration: line-through;
-  color: yellow;
+#gmail:hover {
+  color: #c71610;
 }
 
 @keyframes glitchy {

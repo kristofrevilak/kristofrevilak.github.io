@@ -172,6 +172,19 @@ $(".portfolio").hover((e)=>{
     window.open("wiki/index.html")
   });
 
+  $("#fb").click(function(event) {
+    /* Act on the event */
+    window.open("https://www.facebook.com/kiko.revilak")
+  });
+  $("#ig").click(function(event) {
+    /* Act on the event */
+    window.open("https://www.instagram.com/krist0fk0/")
+  });
+  $("#gmail").click(function(event) {
+    /* Act on the event */
+    window.open("mailto:kristofrevilak@gmail.com")
+  });
+
 
   // $('.space').bind('inview', function(event, isInView) {
   //   if (isInView) {
