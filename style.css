@@ -527,14 +527,6 @@ header #te:before {
   margin-bottom: 3%;
 }
 
-<<<<<<< HEAD
-#tribute:hover {
-  -webkit-filter: grayscale(0%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-=======
 .project-desc p {
   font-size: calc(14px + .5vw);
   position: relative;
@@ -547,7 +539,6 @@ header #te:before {
   line-height: 1.2;
   margin-bottom: 1%;
   width: 75%;
->>>>>>> 8e67bb7b6205f51d2509ef2b653b4ff1df6d4bab
 }
 
 #quote-container {
@@ -595,8 +586,6 @@ header #te:before {
   overflow: hidden;
   -webkit-box-shadow: 10px 5px 8px #999999;
           box-shadow: 10px 5px 8px #999999;
-<<<<<<< HEAD
-=======
   margin-right: 10%;
   position: relative;
   top: -10vw;
@@ -608,7 +597,6 @@ header #te:before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
->>>>>>> 8e67bb7b6205f51d2509ef2b653b4ff1df6d4bab
 }
 
 #weather {
