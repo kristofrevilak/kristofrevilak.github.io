@@ -45,13 +45,11 @@ table {
 
 * {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *:before, *:after {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -70,7 +68,6 @@ body {
   /* iOS Safari */
   -webkit-user-select: none;
   /* Safari */
-  -khtml-user-select: none;
   /* Konqueror HTML */
   -moz-user-select: none;
   /* Firefox */
@@ -171,7 +168,6 @@ body:after {
   /* iOS Safari */
   -webkit-user-select: none;
   /* Safari */
-  -khtml-user-select: none;
   /* Konqueror HTML */
   -moz-user-select: none;
   /* Firefox */
@@ -200,6 +196,7 @@ body:after {
   width: 100%;
   z-index: -1;
   background: rgba(255, 0, 106, 0.308);
+  -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
 }
 
@@ -214,6 +211,7 @@ body:after {
   width: 100%;
   z-index: -1;
   background: rgba(255, 0, 106, 0.678);
+  -webkit-transition: 1s ease-out;
   transition: 1s ease-out;
 }
 
@@ -241,6 +239,7 @@ header {
 
 header p {
   display: inline-block;
+  -webkit-transition: 0.5 ease-out;
   transition: 0.5 ease-out;
   margin-left: 30px;
 }
@@ -256,12 +255,14 @@ header p:before {
   width: 70px;
   height: 0px;
   z-index: 1;
+  -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
   color: transparent;
 }
 
 header p:hover:before {
-  animation: glitchy 0.2s ease 0.1s infinite;
+  -webkit-animation: glitchy 0.2s ease 0.1s infinite;
+          animation: glitchy 0.2s ease 0.1s infinite;
   height: 15px;
 }
 
@@ -321,7 +322,8 @@ header #te:before {
   position: relative;
   font-weight: 800;
   color: #304268;
-  text-decoration: rgba(255, 0, 0, 0.5) underline;
+  -webkit-text-decoration: rgba(255, 0, 0, 0.5) underline;
+          text-decoration: rgba(255, 0, 0, 0.5) underline;
 }
 
 .name {
@@ -417,8 +419,10 @@ header #te:before {
 .img img {
   width: 400px;
   border: 1px solid black;
-  animation: borderr 0.2 ease-in 3s infinite;
-  filter: grayscale(30%) blur(0.8px) sepia(30%) opacity(80%);
+  -webkit-animation: borderr 0.2 ease-in 3s infinite;
+          animation: borderr 0.2 ease-in 3s infinite;
+  -webkit-filter: grayscale(30%) blur(0.8px) sepia(30%) opacity(80%);
+          filter: grayscale(30%) blur(0.8px) sepia(30%) opacity(80%);
 }
 
 /* The portfolio sign */
@@ -435,8 +439,6 @@ header #te:before {
 .go-down {
   cursor: default;
   -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 200;
@@ -496,7 +498,8 @@ header #te:before {
   width: 100%;
   margin: 0 auto;
   height: 110vh;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   overflow: hidden;
   background-color: #ece177;
 }
@@ -511,7 +514,8 @@ header #te:before {
   display: inline-block;
   font-family: 'Source Sans Pro', sans-serif;
   color: #304268;
-  transform: translateZ(20px);
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
   background: white;
 }
 
@@ -535,7 +539,8 @@ header #te:before {
   -webkit-filter: grayscale(0%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(0%);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #quote-container {
@@ -571,11 +576,13 @@ header #te:before {
   background-size: cover;
   width: 40vw;
   margin: 0 auto;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   margin-top: 10%;
   height: 50vh;
   overflow: hidden;
-  box-shadow: 10px 5px 8px #999999;
+  -webkit-box-shadow: 10px 5px 8px #999999;
+          box-shadow: 10px 5px 8px #999999;
 }
 
 #weather {
@@ -644,7 +651,8 @@ header #te:before {
 /* The rotated footer text with the year */
 #that-p {
   font-size: calc(8px + 1.5vw);
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   position: fixed;
   top: 50%;
   opacity: 0;
@@ -672,6 +680,7 @@ header #te:before {
   padding: 5%;
   text-align: center;
   display: inline;
+  -webkit-transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -698,38 +707,48 @@ header #te:before {
 
 @keyframes glitchy {
   0% {
-    transform: translate3d(-3px, 2px, 1px);
+    -webkit-transform: translate3d(-3px, 2px, 1px);
+            transform: translate3d(-3px, 2px, 1px);
   }
   25% {
-    transform: translate3d(-2px, 1px, -3px);
+    -webkit-transform: translate3d(-2px, 1px, -3px);
+            transform: translate3d(-2px, 1px, -3px);
   }
   50% {
-    transform: translate3d(0px, 2px, 1px);
+    -webkit-transform: translate3d(0px, 2px, 1px);
+            transform: translate3d(0px, 2px, 1px);
   }
   75% {
-    transform: translate3d(1px, 3px, -2px);
+    -webkit-transform: translate3d(1px, 3px, -2px);
+            transform: translate3d(1px, 3px, -2px);
   }
   100% {
-    transform: translate3d(-2px, 3px 0px);
+    -webkit-transform: translate3d(-2px, 3px 0px);
+            transform: translate3d(-2px, 3px 0px);
     height: 0px;
   }
 }
 
 @-webkit-keyframes glitchy {
   0% {
-    transform: translate3d(-3px, 2px, 1px);
+    -webkit-transform: translate3d(-3px, 2px, 1px);
+            transform: translate3d(-3px, 2px, 1px);
   }
   25% {
-    transform: translate3d(-2px, 1px, -3px);
+    -webkit-transform: translate3d(-2px, 1px, -3px);
+            transform: translate3d(-2px, 1px, -3px);
   }
   50% {
-    transform: translate3d(0px, 2px, 1px);
+    -webkit-transform: translate3d(0px, 2px, 1px);
+            transform: translate3d(0px, 2px, 1px);
   }
   75% {
-    transform: translate3d(1px, 3px, -2px);
+    -webkit-transform: translate3d(1px, 3px, -2px);
+            transform: translate3d(1px, 3px, -2px);
   }
   100% {
-    transform: translate3d(-2px, 3px 0px);
+    -webkit-transform: translate3d(-2px, 3px 0px);
+            transform: translate3d(-2px, 3px 0px);
     height: 0px;
   }
 }
@@ -771,6 +790,4 @@ header #te:before {
     opacity: 0;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.css.map */
