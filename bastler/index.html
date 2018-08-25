@@ -1,131 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- title-->
-    <title>PC Bastler | Predaj a servis PC techniky</title>
-    <!-- meta tags-->
-    <meta name="description" content="Zložíme PC presne podľa Vašich potrieb a očakávaní. Doprava zadarmo v BA a Senci.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <!-- link tags-->
-    <link rel="stylesheet" href="/style.css" media="screen" title="no title" type="text/css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    <!-- script tags-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script type="text/javascript" src="/main.js"></script>
-    <script type="text/javascript" src="/edit-list.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js" charset="utf-8"></script>
-  </head>
-  <!-- nav bar-->
-  <nav>
-    <ul>
-      <!-- logo-->
-      <li class="nav-logo"><a href="/"><img src="logo.png" alt="PC Bastler"></a></li>
-      <!-- nav menu items-->
-      <li class="nav-item normal"><a onclick="getFooter()" class="active">Kontakt</a></li>
-      <li class="nav-item normal"><a href="/doprava-a-platba" class="active">Doprava a Platba</a></li>
-      <li class="nav-item normal"><a href="/delid-cpu" class="active">Delid CPU</a></li>
-      <li class="nav-item normal"><a href="/pc-na-mieru" class="active">PC Na Mieru</a></li>
-      <!-- nav-item "menu" mobile-only-->
-      <li id="menu" class="nav-item mobile">
-        <p class="nav-item-text">menu</p>
-      </li>
-    </ul>
-    <!-- special nav page mobile-only-->
-    <div class="nav-menu-mobile mobile"><span class="exit">XXX</span>
-      <li class="nav-menu-item"><a href="/doprava-a-platba" class="active">PC Na Mieru</a></li>
-      <li class="nav-menu-item"><a href="/delid-cpu" class="active">Delid CPU</a></li>
-      <li class="nav-menu-item"><a href="/pc-na-mieru" class="active">Doprava a Platba</a></li>
-      <li class="nav-menu-item"><a onclick="getFooter()" class="active">Kontakt</a></li>
-      <li class="nav-menu-item">
-      </li><img src="logo.png" alt="PC Bastler">
-    </div>
-  </nav>
-</html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PC Bastler | Site in construction!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	<script src="main.js"></script> -->
+</head>
 <body>
-
-  <!-- main section-->
-  <section style="background-image:url('https://static.pexels.com/photos/380769/pexels-photo-380769.jpeg');background-position: center;background-size: cover;background-attachment: scroll;" class="main-section">
-    <section class="main-section-content">
-      <header class="main-section-header">
-        <h1 class="highlight">PC Bastler</h1>
-      </header>
-      <section class="main-section-content-text"><span class="main-section-desc highlight">Zložíme PC presne podľa Vašich potrieb a očakávaní. Skúsenosti a kvalita za tu najvýhodnejšiu cenu.</span></section>
-      <div onclick="clickedButton('see-more')" class="see-more"><span class="arrow-text">Prečo práve my?</span><br/><i aria-hidden="true" class="fa fa-arrow"></i></div>
-    </section>
-  </section>
-  <div class="divider"></div>
-  <section style="background-image:url('');background-position: center;background-size: cover;background-attachment: scroll;" class="side-section">
-    <section class="side-section-content">
-      <section class="side-section-float">
-        <header class="side-section-header">
-          <h1>PC zostavy na mieru</h1>
-        </header>
-        <section class="side-section-content-text"><span class="side-section-desc">Každý potrebuje PC na to svoje. Vašnivý hráč, ktorý si chce vychutnať tie najlepšie detaily? Práca v kancelárii, Microsoft Office, tlač dokumentov? Dizajn, grafika, strih videa či úprava hudby? Zložíme PC presne podľa Vašich potrieb a očakávaní!</span></section>
-      </section>
-      <section class="side-section-img"><img src="https://static.pexels.com/photos/776656/pexels-photo-776656.jpeg" alt="section-photo" class="normal"/></section>
-    </section>
-  </section>
-  <div class="divider"></div>
-  <section style="background-image:url('');background-position: center;background-size: cover;background-attachment: scroll;" class="side-section">
-    <section class="side-section-content">
-      <section class="side-section-float left">
-        <header class="side-section-header">
-          <h1>Servis a poradenstvo</h1>
-        </header>
-        <section class="side-section-content-text"><span class="side-section-desc">Pomalý a prehrievajúci sa PC, či nefunkčný displej na notebooku? Zavírený počítač či množstvo nepotrebných programov? Inštalácia operačného systému alebo potrebujete pomôcť s prvým spustením počítača? Ochotne Vám pomôžeme!</span></section>
-      </section>
-      <section class="side-section-img"><img src="https://static.pexels.com/photos/257736/pexels-photo-257736.jpeg" alt="section-photo" class="normal"/></section>
-    </section>
-  </section>
-  <div class="divider"></div>
-  <section style="background-image:url('');background-position: center;background-size: cover;background-attachment: scroll;" class="side-section">
-    <section class="side-section-content">
-      <section class="side-section-float">
-        <header class="side-section-header">
-          <h1>Delid CPU</h1>
-        </header>
-        <section class="side-section-content-text"><span class="side-section-desc">Delid je slúži hlavne na zníženie teplôt, ktoré môžu vo výsledku byť až o 20°C nižšie! Svoje uplatnenie má hlavne pri taktovaní a pre dosiahnutie tichšieho chodu PC. Pri objednávke PC na mieru s procesorom Intel rady "K" dostanete 20% zľavu na delid "Profi".</span>
-          <div onclick="clickedButton('see-more')" class="see-more"><span class="arrow-text">Klikni pre viac info</span></div>
-        </section>
-      </section>
-      <section class="side-section-img"><img src="https://static.pexels.com/photos/159282/technology-servers-server-159282.jpeg" alt="section-photo" class="normal"/></section>
-    </section>
-  </section>
-  <div class="divider"></div>
-  <section class="review-section">
-    <section class="review-section-div">
-      <header class="review-section-header">
-        <h2>  Recenzie</h2>
-      </header>
-      <div class="review-section-wrapper">
-        <article id="bender" class="review-section-body"><img src="https://temptec.webnode.sk/_files/200000034-9871e996c2/200/19275170_1215204021940025_8500336787225476774_n.jpg" alt="PROFILE PHOTO" class="review-profile-photo"/>
-          <div class="review-section-body-header">
-            <h4>Bender Blahovsky</h4>
-          </div>
-          <div class="review-section-body-stars"><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i></div><span>Maximálna spokojnosť</span>
-        </article>
-        <article id="luky" class="review-section-body"><img src="https://temptec.webnode.sk/_files/200000035-1b2541c1fe/200/19702074_1814144758914588_8940003566711964845_n.jpg" alt="PROFILE PHOTO" class="review-profile-photo"/>
-          <div class="review-section-body-header">
-            <h4>Lukáš Elner</h4>
-          </div>
-          <div class="review-section-body-stars"><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i></div><span>Super dohoda, prijemný pán, 100% doporučuji.</span>
-        </article>
-      </div>
-    </section>
-  </section>
-  <section class="whats-next">
-    <div class="whats-next-wrapper">
-      <div class="whats-next-header">
-        <h2>Pozrite dalej:</h2>
-      </div>
-      <div class="whats-next-content">
-        <p class="next-click">pc na mieru</p>
-      </div>
-    </div>
-  </section>
-  <p></p>
+	<p>Na stránke sa pracuje!</p>
+	<p>Ďakujeme za pochopenie.</p>
 </body>
+</html>

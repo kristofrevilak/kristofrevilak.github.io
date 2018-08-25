@@ -543,43 +543,48 @@ header {
   height: 110vh;
   box-sizing: border-box;
   overflow: hidden;
-  background-color: #ece177;
+  // background-color: #ece177;
+}
+
+.project-desc{
+  width: 35%;
+  margin-left: 10%;
+  opacity: 0;
   h3 {
-    font-size: 5vw;
-    margin-left: 0%;
+    font-size: calc(20px + 3vw);
     position: relative;
-    top: 45vh;
+    top: 40vh;
     left: 70px;
     text-transform: lowercase;
-    display: inline-block;
+    display: inline-block;  
     font-family: 'Source Sans Pro', sans-serif;
     color: #304268;
     transform: translateZ(20px);
     background: white;
   }
-}
+  .project-header{
+    margin-bottom: 3%;
 
-#tribute {
-  background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fwww.telegraph.co.uk%2Fcontent%2Fdam%2Fart%2F2016%2F10%2F04%2Fpicasso-large_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwbKTcqHAsmNzJMPMiov7fpk.jpg&sp=ac4dc4e35bc0ac74a30ea29d11ece6b9");
-  background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-  padding: 10%;
-  -webkit-transition: all .4s ease-in-out;
-  -moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -ms-transition: all .4s ease-in-out;
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  &:hover {
-    -webkit-filter: grayscale(0%);
-    /* Safari 6.0 - 9.0 */
-    filter: grayscale(0%);
-    transform: scale(1.1);
+  }
+  p{
+    font-size: calc(14px + .5vw);
+    position: relative;
+    top: 40vh;
+    left: 70px;
+    text-transform: lowercase;
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #304268;
+    line-height: 1.2;
+    margin-bottom: 1%;
+    width: 75%;
   }
 }
+
+
+// .anim{
+//   overflow: hidden;
+// }
 
 // .anim{
 //   background: rgb(141, 50, 50);
@@ -599,23 +604,29 @@ header {
 #tribute-container {
   width: 100%;
   overflow: hidden;
-  background-color: #ece177;
-  background-color: #d0b4eb;
+  background-color: #f0dfe7;
 }
 
 #weather-container {
   width: 100%;
   overflow: hidden;
-  background-color: #77cbec;
+  background-color: #ece177;
 }
 
 #wiki-container {
   width: 100%;
   overflow: hidden;
-  background-color: #f5d1a9;
+  background-color: #f0dfe7;
 }
 
-#nodeblog, #weather, #wiki {
+.proj-img{
+  opacity: 0;
+  position: relative;
+  right: -10vw;
+}
+
+
+#nodeblog, #weather, #wiki, #tribute {
   background-image: url("quotescreen.png");
   background-color: transparent;
   background-position: center;
@@ -628,23 +639,63 @@ header {
   height: 50vh;
   overflow: hidden;
   box-shadow: 10px 5px 8px rgb(153, 153, 153);
-  h3{
-    
-  }
+  margin-right: 10%;
+  position: relative;
+  top: -10vw;  
+}
+
+#tribute {
+  background-image: url("https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fwww.telegraph.co.uk%2Fcontent%2Fdam%2Fart%2F2016%2F10%2F04%2Fpicasso-large_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwbKTcqHAsmNzJMPMiov7fpk.jpg&sp=ac4dc4e35bc0ac74a30ea29d11ece6b9");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  // padding: 10%;
+  // -webkit-transition: all .4s ease-in-out;
+  // -moz-transition: all .4s ease-in-out;
+  // -o-transition: all .4s ease-in-out;
+  // -ms-transition: all .4s ease-in-out;
+  // -webkit-filter: grayscale(100%);
+  // /* Safari 6.0 - 9.0 */
+  // filter: grayscale(100%);
+  // &:hover {
+  //   -webkit-filter: grayscale(0%);
+  //   /* Safari 6.0 - 9.0 */
+  //   filter: grayscale(0%);
+  //   transform: scale(1.1);
+  // }
+}
+
+#nodeblog{
+  
 }
 
 #weather {
-  background: url("https://png.pngtree.com/element_origin_min_pic/17/02/12/3e85f445a7e124653f8d0f5787b4bdb7.jpg");
+  background: url("https://cdn-images-1.medium.com/max/1920/1*rPypt_bQdSNMxfgOKERKzA.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 #wiki {
-  background: url("https://media.wired.com/photos/5955ac6b5992c54331ac161b/1:1/w_4049,c_limit/2000px-Wikipedia-logo-v2-en-F.jpg");
+  background: url("https://cdn-images-1.medium.com/max/1600/1*tJRr_Lf9nlFW7QmWHX8i8A.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.info{
+  font-style: italic;
+  font-size: calc(11px + .5vw) !important;
+  color: #0f2655 !important;
+}
+
+.controller{
+  margin-top: 5%;
+  p{
+    font-size: calc(9px + .5vw);
+    color: #304268;
+  }
 }
 
 /* ############ */
@@ -653,7 +704,7 @@ header {
 /* The title in the text */
 
 .about-me {
-  color: white;
+  color: rgba(255, 0, 106, 0.308);
   font-size: 8vw;
 }
 
@@ -665,7 +716,7 @@ header {
   padding: 10%;
   font-size: 4vw;
   color: #304268;
-  background-color: #86ffff;
+  background-color: white;
   display: block;
   margin: 0 auto;
 }
@@ -717,13 +768,12 @@ header {
 
 .social {
   position: fixed;
-  bottom: 1%;
+  bottom: 4%;
   opacity: 0;
-  right: calc(80px + 5vw);
+  left: 100px;
   margin-top: 1%;
   cursor: pointer;
-  font-size: calc(5px + .8vw);
-  padding: 0;
+  font-size: calc(5px + .6vw);
   font-family: 'Source Sans Pro', sans-serif;
   color: #304268;
   p {
@@ -741,18 +791,15 @@ header {
 }
 
 #fb:hover {
-  text-decoration: line-through;
-  color: blue;
+  color: #3e65cf
 }
 
 #ig:hover {
-  text-decoration: line-through;
-  color: red;
+  color: #cd486b
 }
 
-#snap:hover {
-  text-decoration: line-through;
-  color: yellow;
+#gmail:hover {
+  color: #c71610;
 }
 
 @keyframes glitchy {
