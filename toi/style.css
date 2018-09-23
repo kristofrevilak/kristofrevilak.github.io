@@ -157,7 +157,6 @@ table {
 .small-header h2{
 	font-size: calc(12px + .6vw);
 	line-height: 1.7;
-	text-align: left;
 	color: white;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -168,14 +167,12 @@ table {
 .medium-header h2{
 	font-size: calc(12px + 1vw);
 	line-height: 1.7;
-	text-align: left;
 	letter-spacing: 1px;
 }
 
 .big-header h2{
 	font-size: calc(16px + 1.2vw);
 	line-height: 1.7;
-	text-align: left;
 	letter-spacing: 1px;
 }
 
