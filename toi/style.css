@@ -96,6 +96,23 @@ table {
 	padding: 5% 5%;
 }
 
+@media only screen and (max-width:900px){
+	.big{
+		padding: 5% 5%;
+	}
+	.medium{
+		padding: 5%;
+	}
+	
+	.div-container.small{
+		padding: 5% 2%;
+	}
+
+	.start-elipse{
+		width: 50vw !important;
+	}
+}
+
 
 .div-container.blue{
 	background-color: #84c6e7;
@@ -199,15 +216,15 @@ table {
 
 /* BUTTON STYLES */
 .action-btn{
-	
+	box-shadow: 2px 5px 15px #c2c2c2;
 	background: #67c5f4;
-	border: 1px solid #b8d2f7;
 	border-radius: 20px;
 	padding: 1% 2%;
 	display: table;
 	margin: 0 auto;
+	cursor: pointer;
 }
-.action-btn a{
+.action-btn a, .action-btn p{
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
@@ -239,26 +256,31 @@ table {
 }
 
 .double-button{
-	display: block;
-	text-align: center;
 	overflow: hidden;
-	margin: 0 auto !important;
-	width: 60%;
+	display: flex;
+  justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
+	padding-bottom: 5%;
 }
 
 .action-btn.double{
 	float: left;
-	margin: 0 2%;
-	padding: 2%;
-	width: 30%;
-	box-sizing: border-box;
+	margin: 0 5px;
 }
 
+.value-container .medium-header{
+	color: black;
+	margin-bottom: 10%;
+}
 
 /* WELCOME PAGE */
 
+.welcome-container{
+	padding: 10%;
+}
+
 .bottom-graphic img{
-	width: 50%;
+	width: 45%;
 	position: absolute;
 	left: 0;
 	z-index: 0;
@@ -277,11 +299,13 @@ table {
 .start-h{
 	width: 100%;
 	margin-top: 25%;
+	opacity: 0;
 }
 
 .start-t{
 	width: 90%;
 	color: white;
+	opacity: 0;
 }
 
 .start-box{
@@ -291,6 +315,7 @@ table {
 	margin-right: 4%;
 	padding: 4% !important;
 	margin-bottom: 15%;
+	opacity: 0;
 }
 
 .start-box h2{
@@ -343,7 +368,7 @@ table {
 
 .welcome-steps{
 	position: absolute;
-	right: calc(50px + 2vw);
+	right: calc(-150px + 13vw);
 	z-index: 0;
 	top: -200px;
 }
@@ -356,14 +381,14 @@ table {
 
 .evolution{
 	position: absolute;
-	top: 6%;
-	right: -30px;
+	top: -50px;
+	right: 30px;
 }
 
 .behavior{
 	position: absolute;
 	top: 80px;
-	right: 62%;
+	right: 400px;
 }
 
 .search{
@@ -387,33 +412,149 @@ table {
 	float: left;
 	position: relative;
 	z-index: 0;
+	opacity: 0;
 }
 
-.start-graphic img{
-	width: 110%;
-	min-width: 200px;
+.start-graphic .start-elipse{
+	width: 40vw;
+	min-width: 400px;
 	position: absolute;
-	right: calc(-20px - 40%);
-	top: calc(-100px - 70%);
+	right: calc(-40px - 40%);
+	top: -200px;
+	z-index: -1;
 }
 
+.single-graphic{
+	width: 100%;
+	overflow: hidden;
+	margin-left: 40%;
+	margin-right: 40%;
+	margin-top: 10%;
+	position: relative;
+}
+.thinking{
+	padding-left: 40%;
+}
+.science{
+	padding-left: 40%;
+}
+
+
+.single-graphic img{
+	width: 50%;
+	max-width: 100px;
+	display: block;
+}
+
+.single-graphic .graphic-text{
+	width: 10% !important;
+}
+.thinking .graphic-text{
+	
+}
+.thinking .graphic-arrow{
+	margin-left: 60px;
+	margin-bottom: 10px;
+}
+.thinking .graphic-icon{
+	margin-left: 120px;
+	width: 40% !important;
+}
+.thinking .graphic-arrow{
+	width: 10% !important;
+	max-width: 100px;
+	min-width: 50px;
+	
+}
+
+.science{
+	margin-top: 5%;
+}
+.science .graphic-text{
+	margin-left: 120px;
+}
+.science .graphic-arrow{
+	margin-left: 90px;
+	margin-bottom: 10px;
+	transform: rotate(-100deg);
+	width: 8% !important;
+	max-width: 100px;
+	min-width: 50px;
+}
+.science .graphic-icon{
+	width: 30% !important;
+	position: relative;
+	top: 10px;
+}
+
+.results{
+	margin-top: 5%;
+}
+.results .graphic-text{
+	margin-left: 120px;
+}
+.results .graphic-arrow{
+	margin-left: 150px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	transform: rotate(-280deg);
+	width: 8% !important;
+	max-width: 100px;
+	min-width: 50px;
+}
+.results .graphic-icon{
+	width: 30% !important;
+	margin-left: 180px;
+}
+.profit{
+	position: absolute;
+	bottom: -80px;
+	right: calc(-20%-300px);
+}
+.profit .graphic-text{
+	margin-left: 480px;
+}
+.profit .graphic-arrow{
+	margin-left: 460px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	transform: rotate(180deg);
+	width: 8% !important;
+	max-width: 100px;
+	min-width: 50px;
+}
+.profit .graphic-icon{
+	width: 30% !important;
+	margin-left: 400px;
+}
 
 .overview-text{
-	width: 90%;
+	width: 75%;
+	color: white;
 }
 
 .page-card{
-	width: 15%;
+	width: 28.3%;
 	float: left;
-	margin: 0 auto;
+	margin: 5% auto;
 	padding: 0 2.5%;
 }
+.page-card .small-header{
+	color: white;
+}
+.page-overview .medium-header{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 800;
+	margin-bottom: 5%;
+	color: white;
+}
 .page-underline{
-	width: 10%;
+	width: 7%;
 	max-width: 50px;
-	min-width: 15px;
+	min-width: 5px;
 	background-color: white;
-	height: 15px;
+	height: .8%;
 	margin-bottom: 5%;
 	margin-top: 2%;
 }
@@ -423,6 +564,7 @@ table {
 	border-radius: 10px;
 	padding: 2.5%;
 	box-sizing: border-box;
+	box-shadow: 5px 15px 50px rgb(90, 101, 136);
 }
 
 .blue-box{
@@ -517,6 +659,15 @@ table {
 
 .quote-container .small-text{
 	width: 70%;
+	
+}
+.quote-container .small-text p{
+	color: white;
+	letter-spacing: 1px;
+	line-height: 2;
+	font-size: calc(14px + .55vw);
+	text-align: center;
+	font-family: 'Patrick Hand', cursive;
 }
 .quote-box{
 	width: 50%;
@@ -525,9 +676,19 @@ table {
 
 
 .quote{
-	font-size: 200px;
-	position: absolute;
-	color: #bfd9ff;
+	font-size: 100px;
+	line-height:1px;
+	color: #9ed6f7;
+	font-family: 'Playfair Display', serif;
+	display: block;
+	
+}
+.quote-up{
+	text-align: left;
+}
+.quote-down{
+	text-align: right;
+	margin-top: 7%;
 }
 
 .quote-sign{
@@ -536,6 +697,9 @@ table {
 	text-align: right;
 	text-transform: uppercase;
 	margin-right: 20%;
+	font-weight: 800;
+	margin-top: 5%;
+	color: white;
 }
 
 .academy-texts{
@@ -754,14 +918,23 @@ table {
 	line-height: 1.5;
 	margin-bottom: 2%;
 }
+.no-shadow{
+	box-shadow: none;
+}
 
 .contact-header{
 	margin-bottom: 20%;
 	text-align: center;
 }
 
+.join-us{
+	background-color: #1184bd;
+}
+
 .join-us .medium-text{
-	margin-bottom: 5%;
+	margin-bottom: 3%;
+	font-size: calc(12px + .7vw);
+	color: white;
 }
 
 .page-card-jumper{
@@ -822,6 +995,15 @@ table {
 	width: 90%;
 	float: left;
 }
+.expand-div{
+	cursor: pointer;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
 
 .member-arrow{
 	width: 10%;
@@ -831,6 +1013,15 @@ table {
 	margin-top: 30%;
 	position: relative;
 	right: -70%;
+	width: 80%;
+	max-width: 10px;
+	min-width: 5px;
+}
+.member-expand-content{
+	display: none;
+}
+.member-social{
+	display: none;
 }
 
 .member-expand-content p{
@@ -880,6 +1071,32 @@ table {
 	display: block;
 }
 
+.explore-btn{
+	margin: 0 auto;
+	color: white;
+	overflow: hidden;
+	position: relative; 
+	left: -50%;
+	margin-top: -100px;
+	opacity: 0;
+	cursor: pointer;
+}
+.explore-text{
+	overflow: hidden;
+}
+.explore-text h2{
+	font-size: calc(12px + 0.3vw);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.ciara{
+	height: 50px;
+	width: 1px;
+	background: white;
+	margin: 10px auto;
+}
+
+
 @media screen and (max-width:750px){
 	.single-member{
 		width: 100%;
@@ -925,13 +1142,14 @@ table {
 		float: none;
 	}
 	.start-graphic{
-		width: 100%;
-		float: none;
-		top: 0px;
-		left: -250px;
-		transform: rotate(270deg);
-		position: absolute;
-		z-index: 0;
+		display: none;
+	}
+	.start-elipse{
+		transform: rotate(-80deg);
+		top: -400px;
+	}
+	.bottom-graphic{
+		display: none;
 	}
 	.start-box{
 		width: 47%;
@@ -945,15 +1163,42 @@ table {
 		float: none;
 	}
 	.welcome-steps{
-		/* position: static; */
-		z-index: -2;
+		position: static;
+	}
+	.search{
+		top: 500px;
+		left: calc(50% - 40px);
+	}
+	.nudge{
+		top: 500px;
+		left: calc(50% - 130px);
+	}
+	.welcome-shape{
+		overflow: hidden;
 	}
 	.welcome-steps img{
+		width: 30%;
+		height: 70%;
+		transform: rotate(90deg);
+		margin-top: -250px;
+		margin-left: 30%;
+	}
+	.behavior{
+		top: 430px;
+		left: 50%;
+	}
+	.evolution{
+		top: 430px;
+		left: calc(50% - 80px);
+	}
+	.strategy{
+		left: calc(50% - 160px);
+		top: 430px;
 	}
 	.welcome-shape img{
-		position: static;
+		position: absolute;
 		display: block;
-		float: right;
+		width: 60px;
 	}
 	.welcome{
 		width: 100%;
@@ -983,7 +1228,7 @@ table {
 	.value-card{
 		width: 100%;
 		float: none;
-		height: 19%;
+		height: 21%;
 		margin: 10% 0;
 	}
 	.value-card-top{
@@ -1064,6 +1309,9 @@ table {
 		width: 50%;
 		float: left;
 		margin-left: 0;
+	}
+	.value-header{
+		margin-top: -2%;
 	}
 	.single-reason{
 		width: 100%;
