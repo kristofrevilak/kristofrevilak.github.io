@@ -1136,6 +1136,9 @@ table {
 		float: none;
 		margin-left: 0;
 	}
+	.medium-text{
+		font-size: calc(11px + .5vw);
+	}
 	.big{
 		padding: 5%;
 	}
@@ -1155,6 +1158,13 @@ table {
 		width: auto;
 		padding: 4%;
 		margin-top: 5%;
+	}
+	.academy-btn-div{
+		display: block;
+		text-align: center;
+	}
+	.academy-btn{
+		display: inline-block;
 	}
 	.action-btn{
 		float: none;
@@ -1202,14 +1212,7 @@ table {
 	.welcome-steps{
 		position: static;
 	}
-	.search{
-		top: 500px;
-		left: calc(50% - 40px);
-	}
-	.nudge{
-		top: 500px;
-		left: calc(50% - 130px);
-	}
+
 	.welcome-shape{
 		overflow: hidden;
 	}
@@ -1217,20 +1220,28 @@ table {
 		width: 30%;
 		height: 70%;
 		transform: rotate(90deg);
-		margin-top: -100px;
+		margin-top: -65px;
 		margin-left: 30%;
 	}
 	.behavior{
-		top: 430px;
-		left: 50%;
+		top: 350px;
+		left: 70%;
 	}
 	.evolution{
-		top: 430px;
-		left: calc(50% - 80px);
+		top: 320px;
+		left: calc(50% - 50px);
 	}
 	.strategy{
-		left: calc(50% - 160px);
-		top: 430px;
+		left: calc(50% - 190px);
+		top: 346px;
+	}
+	.search{
+		top: 470px;
+		left: calc(50% - 2px);
+	}
+	.nudge{
+		top: 490px;
+		left: calc(50% - 130px);
 	}
 	.welcome-shape img{
 		position: absolute;
@@ -1249,7 +1260,6 @@ table {
 	}
 	.welcome-text p{
 		font-size: calc(10px + .5vw);
-		letter-spacing: 1px;
 	}
 	.big-text{
 		font-size: calc(12px + 1vw);
@@ -1271,7 +1281,6 @@ table {
 		margin: 5% auto;
 		margin-bottom: 2%;
 		font-size: calc(10px + 0.5vw) !important;
-		letter-spacing: 1px;
 	} 
 	.medium-header{
 		margin: 10% 0;
@@ -1311,7 +1320,6 @@ table {
 	}
 	.small-text{
 		font-size: calc(10px + 0.5vw) !important;
-		letter-spacing: 1px;
 	}
 	.logo-box{
 		width: 70%;
@@ -1389,7 +1397,7 @@ table {
 		left: 2vw;
 	}
 	.quote-sign{
-		font-size: calc(6px + .2vw);
+		font-size: calc(9px + .2vw);
 		margin-right: 0;
 		margin-top: -20px;
 		text-align: center;
@@ -1408,7 +1416,7 @@ table {
 		margin: 0 auto;
 		display: table;
 		position: static;
-		float: none;
+		display: none;
 	}
 	.maze-container img{
 		width: 80%;
@@ -1525,7 +1533,7 @@ table {
 		margin-bottom: 5%;
 	}
 	.box-workshop{
-		height: 60%;
+		height: 70%;
 		width: 70%;
 		margin: 0 auto;
 		margin-bottom: 10%;
@@ -1554,5 +1562,9 @@ table {
 	.gmap_canvas, .mapouter{
 		width: 100% !important;
 		height: 200px !important;
+		text-align: center;
+	}
+	#gmap_canvas{
+		margin: 0 auto;
 	}
 }
