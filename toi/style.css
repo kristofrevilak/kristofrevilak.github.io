@@ -372,7 +372,7 @@ table {
 	position: absolute;
 	right: calc(-150px + 13vw);
 	z-index: 0;
-	top: -200px;
+	top: -150px;
 }
 
 .welcome-shape img{
@@ -1298,6 +1298,8 @@ table {
 	}
 	.value-card{
 		width: 70%;
+		min-height: 300px; 
+		min-width: 200px;
 		float: none;
 		height: 45%;
 		margin: 15% auto;
@@ -1512,7 +1514,7 @@ table {
 		margin: 10% 0;
 	}
 	.action-btn.transparent{
-		width: 40%;
+		width: 50%;
 		padding: 0;
 		margin: 0;
 		text-align: left;
@@ -1534,7 +1536,7 @@ table {
 	}
 	.box-workshop{
 		height: 70%;
-		width: 70%;
+		width: 80%;
 		margin: 0 auto;
 		margin-bottom: 10%;
 	}
