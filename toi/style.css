@@ -1536,7 +1536,8 @@ table {
 	}
 	.box-workshop{
 		height: 70%;
-		width: 80%;
+		width: 70%;
+		min-width: 450px;
 		margin: 0 auto;
 		margin-bottom: 10%;
 	}
