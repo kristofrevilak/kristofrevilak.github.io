@@ -232,6 +232,7 @@ table {
 }
 
 .action-btn.expand{
+	padding: 2% 4%;
 }
 
 .action-btn.transparent{
@@ -240,6 +241,7 @@ table {
 	font-weight: 100;
 	margin: 0;
 	padding: 0;
+	box-shadow: none;
 }
 
 .action-btn.workshop{
@@ -737,11 +739,20 @@ table {
 
 .academy-bullets{
 	width: 50%;
-	float: left;
+	float: right;
 }
 
 .bullets-change{
 	margin-bottom: 15%;
+}
+.reason-text-more{
+	display: none;
+}
+.bullets-change ul{
+	display: none;
+}
+#af0{
+	display: block;
 }
 
 
@@ -751,7 +762,25 @@ table {
 
 .single-fact, .single-fact .small-header{
 	color: #cbeeff;
-	margin-bottom: 2%;
+	margin-bottom: 1.5%;
+}
+.single-fact{
+	margin-bottom: 3%;
+	cursor: pointer;
+}
+.single-fact:hover{
+	color: white !important;
+}
+.single-fact:hover h2{
+	color: white !important;
+}
+.academy-arrow{
+	position: absolute;
+	left: 1%;
+	top: 4%;
+}
+.academy-arrow img{
+	width: 80%;
 }
 
 .single-fact{
@@ -836,13 +865,17 @@ table {
 	background: #3face3;
 }
 
+.custom-shadow{
+	box-shadow: 5px 10px 25px rgb(180, 180, 180);
+}
+
 .box-workshop{
 	width: 47%;
 	float: left;
 	color: white;
 	height: 40%;
 	position: relative;
-	margin: 1.5%
+	margin: 1.5%;
 }
 
 .workshops-text{
@@ -862,8 +895,8 @@ table {
 .workshop-c{
 	position: absolute;
 	overflow: hidden;
-	bottom: 10%;
-	left: 5%;
+	bottom: 12%;
+	left: 8%;
 }
 
 .workshop-c .small-text{
@@ -1119,7 +1152,7 @@ table {
 	}
 	.action-btn.double{
 		float: none;
-		width: 70%;
+		width: auto;
 		padding: 4%;
 		margin-top: 5%;
 	}
@@ -1130,6 +1163,10 @@ table {
 		margin-top: 5%;
 		text-align: center;
 		margin: 5% auto;
+	}
+	.action-btn.short{
+		width: 40%;
+		padding: 6% 4%;
 	}
 	.uvod-container{
 		width: 100%;
@@ -1180,7 +1217,7 @@ table {
 		width: 30%;
 		height: 70%;
 		transform: rotate(90deg);
-		margin-top: -250px;
+		margin-top: -100px;
 		margin-left: 30%;
 	}
 	.behavior{
@@ -1204,9 +1241,22 @@ table {
 		width: 100%;
 		float: none;
 	}
+	.welcome .small-header{
+		margin-top: 15%;
+	}
+	.welcome .small-header h2{
+		font-size: calc(14px + .5vw);
+	}
+	.welcome-text p{
+		font-size: calc(10px + .5vw);
+		letter-spacing: 1px;
+	}
 	.big-text{
 		font-size: calc(12px + 1vw);
 		line-height: 2;
+	}
+	.logo-container{
+		padding-bottom: 15% !important;
 	}
 	.page-card{
 		width: 95%;
@@ -1220,16 +1270,34 @@ table {
 		width: 80%;
 		margin: 5% auto;
 		margin-bottom: 2%;
+		font-size: calc(10px + 0.5vw) !important;
+		letter-spacing: 1px;
 	} 
+	.medium-header{
+		margin: 10% 0;
+		font-size: calc(13px + 0.5vw) !important;
+	}
+	.decide-btn{
+		display: none;
+	}
 	.page-card-jumper{
 		margin: 15% 0;
 		margin-top: 2%;
 	}
+	.decide-header{
+		font-size: calc(18px + .5vw) !important;
+	}
 	.value-card{
-		width: 100%;
+		width: 70%;
 		float: none;
-		height: 21%;
-		margin: 10% 0;
+		height: 45%;
+		margin: 15% auto;
+	}
+	.high{
+		height: 60%;
+	}
+	.low{
+		height: 30%;
 	}
 	.value-card-top{
 		padding: 4% 7%;
@@ -1241,12 +1309,21 @@ table {
 		padding: 4% 7%;
 		width: 82%;
 	}
+	.small-text{
+		font-size: calc(10px + 0.5vw) !important;
+		letter-spacing: 1px;
+	}
+	.logo-box{
+		width: 70%;
+		margin: 0 auto;
+	}
 	.single-logo{
-		width: 100%;
-		float: left;
+		width: 70%;
+		margin: 25% auto;
+		float: none;
 	}
 	.single-logo img{
-		width: 40%;
+		width: 70%;
 		margin: 10% auto;
 		display: block;
 	}
@@ -1256,6 +1333,46 @@ table {
 	}
 	.single-member{
 		margin: 10% 0;
+	}
+	.member-static .medium-header{
+		margin: 0;
+	}
+	.member-info{
+		width: 90%;
+		padding: 5%;
+	}
+	.member-photo{
+		float: none;
+		width: 100%;
+		padding: 5%;
+		overflow: hidden;
+		clear: both;
+	}
+	.member-photo img{	
+		display: block;
+		width: 47.5%;
+		margin-right: 2.5%;
+		float: left;
+	}
+	.member-social{
+		display: block;
+		width: 47.5%;
+		float: left;
+		border-radius: 5px;
+		margin: 0;
+		margin-left: 2.5%;
+	}
+	.single-social{
+		overflow: hidden;
+		text-align: center;
+	}
+	.single-social img{
+		width: 20% !important;
+		display: inline-block;
+		margin-left: 40%;
+	}
+	.member-expand{
+		margin-top: 5%;
 	}
 	.quote-container{
 		width: 100%;
@@ -1274,13 +1391,19 @@ table {
 	.quote-sign{
 		font-size: calc(6px + .2vw);
 		margin-right: 0;
-		margin-left: 10%;
+		margin-top: -20px;
+		text-align: center;
 	}
 	.quote-box{
 		width: 100%;
 		float: none;
 		margin-top: 10%;
+		padding: 10%;
 	}
+	.quote-box .margin-bottom{
+		margin-bottom: 10%;
+	}
+	
 	.maze-container{
 		margin: 0 auto;
 		display: table;
@@ -1297,18 +1420,33 @@ table {
 		width: 100%;
 		float: none;
 		box-sizing: border-box;
+		padding: 10% 5%;
+	}
+	.academy-texts .small-text{
+		margin-bottom: 10%;
 	}
 	.academy-bullets{
 		width: 100%;
 		float: none;
 	}
+	.bullet-box .medium-header{
+		margin: 0;
+		margin-bottom: 10%;
+	}
+	.small-text-bullets{
+		margin-bottom: 5%;
+	}
 	.academy-facts{
 		width: 100%;
 	}
 	.single-fact{
-		width: 50%;
+		width: 40%;
 		float: left;
 		margin-left: 0;
+		padding: 5%;
+	}
+	.academy-arrow{
+		display: none;
 	}
 	.value-header{
 		margin-top: -2%;
@@ -1327,6 +1465,44 @@ table {
 		width: 100%;
 		float: none;
 	}
+	.test-logo-container{
+		padding: 0;
+	}
+	.action-btn.expand{
+		padding: 4% 6%;
+	}
+	.reason-text-more{
+		padding: 15%;
+	}
+	.test-wrapper .medium-header, .logo-wrapper .medium-header{
+		margin: 5% 0;
+	}
+	.logo-wrapper .small-text{
+		margin-bottom: 10%;
+	}
+	.academy-logo{
+		overflow: hidden;
+	}
+	.all-single-logo{
+		width: 27.33%;
+		margin: 2.5%;
+		float: right;
+	}
+	.double-box-blue{
+		border-radius: 0;
+	}
+	.logo-row{
+		width: 100%;
+		overflow: hidden;
+	}
+	.all-single-logo img{
+		width: 60%;
+		margin: 10% auto;
+		display: block;
+	}
+	.list{
+		margin: 10% 0;
+	}
 	.action-btn.transparent{
 		width: 40%;
 		padding: 0;
@@ -1337,8 +1513,25 @@ table {
 	.action-btn.workshop{
 		width: 40%;
 	}
+	.workshop-start .big-header{
+		margin: 5% 0;
+		margin-top: 10%;
+	}
 	.workshop-box .small-text{
 		width: 100%;
+		margin-bottom: 10%;
+	}
+	.workshop-box .small-header{
+		margin-bottom: 5%;
+	}
+	.box-workshop{
+		height: 60%;
+		width: 70%;
+		margin: 0 auto;
+		margin-bottom: 10%;
+	}
+	.workshop-start .medium-text{
+		width: 80%;
 		margin-bottom: 10%;
 	}
 	.contact-map{
