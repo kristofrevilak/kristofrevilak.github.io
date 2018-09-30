@@ -1299,7 +1299,7 @@ table {
 	.value-card{
 		width: 70%;
 		min-height: 300px; 
-		min-width: 200px;
+		min-width: 500px;
 		float: none;
 		height: 45%;
 		margin: 15% auto;
