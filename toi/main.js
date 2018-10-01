@@ -1,6 +1,6 @@
 let $start_h = $('.start-h');
 let $start_t = $('.start-t');
-let $start_box = $('.start-box');
+let $start_box = $('.four-logo');
 let $start_g = $('.start-graphic');
 
 

@@ -74,6 +74,11 @@ table {
 .bold{
 	font-weight: bold;
 }
+.bold-text{
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: 2%;
+}
 
 .grey{
 	background: #f7f7f7;
@@ -96,7 +101,7 @@ table {
 	padding: 5% 5%;
 }
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width:750px){
 	.big{
 		padding: 5% 5%;
 	}
@@ -108,10 +113,9 @@ table {
 		padding: 5% 2%;
 	}
 
-	.start-elipse{
-		width: 50vw !important;
-	}
+	
 }
+
 
 
 .div-container.blue{
@@ -133,12 +137,13 @@ table {
 }
 .blue-wallpaper{
 	background: url("wallpaper.png");
+	background-repeat: no-repeat;
 }
 
 .rotate{
 	overflow: hidden;
 	position: relative;
-	z-index: -2;
+	z-index: 0;
 }
 
 .rotate::before{
@@ -279,7 +284,9 @@ table {
 
 .welcome-container{
 	padding: 10%;
+	padding-bottom: 5%;
 }
+
 
 .bottom-graphic img{
 	width: 45%;
@@ -310,37 +317,8 @@ table {
 	opacity: 0;
 }
 
-.start-box{
-	width: 40%;
-	margin-top: 5%;
-	display: inline-block;
-	margin-right: 4%;
-	padding: 4% !important;
-	margin-bottom: 15%;
-	opacity: 0;
-}
 
-.start-box h2{
-	display: inline;
-}
 
-.start-box .name{
-	font-weight: bold;
-	text-transform: uppercase;
-	display: inline-block;
-	font-size: calc(8px + .45vw);
-}
-.start-box .title{
-	font-weight: bold;
-	font-size: calc(8px + .35vw);
-	display: inline-block;
-}
-.start-box .text{
-	margin-top: 1%;
-	font-size: calc(8px + .3vw);
-	width: 95%;
-	display: inline-block;
-}
 
 .welcome-text{
 	font-size: 18px;
@@ -380,33 +358,39 @@ table {
 	max-width: 130px;
 	min-width: 90px;
 }
+.shape-wrap{
+	margin-left: 30%;
+	width: 100%;
+}
 
-.evolution{
-	position: absolute;
-	top: -50px;
-	right: 30px;
+.ri{
+	text-align: right;
 }
 
 .behavior{
-	position: absolute;
-	top: 80px;
-	right: 400px;
+	position: relative;
+	top: -60px;
+	right: -30px;
+}
+
+.evolution{
+	position: relative;
+	top: -40px;
+	margin-right: 40%;
 }
 
 .search{
-	position: absolute;
-	top: 200px;
-	right: 13%;
+	top: -40px;
+	position: relative;
 }
 .nudge{
-	position: absolute;
-	top: 300px;
-	right: 370px;
+	position: relative;
+	top: -40px;
+	margin-right: 37%;
 }
 .strategy{
-	position: absolute;
-	top: 400px;
-	right: 10%;
+	position: relative;
+	right: -50px;
 }
 
 .start-graphic{
@@ -418,117 +402,89 @@ table {
 }
 
 .start-graphic .start-elipse{
-	width: 40vw;
-	min-width: 400px;
+	width: calc(600px + 10em);
+	min-width: 500px;
 	position: absolute;
 	right: calc(-40px - 40%);
 	top: -200px;
 	z-index: -1;
 }
 
+
 .single-graphic{
-	width: 100%;
-	overflow: hidden;
-	margin-left: 40%;
+	flex: 1;
+	text-align: right;
+	margin-right: 10%;
+	/* margin-left: 40%;
 	margin-right: 40%;
-	margin-top: 10%;
+	margin-top: 10%; */
 	position: relative;
 }
-.thinking{
-	padding-left: 40%;
-}
-.science{
-	padding-left: 40%;
-}
-
-
-.single-graphic img{
-	width: 50%;
-	max-width: 100px;
-	display: block;
-}
-
-.single-graphic .graphic-text{
-	width: 10% !important;
-}
-.thinking .graphic-text{
-	
-}
-.thinking .graphic-arrow{
-	margin-left: 60px;
-	margin-bottom: 10px;
-}
-.thinking .graphic-icon{
-	margin-left: 120px;
-	width: 40% !important;
-}
-.thinking .graphic-arrow{
-	width: 10% !important;
-	max-width: 100px;
-	min-width: 50px;
-	
-}
-
-.science{
+.icons-div{
+	margin-right: -50%;
+	overflow: hidden;
 	margin-top: 5%;
 }
-.science .graphic-text{
-	margin-left: 120px;
+.icons-div-wrap{
+	display: inline-block;
+	margin-bottom: 10%;
+	margin-right: 10%;
 }
-.science .graphic-arrow{
-	margin-left: 90px;
-	margin-bottom: 10px;
-	transform: rotate(-100deg);
-	width: 8% !important;
-	max-width: 100px;
-	min-width: 50px;
+.icons-div-wrap .graphic-icon{
+	width: 40%;
 }
-.science .graphic-icon{
-	width: 30% !important;
+.icons-div-wrap .graphic-arrow{
+	width: 20%;
+}
+.icons-div-wrap .graphic-text{
+	width: 25%;
+}
+.turn .graphic-text{
 	position: relative;
-	top: 10px;
+	bottom: 0px;
+	margin-right: 5px;
+}
+.turn .graphic-arrow{
+	transform: rotate(240deg);
+	margin: 5%;
+	margin-bottom: 2%;
+	margin-right: 20%;
+}
+.norm .graphic-text{
+	position: relative;
+	bottom: -40px;
+	margin-right: -25px;
+}
+.norm .graphic-arrow{
+	margin: 5%;
+	position: relative;
+	bottom: -20px;
+}
+.norm .graphic-icon{
+}
+.thinking .turn{
+	position: relative;
+	left: 5%;
+}
+.profit .norm{
+	position: relative;
+	right: 15%;
+}
+.science .norm{
+	position: relative;
+	right: 5%;
 }
 
-.results{
-	margin-top: 5%;
+
+
+@media only screen and (max-width: 1400px){
+	.start-elipse{
+		width: calc(200px + 15vw) !important;
+	}
 }
-.results .graphic-text{
-	margin-left: 120px;
+@media only screen and (max-width: 1000px){
 }
-.results .graphic-arrow{
-	margin-left: 150px;
-	margin-bottom: 10px;
-	margin-top: 20px;
-	transform: rotate(-280deg);
-	width: 8% !important;
-	max-width: 100px;
-	min-width: 50px;
-}
-.results .graphic-icon{
-	width: 30% !important;
-	margin-left: 180px;
-}
-.profit{
-	position: absolute;
-	bottom: -80px;
-	right: calc(-20%-300px);
-}
-.profit .graphic-text{
-	margin-left: 480px;
-}
-.profit .graphic-arrow{
-	margin-left: 460px;
-	margin-bottom: 10px;
-	margin-top: 20px;
-	transform: rotate(180deg);
-	width: 8% !important;
-	max-width: 100px;
-	min-width: 50px;
-}
-.profit .graphic-icon{
-	width: 30% !important;
-	margin-left: 400px;
-}
+
 
 .overview-text{
 	width: 75%;
@@ -536,13 +492,17 @@ table {
 }
 
 .page-card{
-	width: 28.3%;
+	width: 20%;
 	float: left;
-	margin: 5% auto;
-	padding: 0 2.5%;
+	margin: 0 auto;
+	padding: 5% 2.5%;
 }
 .page-card .small-header{
 	color: white;
+}
+.page-overview{
+	overflow: hidden;
+	margin-bottom: 5%;
 }
 .page-overview .medium-header{
 	text-align: center;
@@ -566,7 +526,7 @@ table {
 	border-radius: 10px;
 	padding: 2.5%;
 	box-sizing: border-box;
-	box-shadow: 5px 15px 50px rgb(90, 101, 136);
+	box-shadow: 0px 15px 50px rgb(90, 101, 136);
 }
 
 .blue-box{
@@ -635,6 +595,11 @@ table {
 	margin: 0;
 	width: 20%;
 	text-align: center;
+	overflow: hidden;
+}
+.academy-logo{
+	overflow: hidden;
+	padding: 10% 5%;
 }
 
 .single-logo{
@@ -643,10 +608,67 @@ table {
 	float: left;
 }
 
+.logo-row{
+	overflow: hidden;
+	display: flex;
+  justify-content: center; /* align horizontal */
+	align-items: center;
+	width: 50%;
+	float: left;
+	height: 20%;
+}
+
+.all-single-logo{
+	overflow: hidden;
+	width: 33.33%;
+	float: left;
+	cursor: pointer;
+	flex: 1;
+}
+.four-logo-img img:hover, .all-single-logo img:hover {
+	filter: none;
+	-webkit-filter: none;
+}
+.four-logo-img img,.all-single-logo img{
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+	cursor: pointer;
+}
+.all-single-logo img{
+	width: 70%;
+	min-width: 50px;
+	max-width: 200px;
+	margin: 2.5% auto;
+	display: block;
+	
+}
+
 .single-logo img{
 	margin: 0 auto;
 }
 
+.start-box-div .small-header{
+	margin-top: 5%;
+}
+
+.four-logo{
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
+	width: 90%;
+	margin-top: 0%;
+	margin-right: 4%;
+	padding: 4% !important;
+	margin-bottom: 28%;
+	opacity: 0;
+}
+.four-logo-img{
+	width: 25%;
+	margin-right: 5%;
+}
+.four-logo-img img{
+	width: 100%;
+}
 
 .academy-uvod-text{
 	width: 70%;
@@ -657,6 +679,7 @@ table {
 .quote-container{
 	width: 50%;
 	float: left;
+	margin-top: 10%;
 }
 
 .quote-container .small-text{
@@ -921,20 +944,30 @@ table {
 	width: 70%;
 }
 
-.contact-map{
-	float: left;
+.contact-container{
+	display: flex;
+	justify-content: center; /* align horizontal */
+}
+.contact-map, .contact-info, .contact-form{
+	width: 33.33%;
 }
 
 .mapouter{
 	text-align:left;
-	height:700px;
-	width:500px;
+	text-align: center;
 }
 .gmap_canvas {
+	text-align: center;
 	overflow:hidden;
 	background:none !important;
-	height:700px;
-	width:500px;
+	width: 70%;
+	margin: 0 auto;
+	height: 45%;
+}
+#gmap_canvas{
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
 }
 
 .contact-info{
@@ -971,21 +1004,35 @@ table {
 }
 
 .page-card-jumper{
-	padding: 3%;
+	padding: 4% 3%;
 	background: white;
 	display: inline-block;
 	border-radius: 10px;
 	margin-top: 4%;
 }
 
+.page-card{
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 5%;
+}
+
+.page-card:hover{
+	background-color: #0096e0;
+	box-shadow: 2px 5px 25px #054666;
+}
+/* .page-card:hover .page-card-jumper{
+	box-shadow: 2px 5px 15px #133647;
+} */
+
 .page-card-jumper h2{
-	font-size: calc(6px + .5vw);
+	font-size: calc(8px + .2vw) !important;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
 
 .team{
-	background-image: url("team.png");
+	background-color: #f7f7f7;
 }
 .team .small-text{
 	width: 75%;
@@ -994,6 +1041,9 @@ table {
 
 .uvod-container{
 	margin: 10% 0;
+}
+.uvod-container .big-header{
+	margin: 0;
 }
 
 .single-member{
@@ -1128,6 +1178,9 @@ table {
 	background: white;
 	margin: 10px auto;
 }
+.ciara.black{
+	background:#4f4f4f;
+}
 
 
 @media screen and (max-width:750px){
@@ -1135,6 +1188,9 @@ table {
 		width: 100%;
 		float: none;
 		margin-left: 0;
+	}
+	.bold-text{
+		width: 80%;
 	}
 	.medium-text{
 		font-size: calc(11px + .5vw);
@@ -1199,7 +1255,7 @@ table {
 		display: none;
 	}
 	.start-box{
-		width: 47%;
+		width: 87%;
 	}
 	.start-box:nth-child(2){
 		margin-right: 0;
@@ -1212,39 +1268,39 @@ table {
 	.welcome-steps{
 		position: static;
 	}
+	.welcome-graphic{
+		display: none !important;
+	}
 
 	.welcome-shape{
 		overflow: hidden;
+		
 	}
 	.welcome-steps img{
 		width: 30%;
 		height: 70%;
 		transform: rotate(90deg);
-		margin-top: -65px;
+		margin-top: -150px;
 		margin-left: 30%;
 	}
 	.behavior{
-		top: 350px;
-		left: 70%;
+	
 	}
 	.evolution{
-		top: 320px;
-		left: calc(50% - 50px);
+	
 	}
 	.strategy{
-		left: calc(50% - 190px);
-		top: 346px;
+		
 	}
 	.search{
-		top: 470px;
-		left: calc(50% - 2px);
+		
 	}
 	.nudge{
-		top: 490px;
-		left: calc(50% - 130px);
+	
 	}
 	.welcome-shape img{
-		position: absolute;
+		position: relative;
+		z-index: 2;
 		display: block;
 		width: 60px;
 	}
@@ -1503,6 +1559,7 @@ table {
 	}
 	.logo-row{
 		width: 100%;
+		height: auto;
 		overflow: hidden;
 	}
 	.all-single-logo img{
@@ -1545,17 +1602,18 @@ table {
 		width: 80%;
 		margin-bottom: 10%;
 	}
+	.contact-container{
+		display: block;
+	}
 	.contact-map{
-		float: none;
 		width: 100%;
+		margin-bottom: 10%;
 	}
 	.contact-info{
-		float: none;
 		width: 100%;
 		
 	}
 	.contact-form{
-		float: none;
 		width: 100%;
 		
 	}
