@@ -142,8 +142,6 @@ table {
 
 .rotate{
 	overflow: hidden;
-	position: relative;
-	z-index: 0;
 }
 
 .rotate::before{
@@ -174,7 +172,10 @@ table {
 }
 
 
-
+.explore-text{
+	position: relative;
+	overflow: visible;
+}
 
 .small-header h2{
 	font-size: calc(12px + .6vw);
@@ -228,6 +229,10 @@ table {
 	display: table;
 	margin: 0 auto;
 	cursor: pointer;
+	transition: all 0.2s ease-in;
+}
+.action-btn:hover{
+	background: #0077ff;
 }
 .action-btn a, .action-btn p{
 	text-decoration: none;
@@ -287,21 +292,30 @@ table {
 	padding-bottom: 5%;
 }
 
+.emeregency{
+	/* overflow: hidden; */
+}
+
 
 .bottom-graphic img{
 	width: 45%;
 	position: absolute;
 	left: 0;
-	z-index: 0;
 }
 
 .start{
 	position: relative;
+	z-index: 0;
+	padding-bottom: 2%;
 }
 
 .start-container{ 
 	width: 50%;
 	float: left;
+}
+
+.trust-header{
+	opacity: 0;
 }
 
 
@@ -333,10 +347,7 @@ table {
 	box-sizing: content-box;
 	margin: 5% 0;
 	position: relative;
-}
-.rel{
-	position: relative;
-	z-index: -1;
+	overflow:hidden;
 }
 
 .welcome-graphic{
@@ -349,8 +360,11 @@ table {
 .welcome-steps{
 	position: absolute;
 	right: calc(-150px + 13vw);
-	z-index: 0;
-	top: -150px;
+	z-index: 100;
+	top: -250px;
+}
+.welcome-steps img{
+	width: 100%;
 }
 
 .welcome-shape img{
@@ -361,6 +375,9 @@ table {
 .shape-wrap{
 	margin-left: 30%;
 	width: 100%;
+}
+.shape-wrap img{
+	cursor: pointer;
 }
 
 .ri{
@@ -431,7 +448,7 @@ table {
 	margin-right: 10%;
 }
 .icons-div-wrap .graphic-icon{
-	width: 40%;
+	width: 45%;
 }
 .icons-div-wrap .graphic-arrow{
 	width: 20%;
@@ -464,15 +481,23 @@ table {
 }
 .thinking .turn{
 	position: relative;
-	left: 5%;
+	left: 15%;
+	opacity: 0;
+}
+.results .turn{
+	position: relative;
+	left: -10%;
+	opacity: 0;
 }
 .profit .norm{
 	position: relative;
-	right: 15%;
+	right: 25%;
+	opacity: 0;		
 }
 .science .norm{
 	position: relative;
-	right: 5%;
+	right: -5%;
+	opacity: 0;
 }
 
 
@@ -625,14 +650,18 @@ table {
 	cursor: pointer;
 	flex: 1;
 }
+
 .four-logo-img img:hover, .all-single-logo img:hover {
-	filter: none;
-	-webkit-filter: none;
+	-webkit-filter: grayscale(0%);
+   -moz-filter: grayscale(0%);
+   filter: grayscale(0%);
 }
 .four-logo-img img,.all-single-logo img{
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-	filter: grayscale(100%);
-	cursor: pointer;
+	-webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   filter: grayscale(100%);
+   transition: all 0.5s ease;
+		cursor: pointer;
 }
 .all-single-logo img{
 	width: 70%;
@@ -1009,17 +1038,23 @@ table {
 	display: inline-block;
 	border-radius: 10px;
 	margin-top: 4%;
+	transition: all 0.3s ease-in;
 }
 
 .page-card{
 	border-radius: 5px;
 	cursor: pointer;
 	margin-bottom: 5%;
+	transition: all 0.1s ease-in;
 }
 
 .page-card:hover{
 	background-color: #0096e0;
 	box-shadow: 2px 5px 25px #054666;
+}
+.page-card:hover .page-card-jumper{
+	background-color: #0096e0;
+	color: white;
 }
 /* .page-card:hover .page-card-jumper{
 	box-shadow: 2px 5px 15px #133647;
@@ -1627,5 +1662,11 @@ table {
 	}
 	#gmap_canvas{
 		margin: 0 auto;
+	}
+}
+
+@keyframes wiggle{
+	20% {
+
 	}
 }

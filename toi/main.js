@@ -5,8 +5,22 @@ let $start_g = $('.start-graphic');
 
 
 let $explore_btn = $('.explore-btn');
+let $explore_text = $('.explore-text');
 let $exploring_btn = $('.exploring');
 let $explore_btn_ciara = $('.ciara');
+
+
+let $img1 = $(".four-logo-img img");
+let $img2 = $(".all-single-logo img");
+
+
+let $trust_h = $('.trust-header');
+
+
+let $thinking = $(".thinking .turn");
+let $profit = $(".profit .norm");
+let $science = $(".science .norm");
+let $results = $(".results .turn");
 
 
 let $decide_btn = $('.decide-btn');
@@ -103,14 +117,58 @@ $explore_btn.mouseenter((e)=>{
 		ease: Power1.easeInOut,
 		css: {marginTop: 30}
 	});
+	let explore_btn_text_hover_tween = TweenMax.to($explore_text,.3,{
+		ease: Power1.easeInOut,
+		css: {top: -5}
+	});
 }).mouseleave((e)=>{
 	e.preventDefault();
 	let explore_btn_hover_tween = TweenMax.to($explore_btn_ciara,.2,{
 		ease: Power1.easeInOut,
 		css: {marginTop: 10}
 	});
+	let explore_btn_text_hover_tween = TweenMax.to($explore_text,.3,{
+		ease: Power1.easeInOut,
+		css: {top: 0}
+	});
 });
 
+
+// $img1.mouseenter((e)=>{
+// 	e.preventDefault();
+// 	let live_tween = TweenMax.to($img1,1,{
+// 		ease: Power3.easeIn,
+// 		css: {
+// 			filter: "none"
+// 		}
+// 	})
+// }).mouseleave((e)=>{
+// 	e.preventDefault();
+// 	let live_tween = TweenMax.to($img1,1,{
+// 		ease: Power3.easeIn,
+// 		css: {
+// 			filter: "grayscale(100%)"
+// 		}
+// 	})
+// });
+
+// $img2.mouseenter((e)=>{
+// 	e.preventDefault();
+// 	let live_tween = TweenMax.to($img2,1,{
+// 		ease: Power3.easeIn,
+// 		css: {
+// 			filter: "none"
+// 		}
+// 	})
+// }).mouseleave((e)=>{
+// 	e.preventDefault();
+// 	let live_tween = TweenMax.to($img2,1,{
+// 		ease: Power3.easeOut,
+// 		css: {
+// 			filter: "grayscale(100%)"
+// 		}
+// 	})
+// });
 
 $( document ).ready(() => {
 	let start_h_tween = TweenMax.to($start_h,1,{
@@ -121,18 +179,56 @@ $( document ).ready(() => {
 		ease: Power1.easeInOut,
 		css: {opacity: 1}
 	});
+	let thinking_tween = TweenMax.to($thinking,1,{
+		ease: Power4. easeIn,
+		delay: .3,
+		css: {
+			opacity: 1,
+			left: "5%"
+		}
+	})
+	let results_tween = TweenMax.to($results,1,{
+		ease: Power4. easeIn,
+		delay: .8,
+		css: {
+			opacity: 1,
+			left: 0
+		}
+	})
+	let profit_tween = TweenMax.to($profit,1,{
+		ease: Power4. easeIn,
+		delay: 1.3,
+		css: {
+			opacity: 1,
+			right: "15%"
+		}
+	})
+	let science_tween = TweenMax.to($science,1,{
+		ease: Power4. easeIn,
+		delay: 1.8,
+		css: {
+			opacity: 1,
+			right: "5%"
+		}
+	})
+	
 	let start_b_tween = TweenMax.to($start_box,1,{
 		ease: Power4. easeIn,
-		delay: .5,
+		delay: 2.5,
 		css: {opacity: 1}
 	});
 	let start_g_tween = TweenMax.to($start_g,1,{
 		ease: Power1.easeInOut,
 		css: {opacity: 1}
 	});
+	let trust_h_tween = TweenMax.to($trust_h,1,{
+		ease: Power1.easeInOut,
+		delay: 2.75,
+		css: {opacity: 1}
+	});
 	let explore_btn_tween = TweenMax.to($explore_btn,1,{
 		ease: Power1.easeInOut,
-		delay: 1,
+		delay: 3.5,
 		css: {
 			opacity: 1,
 			marginTop: -50
