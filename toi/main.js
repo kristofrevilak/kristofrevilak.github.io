@@ -30,6 +30,7 @@ let $playas_btn = $('.playas');
 let $expand_div = $('.expand-div');
 let $expand_arr = $('.member-arrow img');
 let $expand_content = $('.member-expand-content');
+let $expand_sipka = $("")
 
 let $single_fact = $(".single-fact");
 let $single_fact_arr = $(".academy-arrow")[0];
@@ -63,17 +64,30 @@ $expand_div.click((e)=>{
 	let imgg = $("#" + e.currentTarget.id)[0].childNodes[3].childNodes[1];
 	let blue_box = $("#" + e.currentTarget.id).parent().parent().parent().next().children()[1];
 	if(imgg.attributes.src.nodeValue == "arrow_down.png"){
-		let change_img_tween = TweenMax.set(imgg,{attr:{src:"arrow_up.png"}});
-		let display_text_tween = TweenMax.set($("#" + e.currentTarget.id).next().next(),{css:{display:"block"}});
+		let change_img_tween = TweenMax.to(imgg,.1,{
+			ease: Power4.ease,
+			attr:{src:"arrow_up.png"}
+		});
+		let display_text_tween = TweenMax.to($("#" + e.currentTarget.id).next().next(),.1,{
+			ease: Power4.easeOut,
+			css:{display:"block"}
+		});
 		if( screen.width >= 750 ){
-			let display_box_tween = TweenMax.set(blue_box,{css:{display:"block"}});
+			let display_box_tween = TweenMax.set(blue_box,{autoAlpha: 1, display:'block'});
 		}
 			
 	} else{
-		let change_img_tween = TweenMax.set(imgg,{attr:{src:"arrow_down.png"}});
-		let hide_text_tween = TweenMax.set($("#" + e.currentTarget.id).next().next(),{css:{display:"none"}});
+		let change_img_tween = TweenMax.to(imgg,.1,{
+			ease: Power2.ease,
+			attr:{src:"arrow_down.png"}
+		});
+		let hide_text_tween = TweenMax.to($("#" + e.currentTarget.id).next().next(),.1,{
+			ease: Power4.easeOut,
+			css:{display:"none"}
+			
+	});;
 		if( screen.width >= 750 ){
-			let display_box_tween = TweenMax.set(blue_box,{css:{display:"none"}});
+			let display_box_tween = TweenMax.set(blue_box,{autoAlpha: 0, display:'none'});
 		}
 			
 	}
@@ -88,13 +102,27 @@ $single_fact.click((e)=>{
 	e.preventDefault();
 	let data_id = $(e.currentTarget).attr("data-id");
 	let ele = $('*[data-id=' + data_id + ']');
+	
 	if(!ele.hasClass("active")){
+		let displaying = ()=>{
+			
+			ele.addClass("active");
+			$(".bullets-change ul").hide();
+			$("#" + data_id).css("display","block");
+		}
 		$(".active").removeClass("active");
-		ele.addClass("active");
 		let nheight = $('*[data-id="af0"]').offset().top;
-		let heightt = Math.ceil($('*[data-id=' + data_id + ']').offset().top - nheight) + 20;
-		$(".bullets-change ul").hide();
-		$("#" + data_id).css("display","block");
+		let heightt = Math.ceil($('*[data-id=' + data_id + ']').offset().top - nheight) + 30;
+		console.log(heightt);
+		
+		let move_arrow_tween = TweenMax.to($single_fact_arr,.6,{
+			css:{
+				top: heightt,
+			},
+			onComplete: displaying
+		});
+		
+		
 	}
 });
 
@@ -102,12 +130,36 @@ $expand_btn.click((e)=>{
 	e.preventDefault();
 	let data_id = $(e.currentTarget).attr("data-id");
 	let ele = $('*[data-id=' + data_id + ']');
+	let arrow = ele[0].children[1];
+	
 	if(!ele.hasClass("activated")){
-		ele.addClass("activated");
-		$("#" + data_id).css("display","block");
+		let completed = ()=>{
+			ele.addClass("activated");
+		
+			$("#" + data_id).css("display","block");
+		}
+		let arrow_tween = TweenMax.to(arrow,.3,{
+			css:{
+				ease: Power4.easeInOut,
+				transform: "rotate(90deg)"
+			},
+			onComplete: completed
+		})
+	
 	}else{
-		ele.removeClass("activated");
-		$("#" + data_id).css("display","none");
+		let completed = ()=>{
+			ele.removeClass("activated");
+			$("#" + data_id).css("display","none");
+		}
+		let arrow_tween = TweenMax.to(arrow,.3,{
+			css:{
+				ease: Power4.easeInOut,
+				transform: "rotate(0deg)"	
+			}, 
+			force3D:false,
+			onComplete: completed
+		})
+		
 	}
 });
 

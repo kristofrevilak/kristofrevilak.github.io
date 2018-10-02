@@ -261,6 +261,8 @@ table {
 .action-btn.expand img{
 	float: right;
 	width: 20%;
+	transform: translate3d(0, 0, 0);
+	scale: 1;
 }
 
 .action-btn.expand a{
@@ -375,6 +377,13 @@ table {
 .shape-wrap{
 	margin-left: 30%;
 	width: 100%;
+}
+
+.shape-wrap:hover{
+	animation: wiggle 1.2s cubic-bezier(.18,.68,.33,.48) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 .shape-wrap img{
 	cursor: pointer;
@@ -526,14 +535,16 @@ table {
 	color: white;
 }
 .page-overview{
-	overflow: hidden;
 	margin-bottom: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 .page-overview .medium-header{
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 800;
 	margin-bottom: 5%;
+	margin-top: 5%;
 	color: white;
 }
 .page-underline{
@@ -1055,6 +1066,7 @@ table {
 .page-card:hover .page-card-jumper{
 	background-color: #0096e0;
 	color: white;
+	padding-left: 0;
 }
 /* .page-card:hover .page-card-jumper{
 	box-shadow: 2px 5px 15px #133647;
@@ -1665,8 +1677,22 @@ table {
 	}
 }
 
-@keyframes wiggle{
-	20% {
+/* .18,.68,.33,.48 */
 
-	}
+@keyframes wiggle{
+	10%, 90% {
+    transform: translate3d(-1px, 2px, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 1px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, -1px, 0);
+  }
 }
