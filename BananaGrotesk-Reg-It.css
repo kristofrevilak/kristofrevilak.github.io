@@ -1,0 +1,8 @@
+/* Italic Regular (400) */
+@font-face {
+  font-family: "Banana Grotesk Reg It";
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://kristofrevilak.github.io/BananaGrotesk-RegularItalic.woff")
+    format("woff");
+}

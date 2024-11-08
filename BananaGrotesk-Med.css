@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* Medium weight (500) */
+@font-face {
+  font-family: "Banana Grotesk Med";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://kristofrevilak.github.io/BananaGrotesk-Medium.woff")
+    format("woff");
+}

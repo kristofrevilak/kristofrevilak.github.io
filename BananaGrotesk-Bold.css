@@ -1,0 +1,8 @@
+/* Bold weight (700) */
+@font-face {
+  font-family: "Banana Grotesk B";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://kristofrevilak.github.io/BananaGrotesk-Bold.woff")
+    format("woff");
+}

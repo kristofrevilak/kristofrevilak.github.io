@@ -1,0 +1,8 @@
+/* Italic Medium (500) */
+@font-face {
+  font-family: "Banana Grotesk Med It";
+  font-style: italic;
+  font-weight: 500;
+  src: url("https://kristofrevilak.github.io/BananaGrotesk-MediumItalic.woff")
+    format("woff");
+}

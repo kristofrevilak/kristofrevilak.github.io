@@ -1,0 +1,8 @@
+/* Italic Semi-Bold (600) */
+@font-face {
+  font-family: "Banana Grotesk SB It";
+  font-style: italic;
+  font-weight: 600;
+  src: url("https://kristofrevilak.github.io/BananaGrotesk-SemiboldItalic.woff")
+    format("woff");
+}

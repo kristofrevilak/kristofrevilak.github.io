@@ -1,0 +1,8 @@
+/* Semi-Bold weight (600) */
+@font-face {
+  font-family: "Banana Grotesk SB";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://kristofrevilak.github.io/BananaGrotesk-Semibold.woff")
+    format("woff");
+}
