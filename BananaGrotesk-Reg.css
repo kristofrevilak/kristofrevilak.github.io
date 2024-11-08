@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* Regular weight (400) */
+@font-face {
+  font-family: "Banana Grotesk Reg";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://kristofrevilak.github.io/BananaGrotesk-Regular.woff")
+    format("woff");
+}
