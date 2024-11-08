@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/* Regular weight (400) */
+@font-face {
+  font-family: "Banana Grotesk Reg";
+  font-style: normal;
+  font-weight: 400;
+  src: url("http://theglueorchestra.com/fonts/BananaGrotesk-Regular.woff")
+    format("woff");
+}
+
+/* Medium weight (500) */
+@font-face {
+  font-family: "Banana Grotesk Med";
+  font-style: normal;
+  font-weight: 500;
+  src: url("http://theglueorchestra.com/fonts/BananaGrotesk-Medium.woff")
+    format("woff");
+}
+
+/* Semi-Bold weight (600) */
+@font-face {
+  font-family: "Banana Grotesk SB";
+  font-style: normal;
+  font-weight: 600;
+  src: url("http://theglueorchestra.com/fonts/BananaGrotesk-Semibold.woff")
+    format("woff");
+}
+
+/* Bold weight (700) */
+@font-face {
+  font-family: "Banana Grotesk B";
+  font-style: normal;
+  font-weight: 700;
+  src: url("http://theglueorchestra.com/fonts/BananaGrotesk-Bold.woff")
+    format("woff");
+}
+
+/* Italic Regular (400) */
+@font-face {
+  font-family: "Banana Grotesk Reg It";
+  font-style: italic;
+  font-weight: 400;
+  src: url("http://theglueorchestra.com/fonts/BananaGrotesk-RegularItalic.woff")
+    format("woff");
+}
+
+/* Italic Medium (500) */
+@font-face {
+  font-family: "Banana Grotesk Med It";
+  font-style: italic;
+  font-weight: 500;
+  src: url("http://theglueorchestra.com/fonts/BananaGrotesk-MediumItalic.woff")
+    format("woff");
+}
+
+/* Italic Semi-Bold (600) */
+@font-face {
+  font-family: "Banana Grotesk SB It";
+  font-style: italic;
+  font-weight: 600;
+  src: url("http://theglueorchestra.com/fonts/BananaGrotesk-SemiboldItalic.woff")
+    format("woff");
+}
+
+/* Italic Bold (700) */
+@font-face {
+  font-family: "Banana Grotesk B It";
+  font-style: italic;
+  font-weight: 700;
+  src: url("http://theglueorchestra.com/fonts/BananaGrotesk-BoldItalic.woff")
+    format("woff");
+}
+/* CSS Document */
