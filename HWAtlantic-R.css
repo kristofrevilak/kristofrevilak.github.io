@@ -1,0 +1,8 @@
+/* Hw Regular weight (400) */
+@font-face {
+  font-family: "HW Atlantic Reg";
+  font-style: normal;
+  font-weight: 400;
+  src: url("http://kristofrevilak.github.io/HWAtlantic-Regular.woff2")
+    format("woff2");
+}

@@ -1,0 +1,8 @@
+/* HW Medium weight (500) */
+@font-face {
+  font-family: "HW Atlantic Medium";
+  font-style: normal;
+  font-weight: 400;
+  src: url("http://kristofrevilak.github.io/HWAtlantic-Medium.woff2")
+    format("woff2");
+}

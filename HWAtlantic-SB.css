@@ -1,0 +1,8 @@
+/* HW Semibold weight (600) */
+@font-face {
+  font-family: "HW Atlantic Semibold";
+  font-style: normal;
+  font-weight: 400;
+  src: url("http://kristofrevilak.github.io/HWAtlantic-Semibold.woff2")
+    format("woff2");
+}
